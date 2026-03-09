@@ -1,0 +1,673 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 5.1.30-community MySQL Community Server (GPL)
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> --version
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--version' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| abc                |
+| evchargestation    |
+| group044_campus    |
+| infoway067         |
+| mysql              |
+| test               |
++--------------------+
+7 rows in set (0.01 sec)
+
+mysql> use infoway067;
+Database changed
+mysql> show tables;
++----------------------+
+| Tables_in_infoway067 |
++----------------------+
+| a                    |
+| activity             |
+| agent                |
+| airline_seats        |
+| andor                |
+| atm                  |
+| b                    |
+| bankloan             |
+| batch_schedule       |
+| betweensalary        |
+| bitwise              |
+| blanktablea          |
+| blanktableb          |
+| blog                 |
+| bonus                |
+| books                |
+| brands               |
+| bus_stops            |
+| cafe                 |
+| candidate            |
+| cardpayments         |
+| cars                 |
+| cashpayments         |
+| categories           |
+| category             |
+| city                 |
+| classandsubjects     |
+| client               |
+| cnumbers             |
+| coalesce             |
+| comments             |
+| company              |
+| countnulls           |
+| countnumbers         |
+| cricketwinnerteam    |
+| customer             |
+| customers            |
+| demodept1            |
+| demodept2            |
+| dept                 |
+| dept1                |
+| dhl                  |
+| docs                 |
+| doctor               |
+| doctorvisits         |
+| dummy                |
+| duplicate            |
+| emp                  |
+| emp1                 |
+| emp2                 |
+| emp_attendance       |
+| emp_cards            |
+| emp_phone            |
+| envelope             |
+| facebook             |
+| fedex                |
+| food                 |
+| food_category_tags   |
+| food_items           |
+| fromstoreorders      |
+| fruits               |
+| fullname             |
+| hall_ticket          |
+| hobby                |
+| ipl                  |
+| item                 |
+| job_list             |
+| key_parts            |
+| labtestlist          |
+| leading_zeroes       |
+| leadtable            |
+| licence              |
+| linkedin             |
+| location             |
+| managers             |
+| mass_table           |
+| medicinelist         |
+| menucard             |
+| missingnumbers       |
+| nearest              |
+| new                  |
+| newbooks             |
+| null1                |
+| null2                |
+| nullif               |
+| numberstring         |
+| onlineorders         |
+| ord                  |
+| order1               |
+| order_items          |
+| orderdetails         |
+| orders               |
+| overlapping_dates    |
+| overtime             |
+| patient              |
+| phonecall            |
+| pivot_table          |
+| plumber              |
+| plumber_service_map  |
+| points               |
+| population           |
+| price                |
+| product              |
+| product_sales        |
+| products             |
+| pune_metro_stations  |
+| quarterly_revenue    |
+| r                    |
+| r1                   |
+| r2                   |
+| races                |
+| regexpr              |
+| repeatingnumbers     |
+| replacedept          |
+| reservations         |
+| revenue              |
+| rockets              |
+| room_assigned        |
+| room_staff           |
+| rooms                |
+| runners              |
+| runningserver        |
+| sales                |
+| sales1               |
+| sales_channel        |
+| salespeople          |
+| salesperson          |
+| salgrade             |
+| server               |
+| service              |
+| seta                 |
+| setb                 |
+| shop                 |
+| softdrink            |
+| sort                 |
+| sourcecity           |
+| sourcenames          |
+| stadium              |
+| stages               |
+| states               |
+| station              |
+| status               |
+| stocks               |
+| stringnumber         |
+| student              |
+| swapcity             |
+| tablea               |
+| tableaa              |
+| tableb               |
+| tablebb              |
+| targetcity           |
+| targetnames          |
+| tasks                |
+| teams                |
+| temp1                |
+| trainers             |
+| trains               |
+| traintimetable       |
+| transactions         |
+| unpivot_table        |
+| ups                  |
+| vote_response        |
+| votes                |
+| warehouse            |
+| x                    |
+| year_of_service      |
+| yearly_revenue       |
+| years                |
+| z                    |
++----------------------+
+169 rows in set (0.14 sec)
+
+mysql> select * from ups;
++-------------+---------+------------------+---------------+
+| tracking_id | carrier | status           | delivery_date |
++-------------+---------+------------------+---------------+
+| UPS100032   | UPS     | Delivered        | 2025-07-01    |
+| UPS100042   | UPS     | Pending          | 2025-11-11    |
+| UPS100033   | UPS     | Dispatched       | 2025-07-07    |
+| UPS100034   | UPS     | Out for Delivery | 2025-07-08    |
+| UPS100035   | UPS     | Delayed          | 2025-07-09    |
+| UPS100036   | UPS     | In Transit       | 2025-07-03    |
+| UPS100037   | UPS     | Delivered        | 2025-07-05    |
+| UPS100038   | UPS     | Dispatched       | 2025-07-06    |
+| UPS100039   | UPS     | Out for Delivery | 2025-07-04    |
+| UPS100040   | UPS     | Delayed          | 2025-07-12    |
++-------------+---------+------------------+---------------+
+10 rows in set (0.02 sec)
+
+mysql> select * from dhl;
++-------------+---------+------------------+---------------+
+| tracking_id | carrier | status           | delivery_date |
++-------------+---------+------------------+---------------+
+| DHL100021   | DHL     | Delivered        | 2025-07-04    |
+| DHL100027   | DHL     | Pending          | 2025-07-23    |
+| DHL100022   | DHL     | In Transit       | 2025-07-05    |
+| DHL100023   | DHL     | Dispatched       | 2025-07-06    |
+| DHL100028   | DHL     | Pending          | 2025-12-23    |
+| DHL100024   | DHL     | Out for Delivery | 2025-07-07    |
+| DHL100025   | DHL     | Delayed          | 2025-07-08    |
+| DHL100026   | DHL     | In Transit       | 2025-07-03    |
++-------------+---------+------------------+---------------+
+8 rows in set (0.02 sec)
+
+mysql> select * from fedex;
++--------------+---------+------------------+---------------+
+| tracking_id  | carrier | status           | delivery_date |
++--------------+---------+------------------+---------------+
+| FEDEX100001  | FedEx   | Dispatched       | 2025-07-04    |
+| FEDEX100002  | FedEx   | In Transit       | 2025-07-05    |
+| FEDEX100006  | FedEx   | Pending          | 2025-06-29    |
+| FEDEX100003  | FedEx   | Delivered        | 2025-07-03    |
+| FEDEX100004  | FedEx   | Out for Delivery | 2025-07-07    |
+| FEDEX100007  | FedEx   | Pending          | 2025-01-09    |
+| FEDEX100005  | FedEx   | Delayed          | 2025-07-08    |
++--------------+---------+------------------+---------------+
+7 rows in set (0.00 sec)
+
+mysql> select * from (select * from ups union select * from fedex union select * from dhl);
+ERROR 1248 (42000): Every derived table must have its own alias
+mysql> select * from (select * from ups union select * from fedex union select * from dhl) where status = 'dispatched';
+ERROR 1248 (42000): Every derived table must have its own alias
+mysql> select * from shop;
++----------+--------+--------+----------+
+| itemName | color  | size   | quantity |
++----------+--------+--------+----------+
+| skirt    | dark   | small  |        2 |
+| skirt    | dark   | medium |        5 |
+| skirt    | dark   | large  |        1 |
+| skirt    | pastel | small  |       11 |
+| skirt    | pastel | medium |        9 |
+| skirt    | pastel | large  |       15 |
+| skirt    | white  | small  |        2 |
+| skirt    | white  | medium |        5 |
+| skirt    | white  | large  |        3 |
+| dress    | dark   | small  |        2 |
+| dress    | dark   | medium |        6 |
+| dress    | dark   | large  |       12 |
+| dress    | pastel | small  |        4 |
+| dress    | pastel | medium |        3 |
+| dress    | pastel | large  |        3 |
+| dress    | white  | small  |        2 |
+| dress    | white  | medium |        3 |
+| dress    | white  | large  |        0 |
+| shirt    | dark   | small  |        2 |
+| shirt    | dark   | medium |        6 |
+| shirt    | dark   | large  |        6 |
+| shirt    | pastel | small  |        4 |
+| shirt    | pastel | medium |        1 |
+| shirt    | pastel | large  |        2 |
+| shirt    | white  | small  |       17 |
+| shirt    | white  | medium |        1 |
+| shirt    | white  | large  |       10 |
+| pants    | dark   | small  |       14 |
+| pants    | dark   | medium |        6 |
+| pants    | dark   | large  |        0 |
+| pants    | pastel | small  |        1 |
+| pants    | pastel | medium |        0 |
+| pants    | pastel | large  |        1 |
+| pants    | white  | small  |        3 |
+| pants    | white  | medium |        0 |
+| pants    | white  | large  |        2 |
+| pants    | brown  | medium |       12 |
+| pants    | brown  | large  |       13 |
+| Jeans    | blue   | medium |        7 |
+| Jeans    | black  | medium |        4 |
+| Jeans    | white  | medium |        6 |
+| Jeans    | denim  | medium |        3 |
+| Jeans    | blue   | small  |        8 |
+| Jeans    | black  | small  |        9 |
+| Jeans    | white  | small  |       23 |
+| Jeans    | grey   | small  |       12 |
+| Jeans    | grey   | medium |        7 |
++----------+--------+--------+----------+
+47 rows in set (0.02 sec)
+
+mysql> select itemname, quantity  from shop group by itemname, quantity;
++----------+----------+
+| itemname | quantity |
++----------+----------+
+| dress    |        0 |
+| dress    |        2 |
+| dress    |        3 |
+| dress    |        4 |
+| dress    |        6 |
+| dress    |       12 |
+| Jeans    |        3 |
+| Jeans    |        4 |
+| Jeans    |        6 |
+| Jeans    |        7 |
+| Jeans    |        8 |
+| Jeans    |        9 |
+| Jeans    |       12 |
+| Jeans    |       23 |
+| pants    |        0 |
+| pants    |        1 |
+| pants    |        2 |
+| pants    |        3 |
+| pants    |        6 |
+| pants    |       12 |
+| pants    |       13 |
+| pants    |       14 |
+| shirt    |        1 |
+| shirt    |        2 |
+| shirt    |        4 |
+| shirt    |        6 |
+| shirt    |       10 |
+| shirt    |       17 |
+| skirt    |        1 |
+| skirt    |        2 |
+| skirt    |        3 |
+| skirt    |        5 |
+| skirt    |        9 |
+| skirt    |       11 |
+| skirt    |       15 |
++----------+----------+
+35 rows in set (0.00 sec)
+
+mysql> select itemname, quantity, sum(quantity)  from shop group by itemname, quantity;
++----------+----------+---------------+
+| itemname | quantity | sum(quantity) |
++----------+----------+---------------+
+| dress    |        0 |             0 |
+| dress    |        2 |             4 |
+| dress    |        3 |             9 |
+| dress    |        4 |             4 |
+| dress    |        6 |             6 |
+| dress    |       12 |            12 |
+| Jeans    |        3 |             3 |
+| Jeans    |        4 |             4 |
+| Jeans    |        6 |             6 |
+| Jeans    |        7 |            14 |
+| Jeans    |        8 |             8 |
+| Jeans    |        9 |             9 |
+| Jeans    |       12 |            12 |
+| Jeans    |       23 |            23 |
+| pants    |        0 |             0 |
+| pants    |        1 |             2 |
+| pants    |        2 |             2 |
+| pants    |        3 |             3 |
+| pants    |        6 |             6 |
+| pants    |       12 |            12 |
+| pants    |       13 |            13 |
+| pants    |       14 |            14 |
+| shirt    |        1 |             2 |
+| shirt    |        2 |             4 |
+| shirt    |        4 |             4 |
+| shirt    |        6 |            12 |
+| shirt    |       10 |            10 |
+| shirt    |       17 |            17 |
+| skirt    |        1 |             1 |
+| skirt    |        2 |             4 |
+| skirt    |        3 |             3 |
+| skirt    |        5 |            10 |
+| skirt    |        9 |             9 |
+| skirt    |       11 |            11 |
+| skirt    |       15 |            15 |
++----------+----------+---------------+
+35 rows in set (0.01 sec)
+
+mysql> select itemname from shop group by itemname;
++----------+
+| itemname |
++----------+
+| dress    |
+| Jeans    |
+| pants    |
+| shirt    |
+| skirt    |
++----------+
+5 rows in set (0.00 sec)
+
+mysql> select itemname, sum(quantity) from shop group by itemname;
++----------+---------------+
+| itemname | sum(quantity) |
++----------+---------------+
+| dress    |            35 |
+| Jeans    |            79 |
+| pants    |            52 |
+| shirt    |            49 |
+| skirt    |            53 |
++----------+---------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from ups;
++-------------+---------+------------------+---------------+
+| tracking_id | carrier | status           | delivery_date |
++-------------+---------+------------------+---------------+
+| UPS100032   | UPS     | Delivered        | 2025-07-01    |
+| UPS100042   | UPS     | Pending          | 2025-11-11    |
+| UPS100033   | UPS     | Dispatched       | 2025-07-07    |
+| UPS100034   | UPS     | Out for Delivery | 2025-07-08    |
+| UPS100035   | UPS     | Delayed          | 2025-07-09    |
+| UPS100036   | UPS     | In Transit       | 2025-07-03    |
+| UPS100037   | UPS     | Delivered        | 2025-07-05    |
+| UPS100038   | UPS     | Dispatched       | 2025-07-06    |
+| UPS100039   | UPS     | Out for Delivery | 2025-07-04    |
+| UPS100040   | UPS     | Delayed          | 2025-07-12    |
++-------------+---------+------------------+---------------+
+10 rows in set (0.00 sec)
+
+mysql> select * from dhl;
++-------------+---------+------------------+---------------+
+| tracking_id | carrier | status           | delivery_date |
++-------------+---------+------------------+---------------+
+| DHL100021   | DHL     | Delivered        | 2025-07-04    |
+| DHL100027   | DHL     | Pending          | 2025-07-23    |
+| DHL100022   | DHL     | In Transit       | 2025-07-05    |
+| DHL100023   | DHL     | Dispatched       | 2025-07-06    |
+| DHL100028   | DHL     | Pending          | 2025-12-23    |
+| DHL100024   | DHL     | Out for Delivery | 2025-07-07    |
+| DHL100025   | DHL     | Delayed          | 2025-07-08    |
+| DHL100026   | DHL     | In Transit       | 2025-07-03    |
++-------------+---------+------------------+---------------+
+8 rows in set (0.00 sec)
+
+mysql> select * from (select * from ups union select * from fedex union select * from dhl) where status = 'dispatched';
+ERROR 1248 (42000): Every derived table must have its own alias
+mysql> select * from (select * from ups union select * from fedex union select * from dhl) as tb where status = 'dispatched';
++-------------+---------+------------+---------------+
+| tracking_id | carrier | status     | delivery_date |
++-------------+---------+------------+---------------+
+| UPS100033   | UPS     | Dispatched | 2025-07-07    |
+| UPS100038   | UPS     | Dispatched | 2025-07-06    |
+| FEDEX100001 | FedEx   | Dispatched | 2025-07-04    |
+| DHL100023   | DHL     | Dispatched | 2025-07-06    |
++-------------+---------+------------+---------------+
+4 rows in set (0.01 sec)
+
+mysql> select count(status) from (select * from ups union select * from fedex union select * from dhl) as tb where status in ('delivered','pending');
++---------------+
+| count(status) |
++---------------+
+|             9 |
++---------------+
+1 row in set (0.02 sec)
+
+mysql> select *,count(status) from (select * from ups union select * from fedex union select * from dhl) as tb where status = 'Delivered' or status = 'Pending ';
++-------------+---------+-----------+---------------+---------------+
+| tracking_id | carrier | status    | delivery_date | count(status) |
++-------------+---------+-----------+---------------+---------------+
+| UPS100032   | UPS     | Delivered | 2025-07-01    |             9 |
++-------------+---------+-----------+---------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select *,count(status) from (select * from ups union all select * from fedex union all select * from dhl) as tb where status = 'Delivered' or status = 'Pending ';
++-------------+---------+-----------+---------------+---------------+
+| tracking_id | carrier | status    | delivery_date | count(status) |
++-------------+---------+-----------+---------------+---------------+
+| UPS100032   | UPS     | Delivered | 2025-07-01    |             9 |
++-------------+---------+-----------+---------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select carrier,status,count(status) as D from (select * from ups union select * from fedex union select * from dhl) as tb group by carrier,status having status in ('delivered','pending')  ;
++---------+-----------+---+
+| carrier | status    | D |
++---------+-----------+---+
+| DHL     | Delivered | 1 |
+| DHL     | Pending   | 2 |
+| FedEx   | Delivered | 1 |
+| FedEx   | Pending   | 2 |
+| UPS     | Delivered | 2 |
+| UPS     | Pending   | 1 |
++---------+-----------+---+
+6 rows in set (0.00 sec)
+
+mysql> select carrier,status,count(status) as D from (select * from ups union select * from fedex union select * from dhl) as tb group by status, carrier having status in ('delivered','pending')  ;
++---------+-----------+---+
+| carrier | status    | D |
++---------+-----------+---+
+| DHL     | Delivered | 1 |
+| FedEx   | Delivered | 1 |
+| UPS     | Delivered | 2 |
+| DHL     | Pending   | 2 |
+| FedEx   | Pending   | 2 |
+| UPS     | Pending   | 1 |
++---------+-----------+---+
+6 rows in set (0.00 sec)
+
+mysql> select * from (select * from ups union all select * from fedex union all select * from dhl) as tb where status = 'Delivered' or status = 'out for delivered ';
++--------------+---------+-----------+---------------+
+| tracking_id  | carrier | status    | delivery_date |
++--------------+---------+-----------+---------------+
+| UPS100032    | UPS     | Delivered | 2025-07-01    |
+| UPS100037    | UPS     | Delivered | 2025-07-05    |
+| FEDEX100003  | FedEx   | Delivered | 2025-07-03    |
+| DHL100021    | DHL     | Delivered | 2025-07-04    |
++--------------+---------+-----------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from (select * from ups union all select * from fedex union all select * from dhl) as tb where status = 'Delivered' or status = 'Out for Delivery ';
++--------------+---------+------------------+---------------+
+| tracking_id  | carrier | status           | delivery_date |
++--------------+---------+------------------+---------------+
+| UPS100032    | UPS     | Delivered        | 2025-07-01    |
+| UPS100034    | UPS     | Out for Delivery | 2025-07-08    |
+| UPS100037    | UPS     | Delivered        | 2025-07-05    |
+| UPS100039    | UPS     | Out for Delivery | 2025-07-04    |
+| FEDEX100003  | FedEx   | Delivered        | 2025-07-03    |
+| FEDEX100004  | FedEx   | Out for Delivery | 2025-07-07    |
+| DHL100021    | DHL     | Delivered        | 2025-07-04    |
+| DHL100024    | DHL     | Out for Delivery | 2025-07-07    |
++--------------+---------+------------------+---------------+
+8 rows in set (0.00 sec)
+
+mysql> select * from (select * from ups union all select * from fedex union all select * from dhl) as tb ;
++--------------+---------+------------------+---------------+
+| tracking_id  | carrier | status           | delivery_date |
++--------------+---------+------------------+---------------+
+| UPS100032    | UPS     | Delivered        | 2025-07-01    |
+| UPS100042    | UPS     | Pending          | 2025-11-11    |
+| UPS100033    | UPS     | Dispatched       | 2025-07-07    |
+| UPS100034    | UPS     | Out for Delivery | 2025-07-08    |
+| UPS100035    | UPS     | Delayed          | 2025-07-09    |
+| UPS100036    | UPS     | In Transit       | 2025-07-03    |
+| UPS100037    | UPS     | Delivered        | 2025-07-05    |
+| UPS100038    | UPS     | Dispatched       | 2025-07-06    |
+| UPS100039    | UPS     | Out for Delivery | 2025-07-04    |
+| UPS100040    | UPS     | Delayed          | 2025-07-12    |
+| FEDEX100001  | FedEx   | Dispatched       | 2025-07-04    |
+| FEDEX100002  | FedEx   | In Transit       | 2025-07-05    |
+| FEDEX100006  | FedEx   | Pending          | 2025-06-29    |
+| FEDEX100003  | FedEx   | Delivered        | 2025-07-03    |
+| FEDEX100004  | FedEx   | Out for Delivery | 2025-07-07    |
+| FEDEX100007  | FedEx   | Pending          | 2025-01-09    |
+| FEDEX100005  | FedEx   | Delayed          | 2025-07-08    |
+| DHL100021    | DHL     | Delivered        | 2025-07-04    |
+| DHL100027    | DHL     | Pending          | 2025-07-23    |
+| DHL100022    | DHL     | In Transit       | 2025-07-05    |
+| DHL100023    | DHL     | Dispatched       | 2025-07-06    |
+| DHL100028    | DHL     | Pending          | 2025-12-23    |
+| DHL100024    | DHL     | Out for Delivery | 2025-07-07    |
+| DHL100025    | DHL     | Delayed          | 2025-07-08    |
+| DHL100026    | DHL     | In Transit       | 2025-07-03    |
++--------------+---------+------------------+---------------+
+25 rows in set (0.00 sec)
+
+mysql> select * from (select * from ups union all select * from fedex union all select * from dhl) as tb where status = 'delayed';
++-------------+---------+---------+---------------+
+| tracking_id | carrier | status  | delivery_date |
++-------------+---------+---------+---------------+
+| UPS100035   | UPS     | Delayed | 2025-07-09    |
+| UPS100040   | UPS     | Delayed | 2025-07-12    |
+| FEDEX100005 | FedEx   | Delayed | 2025-07-08    |
+| DHL100025   | DHL     | Delayed | 2025-07-08    |
++-------------+---------+---------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from (select * from ups union select * from fedex union select * from dhl) as tb where status = 'delayed';
++-------------+---------+---------+---------------+
+| tracking_id | carrier | status  | delivery_date |
++-------------+---------+---------+---------------+
+| UPS100035   | UPS     | Delayed | 2025-07-09    |
+| UPS100040   | UPS     | Delayed | 2025-07-12    |
+| FEDEX100005 | FedEx   | Delayed | 2025-07-08    |
+| DHL100025   | DHL     | Delayed | 2025-07-08    |
++-------------+---------+---------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from (select * from ups union select * from fedex union select * from dhl) as tb where status = 'delivered';
++--------------+---------+-----------+---------------+
+| tracking_id  | carrier | status    | delivery_date |
++--------------+---------+-----------+---------------+
+| UPS100032    | UPS     | Delivered | 2025-07-01    |
+| UPS100037    | UPS     | Delivered | 2025-07-05    |
+| FEDEX100003  | FedEx   | Delivered | 2025-07-03    |
+| DHL100021    | DHL     | Delivered | 2025-07-04    |
++--------------+---------+-----------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> select count(status), status from (select * from ups union select * from fedex union select * from dhl) as tb group by status;
++---------------+------------------+
+| count(status) | status           |
++---------------+------------------+
+|             4 | Delayed          |
+|             4 | Delivered        |
+|             4 | Dispatched       |
+|             4 | In Transit       |
+|             4 | Out for Delivery |
+|             5 | Pending          |
++---------------+------------------+
+6 rows in set (0.00 sec)
+
+mysql> select count(elivery_date), status, delivery_date from (select * from ups union select * from fedex union select * from dhl) as tb group by delivery_date;
+ERROR 1054 (42S22): Unknown column 'elivery_date' in 'field list'
+mysql> select count(delivery_date), status, delivery_date from (select * from ups union select * from fedex union select * from dhl) as tb group by delivery_date;
++----------------------+------------------+---------------+
+| count(delivery_date) | status           | delivery_date |
++----------------------+------------------+---------------+
+|                    1 | Pending          | 2025-01-09    |
+|                    1 | Pending          | 2025-06-29    |
+|                    1 | Delivered        | 2025-07-01    |
+|                    3 | In Transit       | 2025-07-03    |
+|                    3 | Out for Delivery | 2025-07-04    |
+|                    3 | Delivered        | 2025-07-05    |
+|                    2 | Dispatched       | 2025-07-06    |
+|                    3 | Dispatched       | 2025-07-07    |
+|                    3 | Out for Delivery | 2025-07-08    |
+|                    1 | Delayed          | 2025-07-09    |
+|                    1 | Delayed          | 2025-07-12    |
+|                    1 | Pending          | 2025-07-23    |
+|                    1 | Pending          | 2025-11-11    |
+|                    1 | Pending          | 2025-12-23    |
++----------------------+------------------+---------------+
+14 rows in set (0.00 sec)
+
+mysql> select count(status), status, delivery_date,carrier from (select * from ups union select * from fedex union select * from dhl) as tb group by delivery_date,status , carrier having in ('delivered') order by delivery_date;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in ('delivered') order by delivery_date' at line 1
+mysql> select count(status), status, delivery_date,carrier from (select * from ups union select * from fedex union select * from dhl) as tb group by delivery_date,status , carrier having status in ('delivered') order by delivery_date;
++---------------+-----------+---------------+---------+
+| count(status) | status    | delivery_date | carrier |
++---------------+-----------+---------------+---------+
+|             1 | Delivered | 2025-07-01    | UPS     |
+|             1 | Delivered | 2025-07-03    | FedEx   |
+|             1 | Delivered | 2025-07-04    | DHL     |
+|             1 | Delivered | 2025-07-05    | UPS     |
++---------------+-----------+---------------+---------+
+4 rows in set (0.02 sec)
+
+mysql> select carrier, status from (select * from ups union select * from fedex union select * from dhl) as tb group by status, carrier having status in ('pending');
++---------+---------+
+| carrier | status  |
++---------+---------+
+| DHL     | Pending |
+| FedEx   | Pending |
+| UPS     | Pending |
++---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select carrier, status from (select * from ups union select * from fedex union select * from dhl) as tb where status in ('pending');
++---------+---------+
+| carrier | status  |
++---------+---------+
+| UPS     | Pending |
+| FedEx   | Pending |
+| FedEx   | Pending |
+| DHL     | Pending |
+| DHL     | Pending |
++---------+---------+
+5 rows in set (0.00 sec)
+
+mysql>
+mysql>

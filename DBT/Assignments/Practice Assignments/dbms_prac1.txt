@@ -1,0 +1,96 @@
+mysql> select * from ms_employee;
++------+----------+-----------+---------+--------------+---------+-----------+
+| ID   | Emp_Name | Dept_name | Dept_ID | Working_Days | Payment | insentive |
++------+----------+-----------+---------+--------------+---------+-----------+
+| 1021 | Omyaa    | developer |     203 |           23 |   28750 |       270 |
+| 1068 | Sagyaaaa | analyst   |     301 |           12 |  125368 |       180 |
+| 5120 | Gaurayaa | Tester    |     225 |           19 |   23750 |       210 |
+| 5121 | Adyaaa   | Tester    |     225 |           28 |   35000 |       180 |
++------+----------+-----------+---------+--------------+---------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| group044           |
+| group044_campus    |
+| group054           |
+| information_schema |
+| performance_schema |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> USE group044
+Database changed
+mysql> create table MS (ID int primary key auto_increment,Emp_Name varchar(20),Dept_name varchar(10),Dept_ID int,Working_Days int,Payment int(Working_Days *1250),insentive  int default(210) );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Working_Days *1250),insentive  int default(210) )' at line 1
+mysql> create table MS (ID int primary key auto_increment,Emp_Name varchar(20),Dept_name varchar(10),Dept_ID int,Working_Days int,Payment int default (Working_Days *1250),insentive  int default(210) );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_group044 |
++--------------------+
+| ms                 |
+| ms_employee        |
++--------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc ms;
++--------------+-------------+------+-----+-------------------------+-------------------+
+| Field        | Type        | Null | Key | Default                 | Extra             |
++--------------+-------------+------+-----+-------------------------+-------------------+
+| ID           | int         | NO   | PRI | NULL                    | auto_increment    |
+| Emp_Name     | varchar(20) | YES  |     | NULL                    |                   |
+| Dept_name    | varchar(10) | YES  |     | NULL                    |                   |
+| Dept_ID      | int         | YES  |     | NULL                    |                   |
+| Working_Days | int         | YES  |     | NULL                    |                   |
+| Payment      | int         | YES  |     | (`Working_Days` * 1250) | DEFAULT_GENERATED |
+| insentive    | int         | YES  |     | 210                     | DEFAULT_GENERATED |
++--------------+-------------+------+-----+-------------------------+-------------------+
+7 rows in set (0.00 sec)
+
+mysql> desc ms_employee;
++--------------+-------------+------+-----+-------------------------+-------------------+
+| Field        | Type        | Null | Key | Default                 | Extra             |
++--------------+-------------+------+-----+-------------------------+-------------------+
+| ID           | int         | NO   | PRI | NULL                    | auto_increment    |
+| Emp_Name     | varchar(20) | YES  |     | NULL                    |                   |
+| Dept_name    | varchar(10) | YES  |     | NULL                    |                   |
+| Dept_ID      | int         | YES  |     | NULL                    |                   |
+| Working_Days | int         | YES  |     | NULL                    |                   |
+| Payment      | int         | YES  |     | (`Working_Days` * 1250) | DEFAULT_GENERATED |
+| insentive    | int         | YES  |     | 210                     | DEFAULT_GENERATED |
++--------------+-------------+------+-----+-------------------------+-------------------+
+7 rows in set (0.00 sec)
+
+mysql> insert into ms values (default, 'Sagyaaaa','data analyst',301,12,default,180);
+ERROR 1406 (22001): Data too long for column 'Dept_name' at row 1
+mysql> insert into ms values (default, 'Sagyaaaa','analyst',301,12,default,180);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ms;
++----+----------+-----------+---------+--------------+---------+-----------+
+| ID | Emp_Name | Dept_name | Dept_ID | Working_Days | Payment | insentive |
++----+----------+-----------+---------+--------------+---------+-----------+
+|  1 | Sagyaaaa | analyst   |     301 |           12 |   15000 |       180 |
++----+----------+-----------+---------+--------------+---------+-----------+
+1 row in set (0.00 sec)
+
+mysql> insert into ms values (1020, 'omyaa','tester,301,21,default,default);
+    '> ;
+    '> ^C
+mysql> insert into ms values (1020, 'omyaa','tester',301,21,default,default);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from ms;
++------+----------+-----------+---------+--------------+---------+-----------+
+| ID   | Emp_Name | Dept_name | Dept_ID | Working_Days | Payment | insentive |
++------+----------+-----------+---------+--------------+---------+-----------+
+|    1 | Sagyaaaa | analyst   |     301 |           12 |   15000 |       180 |
+| 1020 | omyaa    | tester    |     301 |           21 |   26250 |       210 |
++------+----------+-----------+---------+--------------+---------+-----------+
+2 rows in set (0.00 sec)
+
+mysql>
