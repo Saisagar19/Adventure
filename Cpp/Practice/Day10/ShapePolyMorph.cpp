@@ -72,7 +72,8 @@ int main()
 
     ptr = new Square(8);
     cout<<"\n"<<ptr->cal_area();
-
+    
+    delete ptr;
     return 0;    
 
 }
