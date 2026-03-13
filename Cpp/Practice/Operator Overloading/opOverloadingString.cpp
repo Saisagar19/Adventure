@@ -5,26 +5,23 @@ using namespace std;
 class myString
 {
     char *name1;
-    // char *name2;
+
     public:
         myString()
         {
             name1 = new char[100];
             name1[0] = '\0';
-            // name1=nullptr;
-            // name2=nullptr;
+        
         }
         myString(const char *c)
         {
             name1 = new char[strlen(c)+1];
             strcpy(name1,c);
-            // name2 = new char[strlen(d)+1];
-            // strcpy(name2,d);
+
         }
         ~myString()
         {
             delete[] name1;
-            // delete[] name2;
         }
 
         int length()                //length
@@ -39,22 +36,21 @@ class myString
             return count;
         }
 
-        void operator=(const myString s)        //equal
+        myString& operator=(const myString &s)        //equal
         {
-            char *des = name1;
-            char *sou = s.name1;
-            while(*sou != '\0')
+            if(this != &s)
             {
-                *des = *sou;
-                des++;
-                sou++;
+                name1 = new char[strlen(s.name1)+1];
+                strcpy(name1, s.name1);
             }
-            *des = '\0';
+            return *this;
         }
 
         myString operator+(const myString s)        //concatination
         {
             myString temp;
+            delete[] temp.name1;
+            temp.name1 = new char[strlen(name1) + strlen(s. name1)+1];
             char *d = temp.name1;
             char *des = name1;
             char *sou = s.name1;
@@ -79,19 +75,17 @@ class myString
         {
             char *des = name1;
             char *sou = s.name1;
+
             while(*sou != '\0' && *des != '\0')
             {
-                if(*sou != *des) return false;
+                if(*sou != *des)
+                    return false;
+
                 sou++;
                 des++;
-                
-            }
-            if(*sou == '\0' && *des == '\0')
-                return true;
-            else{
-                return false;
             }
 
+            return (*sou == '\0' && *des == '\0');
         }
 
         void display()
@@ -102,8 +96,8 @@ class myString
 };
 int main()
 {
-    myString str("sagar   ");
-    myString str1("devil");
+    myString str("sagar");
+    myString str1("sagar");
     // cout<<str.length();
     // str = str1;                 // = operator meaning String Copy  ( = operator )
     cout<<"\n";
@@ -118,7 +112,6 @@ int main()
         cout<<"\nStrings are not equal";
 
     return 0;
-    con.display();
 
 
 
