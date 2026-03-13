@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
 
 class Animal
@@ -10,8 +11,8 @@ class Animal
         Animal()
         {
             cout<<"\nAnimal Default Constructor is called";
-            this->animalName="NA";
-            this->age = 0; 
+            animalName = "NA";
+            age = 0; 
         }
 
         Animal(string n,int a)
@@ -76,8 +77,19 @@ class Cat : public Animal
         {
             cout<<"\nMeow...Meow...Meow....";
         }
-};
 
+        bool operator==(Cat &c)
+        {
+            if(strcmp(animalName.c_str(),c.animalName.c_str()) == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+};
 
 
 int main()
@@ -92,12 +104,13 @@ int main()
 	//My cat name is Puppy & she is 3 month old and it is-a Animal
 	Cat c1("Puppy", 3);
 	Cat c2("Sweety", 4);
+    Cat c3("Sweety", 4);
 	
 	//Use strcmp function to to compare names of 2 Cat
-	// if(c1 == c2)  
-	// 	cout<<"Both are same!"<<endl;
-	// else
-	// 	cout<<"Both are different!"<<endl;
+	if(c2 == c3)            //c2.operator(c3)
+		cout<<"\nBoth are same!"<<endl;
+	else
+		cout<<"\nBoth are different!"<<endl;
 		
 	c1.talk();
 }
