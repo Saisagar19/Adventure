@@ -1,0 +1,386 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 5
+Server version: 5.1.30-community MySQL Community Server (GPL)
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> use infoway067;
+Database changed
+mysql> select * from emp;
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+| EMPNO | ENAME    | GENDER | JOB                 | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+|  6001 | GITA     | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | GITA         | sales@2017 | NULL       |        1 |
+|  6129 | VRUSHALI | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | VRUSHALI     | PUN@8877   | NULL       |        1 |
+|  6473 | SHARMIN  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | SHARMIN      | a12recmpm  | NULL       |        1 |
+|  6781 | BANDISH  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | BANDISH      | a12recmpm  | NULL       |        1 |
+|  7369 | SMITH    | M      | CLERK               | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 |
+|  7415 | AARAV    | M      | CLERK               | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV        | NULL       | 7032300084 |        0 |
+|  7421 | THOMAS   | M      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | THOMAS       | r50mpm     | 7032300011 |        0 |
+|  7499 | ALLEN    | M      | SALESMAN            | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | ALWAYS TESTE | sales@2017 | 7032300096 |        1 |
+|  7521 | WARD     | M      | SALESMAN            | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 |
+|  7566 | JONES    | M      | MANAGER             | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 |
+|  7654 | MARTIN   | M      | SALESMAN            | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 |
+|  7698 | BLAKE    | M      | MANAGER             | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 |
+|  7782 | CLARK    | M      | MANAGER             | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 |
+|  7788 | SCOTT    | M      | ANALYST             | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 |
+|  7839 | KING     | M      | PRESIDENT           | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE   | a12recmpm  | NULL       |        1 |
+|  7844 | TURNER   | M      | SALESMAN            | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | SAND DUST    | sales@2017 | NULL       |        1 |
+|  7876 | ADAMS    | M      | CLERK               | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 |
+|  7888 | Ruhan    | M      | Network             | 7888 | 1983-08-09 | 2000 | NULL |     60 |       1 | Ruhan        | BRD@1122   | NULL       |        1 |
+|  7889 | Neel     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 1000 | NULL |     60 |       0 | Neel         | BRD@1122   | NULL       |        1 |
+|  7900 | JAMES    | M      | CLERK               | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 |
+|  7902 | FORD     | M      | ANALYST             | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 |
+|  7919 | HOFFMAN  | M      | MANAGER             | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL     | sales@2017 | NULL       |        1 |
+|  7920 | GRASS    | M      | SALESMAN            | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS        | sales@2017 | NULL       |        1 |
+|  7934 | MILLER   | M      | CLERK               | 7782 | 1982-01-23 | 1300 | 1300 |     10 |       2 | QUARTERNOTE  | r50mpm     | 7132300055 |        0 |
+|  7945 | AARUSH   | M      | SALESMAN            | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | AARUSH       | ABCDEF     | NULL       |        0 |
+|  7949 | ALEX     | M      | MANAGER             | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | QUARTERREST  | sales@2017 | 7156567183 |        1 |
+|  8433 | NATASHA  | F      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | NATASHA      | sales@2017 | NULL       |        1 |
+|  9400 | SANGITA  | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SANGITA      | NULL       | NULL       |        1 |
+|  9473 | SUPRIYA  | F      | ANALYST             | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SUPRIYA      | XYZ@1234   | NULL       |        1 |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select name, sal from emp where sal = (slect max(sal) from emp);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'max(sal) from emp)' at line 1
+mysql> select name, sal from emp where sal = (select max(sal) from emp);
+ERROR 1054 (42S22): Unknown column 'name' in 'field list'
+mysql> select ename, sal from emp where sal = (select max(sal) from emp);
++-------+------+
+| ename | sal  |
++-------+------+
+| KING  | 5000 |
+| FRED  | 5000 |
++-------+------+
+2 rows in set (0.00 sec)
+
+mysql> select ename,sal from emp where sal > (select avg(sal) from emp );
++---------+------+
+| ename   | sal  |
++---------+------+
+| AARAV   | 3350 |
+| JONES   | 2975 |
+| BLAKE   | 2850 |
+| CLARK   | 2450 |
+| SCOTT   | 3000 |
+| KING    | 5000 |
+| FRED    | 5000 |
+| FORD    | 3000 |
+| HOFFMAN | 4150 |
+| GRASS   | 2575 |
++---------+------+
+10 rows in set (0.01 sec)
+
+mysql> select ename,sal from emp where sal > (select ename from emp where ename = "smith" );
++----------+------+
+| ename    | sal  |
++----------+------+
+| GITA     | 1750 |
+| VRUSHALI | 1750 |
+| SHARMIN  | 1750 |
+| BANDISH  | 1750 |
+| SMITH    |  800 |
+| AARAV    | 3350 |
+| THOMAS   | 1750 |
+| ALLEN    | 1600 |
+| WARD     | 1250 |
+| JONES    | 2975 |
+| MARTIN   | 1250 |
+| BLAKE    | 2850 |
+| CLARK    | 2450 |
+| SCOTT    | 3000 |
+| KING     | 5000 |
+| FRED     | 5000 |
+| TURNER   | 1500 |
+| ADAMS    | 1100 |
+| Ruhan    | 2000 |
+| Neel     | 1000 |
+| JAMES    |  950 |
+| FORD     | 3000 |
+| HOFFMAN  | 4150 |
+| GRASS    | 2575 |
+| MILLER   | 1300 |
+| AARUSH   | 1350 |
+| ALEX     | 1250 |
+| NATASHA  | 1750 |
+| SANGITA  | 1750 |
+| SUPRIYA  | 1750 |
++----------+------+
+30 rows in set (0.02 sec)
+
+mysql> select ename from emp where sal = (select ename from emp where ename = "smith" );
+Empty set (0.00 sec)
+
+mysql> select ename from emp where sal = (select ename from emp where ename = "smith");
+Empty set (0.00 sec)
+
+mysql> select ename from emp where deptno in (select deptno from emp where ename = "smith");
++---------+
+| ename   |
++---------+
+| SHARMIN |
+| BANDISH |
+| SMITH   |
+| JONES   |
+| SCOTT   |
+| FRED    |
+| ADAMS   |
+| FORD    |
++---------+
+8 rows in set (0.02 sec)
+
+mysql> select ename, deptno from emp where deptno in (select deptno from emp where ename = "smith");
++---------+--------+
+| ename   | deptno |
++---------+--------+
+| SHARMIN |     20 |
+| BANDISH |     20 |
+| SMITH   |     20 |
+| JONES   |     20 |
+| SCOTT   |     20 |
+| FRED    |     20 |
+| ADAMS   |     20 |
+| FORD    |     20 |
++---------+--------+
+8 rows in set (0.00 sec)
+
+mysql> select ename, deptno from emp where job in (select job from emp where ename = "jones");
++---------+--------+
+| ename   | deptno |
++---------+--------+
+| JONES   |     20 |
+| BLAKE   |     30 |
+| CLARK   |     10 |
+| HOFFMAN |     30 |
+| ALEX    |     30 |
++---------+--------+
+5 rows in set (0.01 sec)
+
+mysql> select ename, deptno, job from emp where job in (select job from emp where ename = "jones");
++---------+--------+---------+
+| ename   | deptno | job     |
++---------+--------+---------+
+| JONES   |     20 | MANAGER |
+| BLAKE   |     30 | MANAGER |
+| CLARK   |     10 | MANAGER |
+| HOFFMAN |     30 | MANAGER |
+| ALEX    |     30 | MANAGER |
++---------+--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select ename, deptno, job from emp where mgr in (select mgr from emp where ename = "Allen");
++--------+--------+----------+
+| ename  | deptno | job      |
++--------+--------+----------+
+| ALLEN  |     30 | SALESMAN |
+| WARD   |     30 | SALESMAN |
+| MARTIN |     30 | SALESMAN |
+| TURNER |     30 | SALESMAN |
+| JAMES  |     30 | CLERK    |
+| ALEX   |     30 | MANAGER  |
++--------+--------+----------+
+6 rows in set (0.00 sec)
+
+mysql> select mgr,ename, deptno, job from emp where mgr in (select mgr from emp where ename = "Allen");
++------+--------+--------+----------+
+| mgr  | ename  | deptno | job      |
++------+--------+--------+----------+
+| 7698 | ALLEN  |     30 | SALESMAN |
+| 7698 | WARD   |     30 | SALESMAN |
+| 7698 | MARTIN |     30 | SALESMAN |
+| 7698 | TURNER |     30 | SALESMAN |
+| 7698 | JAMES  |     30 | CLERK    |
+| 7698 | ALEX   |     30 | MANAGER  |
++------+--------+--------+----------+
+6 rows in set (0.00 sec)
+
+mysql> select mgr,ename, deptno, job from emp where sal in (select max(sal) from emp);
++------+-------+--------+----------------+
+| mgr  | ename | deptno | job            |
++------+-------+--------+----------------+
+| NULL | KING  |     10 | PRESIDENT      |
+| 7839 | FRED  |     20 | vice PRESIDENT |
++------+-------+--------+----------------+
+2 rows in set (0.02 sec)
+
+mysql> select mgr,ename, deptno, job from emp where deptno in (select deptno from emp where ename = "clark");
++------+--------+--------+-----------+
+| mgr  | ename  | deptno | job       |
++------+--------+--------+-----------+
+| 7902 | AARAV  |     10 | CLERK     |
+| 7920 | THOMAS |     10 | CLERK     |
+| 7839 | CLARK  |     10 | MANAGER   |
+| NULL | KING   |     10 | PRESIDENT |
+| 7782 | MILLER |     10 | CLERK     |
++------+--------+--------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> select mgr,ename, deptno, job from emp where sal in (select min(sal) from emp);
++------+-------+--------+-------+
+| mgr  | ename | deptno | job   |
++------+-------+--------+-------+
+| 7902 | SMITH |     20 | CLERK |
++------+-------+--------+-------+
+1 row in set (0.01 sec)
+
+mysql> select mgr,ename, deptno, job from emp where emp in (select mgr from emp);
+ERROR 1054 (42S22): Unknown column 'emp' in 'IN/ALL/ANY subquery'
+mysql> select mgr,ename from emp where emp in (select mgr from emp);
+ERROR 1054 (42S22): Unknown column 'emp' in 'IN/ALL/ANY subquery'
+mysql> select mgr,ename from emp where empno in (select mgr from emp);
++------+---------+
+| mgr  | ename   |
++------+---------+
+| 7839 | JONES   |
+| 7839 | BLAKE   |
+| 7839 | CLARK   |
+| 7566 | SCOTT   |
+| NULL | KING    |
+| 7888 | Ruhan   |
+| 7566 | FORD    |
+| 7566 | HOFFMAN |
+| 7919 | GRASS   |
++------+---------+
+9 rows in set (0.00 sec)
+
+mysql> select ename from emp where dept not in (select dept from emp where ename = 'allen');
+ERROR 1054 (42S22): Unknown column 'dept' in 'field list'
+mysql> select ename from emp where dept not in (select deptno from emp where ename = 'allen');
+ERROR 1054 (42S22): Unknown column 'dept' in 'IN/ALL/ANY subquery'
+mysql> select ename from emp where deptno not in (select deptno from emp where ename = 'allen');
++----------+
+| ename    |
++----------+
+| VRUSHALI |
+| SHARMIN  |
+| BANDISH  |
+| SMITH    |
+| AARAV    |
+| THOMAS   |
+| JONES    |
+| CLARK    |
+| SCOTT    |
+| KING     |
+| FRED     |
+| ADAMS    |
+| Ruhan    |
+| Neel     |
+| FORD     |
+| MILLER   |
+| SANGITA  |
+| SUPRIYA  |
++----------+
+18 rows in set (0.00 sec)
+
+mysql> select deptno, ename from emp where deptno not in (select deptno from emp where ename = 'allen');
++--------+----------+
+| deptno | ename    |
++--------+----------+
+|     50 | VRUSHALI |
+|     20 | SHARMIN  |
+|     20 | BANDISH  |
+|     20 | SMITH    |
+|     10 | AARAV    |
+|     10 | THOMAS   |
+|     20 | JONES    |
+|     10 | CLARK    |
+|     20 | SCOTT    |
+|     10 | KING     |
+|     20 | FRED     |
+|     20 | ADAMS    |
+|     60 | Ruhan    |
+|     60 | Neel     |
+|     20 | FORD     |
+|     10 | MILLER   |
+|     50 | SANGITA  |
+|     50 | SUPRIYA  |
++--------+----------+
+18 rows in set (0.00 sec)
+
+mysql> select deptno, ename from emp where job in (select max(sal),job from emp);
+ERROR 1241 (21000): Operand should contain 1 column(s)
+mysql> select deptno, ename,job from emp where sal in (select max(sal),job from emp);
+ERROR 1241 (21000): Operand should contain 1 column(s)
+mysql> select deptno, ename,job from emp where sal in (select max(sal) from emp);
++--------+-------+----------------+
+| deptno | ename | job            |
++--------+-------+----------------+
+|     10 | KING  | PRESIDENT      |
+|     20 | FRED  | vice PRESIDENT |
++--------+-------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> select deptno, ename,job from emp where sal > (select avg(sal) from emp where deptno = 30);
++--------+---------+----------------+
+| deptno | ename   | job            |
++--------+---------+----------------+
+|     10 | AARAV   | CLERK          |
+|     20 | JONES   | MANAGER        |
+|     30 | BLAKE   | MANAGER        |
+|     10 | CLARK   | MANAGER        |
+|     20 | SCOTT   | ANALYST        |
+|     10 | KING    | PRESIDENT      |
+|     20 | FRED    | vice PRESIDENT |
+|     60 | Ruhan   | Network        |
+|     20 | FORD    | ANALYST        |
+|     30 | HOFFMAN | MANAGER        |
+|     30 | GRASS   | SALESMAN       |
++--------+---------+----------------+
+11 rows in set (0.02 sec)
+
+mysql> select deptno, ename,job from emp where hiredate > (select hiredate from emp where ename = "king");
++--------+---------+----------------+
+| deptno | ename   | job            |
++--------+---------+----------------+
+|     10 | AARAV   | CLERK          |
+|     20 | SCOTT   | ANALYST        |
+|     20 | FRED    | vice PRESIDENT |
+|     20 | ADAMS   | CLERK          |
+|     60 | Ruhan   | Network        |
+|     60 | Neel    | vice PRESIDENT |
+|     30 | JAMES   | CLERK          |
+|     20 | FORD    | ANALYST        |
+|     30 | HOFFMAN | MANAGER        |
+|     10 | MILLER  | CLERK          |
+|     30 | ALEX    | MANAGER        |
++--------+---------+----------------+
+11 rows in set (0.02 sec)
+
+mysql> select deptno, ename,job from emp where sal = (select sal from emp where ename = "smith");
++--------+-------+-------+
+| deptno | ename | job   |
++--------+-------+-------+
+|     20 | SMITH | CLERK |
++--------+-------+-------+
+1 row in set (0.01 sec)
+
+mysql> select deptno, ename,job,sal from emp where sal = (select sal from emp where ename = "smith");
++--------+-------+-------+------+
+| deptno | ename | job   | sal  |
++--------+-------+-------+------+
+|     20 | SMITH | CLERK |  800 |
++--------+-------+-------+------+
+1 row in set (0.00 sec)
+
+mysql> select deptno, ename,job,hiredate from emp where hiredate > (select hiredate from emp where ename = "king");
++--------+---------+----------------+------------+
+| deptno | ename   | job            | hiredate   |
++--------+---------+----------------+------------+
+|     10 | AARAV   | CLERK          | 1981-12-31 |
+|     20 | SCOTT   | ANALYST        | 1982-12-09 |
+|     20 | FRED    | vice PRESIDENT | 1983-08-09 |
+|     20 | ADAMS   | CLERK          | 1983-01-12 |
+|     60 | Ruhan   | Network        | 1983-08-09 |
+|     60 | Neel    | vice PRESIDENT | 1983-08-09 |
+|     30 | JAMES   | CLERK          | 1981-12-03 |
+|     20 | FORD    | ANALYST        | 1981-12-03 |
+|     30 | HOFFMAN | MANAGER        | 1982-03-24 |
+|     10 | MILLER  | CLERK          | 1982-01-23 |
+|     30 | ALEX    | MANAGER        | 1982-01-24 |
++--------+---------+----------------+------------+
+11 rows in set (0.00 sec)
+
+mysql>
