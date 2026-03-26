@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task4-Color</title>
+    <style>
+      .circle {
+        border: 3px solid black;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: black;
+      }
+
+      .outer{
+        border: 3px solid black;
+        border-radius: 50px;
+        display: block;
+        width: 350px;
+        margin: auto;
+        padding: 10px;
+      }
+      .inner
+      {
+        margin-left: 25px;
+        margin-top: 10px;
+      }
+
+      button
+      {
+        background-color: pink;
+        border-radius: 8px;
+
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="circle" id = "c1"></div>
+      <div class="inner">
+      <button  type="button" onclick="colorChange(0)">RED</button>
+      <button type="button" onclick="colorChange(1)">YELLOW<s/button>
+      <button type="button" onclick="colorChange(2)">BLUE</button>
+      <button type="button" onclick="colorChange(3)">GREY</button>
+      <button type="button" onclick="colorChange(4)">BLACK</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function colorChange(num) {
+        let element = document.getElementById("c1");
+    
+        switch(num)
+        {
+            case 0:
+                element.style.backgroundColor="red";
+                break;
+            case 1:
+                element.style.backgroundColor="yellow";
+                break;
+            case 2:
+                element.style.backgroundColor="blue";
+                break;
+            case 3:
+                element.style.backgroundColor="grey";
+                break;
+            default:
+                element.style.backgroundColor="black";
+                break;
+        }
+    
+    };
+  </script>
+</html>

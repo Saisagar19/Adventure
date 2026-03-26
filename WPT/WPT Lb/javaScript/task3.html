@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<style>
+.container{
+    /* display: flex; */
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: fit-content;
+        margin: auto;
+        /* height: 100vh; */
+        padding: 50px;
+        margin-top: 250px;
+
+}
+</style>
+<body>
+
+    <div class="container">
+    <label for="num1">Enter First Number: </label>
+    <input type="number" name="number1" id="num1" value="4"><br>
+    <label for="num2">Enter First Number: </label>
+    <input type="number" name="number2" id="num2" value="5"><br>
+
+    <button type="button" onclick="add()">ADD</button>
+    <button type="button" onclick="sub()">SUB</button>
+    <button type="button" onclick="mul()">MUL</button>
+    <button type="button" onclick="div()">DIV</button>
+
+    <P>Result: <p id="ans">0</p></P>
+
+
+    </div>
+    
+        <Script>
+           function add()
+            {
+                let num1=document.getElementById('num1').value;
+                let num2=document.getElementById('num2').value;
+                return document.getElementById('ans').innerHTML = parseInt(num1) + parseInt(num2);
+            }
+            function sub()
+            {
+                let num1=document.getElementById('num1').value;
+                let num2=document.getElementById('num2').value;
+                return document.getElementById('ans').innerHTML = parseInt(num1) - parseInt(num2);
+            }
+            function mul()
+            {
+                let num1=document.getElementById('num1').value;
+                let num2=document.getElementById('num2').value;
+                return document.getElementById('ans').innerHTML = parseInt(num1) * parseInt(num2);
+            }
+            function div()
+            {
+                let num1=document.getElementById('num1').value;
+                let num2=document.getElementById('num2').value;
+                return document.getElementById('ans').innerHTML = parseInt(num1) / parseInt(num2);
+            }
+     
+        </Script>
+</body>
+</html>

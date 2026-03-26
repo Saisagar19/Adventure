@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Object</title>
+</head>
+<body>
+<!-- Task : temprary address same as permanant 
+Task: create array of object for 10 employee having id,name,post,salary,gender,age,city,department.
+-display all employee details 
+-display only employee detail whoes gender is female
+-display only employee detail  who is HR
+-display only employee detail salary > 30000 and salary<60000
+-display only employee detail whoes age > 55 
+-display only employee detail belong to same department.  -->
+<script class="data">
+let emp = [
+        {id:101,name:"sagar",post:"SDE",salary:"45000",gender:"male",age:"22",city:"pune",department:"IT"},
+        {id:102,name:"rahul",post:"Backend Dev",salary:"55000",gender:"male",age:"56",city:"mumbai",department:"IT"},
+        {id:103,name:"priya",post:"HR",salary:"40000",gender:"female",age:"59",city:"delhi",department:"HR"},
+        {id:104,name:"amit",post:"Data Analyst",salary:"60000",gender:"male",age:"44",city:"bangalore",department:"Analytics"},
+        {id:105,name:"neha",post:"UI Designer",salary:"48000",gender:"female",age:"55",city:"pune",department:"Design"},
+        {id:106,name:"karan",post:"DevOps Engineer",salary:"70000",gender:"male",age:"30",city:"hyderabad",department:"IT"},
+        {id:107,name:"sneha",post:"QA Engineer",salary:"42000",gender:"female",age:"54",city:"chennai",department:"Testing"},
+        {id:108,name:"vikas",post:"HR",salary:"80000",gender:"male",age:"30",city:"noida",department:"Management"},
+        {id:109,name:"ananya",post:"Frontend Dev",salary:"50000",gender:"female",age:"22",city:"kolkata",department:"IT"},
+        {id:110,name:"rohit",post:"System Admin",salary:"47000",gender:"male",age:"28",city:"ahmedabad",department:"IT"}
+        ]
+
+document.writeln(`<b>Q. display all employee details </b> <br>`)
+for(let i = 0;i<emp.length;i++)
+{
+    document.writeln(`ID:${emp[i].id} Name:${emp[i].name} Post:${emp[i].post} Salary${emp[i].salary} Gender:${emp[i].gender} Age:${emp[i].age} City:${emp[i].city} Department: ${emp[i].department} <br>`);
+}
+document.writeln(`<hr>`)
+document.writeln(`<b>Q. display only employee detail whoes gender is female</b> <br>`)
+for(let i = 0;i<emp.length;i++)
+{
+    if(emp[i].gender === "female")
+    document.writeln(`ID:${emp[i].id} Name:${emp[i].name} Post:${emp[i].post} Salary${emp[i].salary} Gender:${emp[i].gender} Age:${emp[i].age} City:${emp[i].city} Department: ${emp[i].department} <br>`);
+}
+document.writeln(`<hr>`)
+document.writeln(`<b>Q. display only employee detail  who is HR</b> <br>`)
+for(let i = 0; i < emp.length; i++)
+{
+    if(emp[i].post == "HR")
+    document.writeln(`ID:${emp[i].id} Name:${emp[i].name} Post:${emp[i].post} Salary${emp[i].salary} Gender:${emp[i].gender} Age:${emp[i].age} City:${emp[i].city} Department: ${emp[i].department} <br>`);
+}
+document.writeln(`<hr>`)
+document.writeln(`<b>Q. display only employee detail salary > 30000 and salary<60000 </b><br>`)
+for(let i = 0; i < emp.length; i++)
+{
+    if(emp[i].salary > 30000 && emp[i].salary < 60000)
+    document.writeln(`ID:${emp[i].id} Name:${emp[i].name} Post:${emp[i].post} Salary: ${emp[i].salary} Gender:${emp[i].gender} Age:${emp[i].age} City:${emp[i].city} Department: ${emp[i].department} <br>`);
+}
+
+document.writeln(`<hr>`)
+document.writeln(`<b>Q. display only employee detail whoes age > 55  </b><br>`)
+for(let i = 0; i < emp.length; i++)
+{
+    if(emp[i].age > 55)
+    document.writeln(`ID:${emp[i].id} Name:${emp[i].name} Post:${emp[i].post} Salary: ${emp[i].salary} Gender:${emp[i].gender} Age:${emp[i].age} City:${emp[i].city} Department: ${emp[i].department} <br>`);
+}
+
+document.writeln(`<hr>`)
+document.writeln(`<b>Q. display only employee detail belong to same department.  </b><br>`)
+for(let i = 0; i < emp.length; i++)
+{
+    for(let j = 0; j < emp.length; j++)
+    {
+        if(emp[i].department == emp[j].department)
+        document.writeln(`ID:${emp[i].id} Name:${emp[i].name} Post:${emp[i].post} Salary: ${emp[i].salary} Gender:${emp[i].gender} Age:${emp[i].age} City:${emp[i].city} Department: ${emp[i].department} <br>`);
+        break;
+    }
+}
+
+
+</script>
+</body>
+</html>
