@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+</style>
+<body>
+    <button type="button" onclick="generateTable()" id="b1">Generate Table</button>
+    <table border="" width = 50%> 
+        <thead>
+            <tr>
+                <th>ID</th><th>NAME</th><th>POST</th><th>SALARY</th>
+            </tr>
+            <tbody id="tb">
+            </tbody>
+        </thead>
+    </table>
+
+    <script>
+    let emp = [
+    {id:1,name:"Abhishek",post:"Manager",salary:"950000"},
+    {id:2,name:"Payal",post:"HR",salary:"950000"},
+    {id:3,name:"Swayam",post:"TL",salary:"950000"},
+    {id:4,name:"Swati",post:"Fullstack Developer",salary:"950000"},
+    {id:5,name:"Tanmay",post:"React Developer",salary:"950000"}
+  ]
+
+  const generateTable = ()=>
+  {
+    let tbody = document.getElementById("tb");
+    for(let i = 0; i< emp.length; i++)
+    {
+        let newRow = document.createElement("tr");
+        newRow.innerHTML = `<td>${emp[i].id}</td><td>${emp[i].name}</td><td>${emp[i].post}</td><td>${emp[i].salary}</td>`;
+        tbody.appendChild(newRow);
+        
+    }
+    let dib = document.getElementById("b1").disabled = true;
+  }
+  
+
+    </script>
+</body>
+</html>

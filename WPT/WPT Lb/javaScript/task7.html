@@ -1,30 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Clock</title>
-</head>
+  </head>
 
-<style>
-    .circle
-    {
-        display: flex;
-        border: 2px solid black;
-        width: 100px;
-        height: 50px;
-        border-radius: 40px;
+  <style>
+    .circle {
+      display: flex;
+      border: 1px solid whitesmoke;
+      box-shadow: 0px 3px 40px beige;
+      width: 150px;
+      height: 50px;
+      border-radius: 40px;
+      align-items: center;
+      justify-content: center;
+      color: whitesmoke;
     }
-    .align
-    {
-        display: flex;
-        justify-content: center;
-        margin-top: 25%;
+    .align {
+      display: flex;
+      justify-content: center;
+      margin-top: 20%;
     }
-</style>
-
-<body>
-<div class="align"><div class="circle"></div></div>
     
-</body>
+  </style>
+
+  <body style="background-color: black">
+    <div class="align">
+      <div class="circle" id="d1">
+        <span id="sp1"></span>:<span id="sp2"></span>:<span id="sp3"> </span>
+        <span id="sp4"></span>
+      </div>
+    </div>
+
+    <script>
+      const myClock = () => {
+        let newDate = new Date();
+        document.getElementById("d1").innerHTML = newDate.toLocaleTimeString();
+        // const hours = document.getElementById("sp1").innerHTML = newDate.getHours();
+        // document.getElementById("sp1").innerHTML = hours;
+        // document.getElementById("sp2").innerHTML = newDate.getMinutes();
+        // document.getElementById("sp3").innerHTML = newDate.getSeconds();
+        // const changeFormatter = hours >= 12 ? "PM" : "AM";
+        // document.getElementById("sp4").innerHTML = changeFormatter;
+        
+      };
+      myClock();
+      setInterval(myClock, 1000);
+    </script>
+  </body>
 </html>
