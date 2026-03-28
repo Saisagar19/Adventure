@@ -1,0 +1,19 @@
+28/03/2026
+
+Introductions of Ajax
+
+Why to use use Ajax
+Where to use Ajax
+
+// install jsoon-server library 
+npm install -g json-server
+npm install json-server
+
+// cmd to start json server and database
+json-server --watch -p 8888 db.json
+
+GET - We can fetch data from server by using get method.
+DELETE  - We can delete data from server
+POST - we can add data to server db
+PUT - we can update data from server
+ 

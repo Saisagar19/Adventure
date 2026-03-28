@@ -1,0 +1,52 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRUD Dashboard</title>
+  <script src="dashboard.js"></script>
+</head>
+
+<body>
+
+<button type="button" onclick="getData()">Load Data</button>
+
+<table border="1" width="60%">
+  <thead>
+    <tr>
+      <th>ID</th><th>NAME</th><th>ROLE</th><th>SALARY</th><th>DEPARTMENT</th>
+    </tr>
+  </thead>
+  <tbody id="tb"></tbody>
+</table>
+
+<hr>
+
+<!-- ADD -->
+<h3>Add Employee</h3>
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="role" placeholder="Role">
+<input type="text" id="salary" placeholder="Salary">
+<input type="text" id="dept" placeholder="Department">
+<button onclick="addRecord()">Add</button>
+
+<hr>
+
+<!-- UPDATE -->
+<h3>Update Employee</h3>
+<input type="text" id="uid_update" placeholder="Enter ID">
+<input type="text" id="name_update" placeholder="Name">
+<input type="text" id="role_update" placeholder="Role">
+<input type="text" id="salary_update" placeholder="Salary">
+<input type="text" id="dept_update" placeholder="Department">
+<button onclick="updateRecord()">Update</button>
+
+<hr>
+
+<!-- DELETE -->
+<h3>Delete Employee</h3>
+<input type="text" id="uid" placeholder="Enter ID">
+<button onclick="deleteRecord()">Delete</button>
+
+</body>
+</html>
