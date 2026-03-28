@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Convertion Of JSON to OBJ</title>
 </head>
 <body>
-    
-    <Script>
-        let emp = {id:101,name:"sagar",post:"SDE",salary:"45000",gender:"male",age:"22",city:"pune",department:"IT"};
-        let jsonData = JSON.stringify(emp);     // javascricpt convert obj type data to json
-        document.writeln(jsonData);
-
-        document.writeln(`<hr>`);
-        //Json.parse(): convert json type data into js obj.
-        let jsObjData  = JSON.parse(jsonData);
-        document.write(jsObjData.name)
-
-    </Script>
+    <script>
+        let emp={id:1,name:"sagar",post:"SDE",salary:85000}
+        let jsonObj = JSON.stringify(emp);
+        document.writeln(jsonObj);
+        document.writeln(`<hr>`)
+        let objJson=JSON.parse(jsonObj)
+        document.writeln(objJson.name);
+    </script>
 </body>
 </html>
