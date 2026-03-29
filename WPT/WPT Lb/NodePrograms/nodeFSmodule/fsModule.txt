@@ -1,0 +1,2 @@
+There are two ways of CRUD 
+1.Synchronus 

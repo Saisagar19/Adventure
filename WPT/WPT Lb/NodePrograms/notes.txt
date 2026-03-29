@@ -1,0 +1,171 @@
+Modules in NodeJS
+
+tyeps of modules in nodejs
+1.core module: module provide by node js to us
+2.local module: module created by developer for their use in project 
+3.thirdparty module: module created and developed by third party vendor, to use it first we have to install it then we can use it.
+
+*core module: 
+    os: it give information about operating system
+    path: it return information aout file or directory path.
+    _dirname: it gives current directory address
+    _filename: it gves current filepath.
+    
+
+
+
+
+
+
+
+    ws [Version 10.0.26200.8039]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\CDAC\Adventure\WPT\WPT Lb\Ajax>json-server --watch -p 8888 db.json
+--watch/-w can be omitted, JSON Server 1+ watches for file changes by default
+JSON Server started on PORT :8888
+Press CTRL-C to stop
+Watching db.json...
+
+(˶ᵔ ᵕ ᵔ˶)
+
+Index:
+http://localhost:8888/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:8888/employees
+http://localhost:8888/users
+
+ *  History restored 
+
+(c) Microsoft Corporation. All rights reserved.
+
+D:\CDAC\Adventure\WPT\WPT Lb\Ajax>json-server --watch -p 8888 db.json
+--watch/-w can be omitted, JSON Server 1+ watches for file changes by default
+JSON Server started on PORT :8888
+Press CTRL-C to stop
+Watching db.json...
+
+♡( ◡‿◡ )
+
+Index:
+http://localhost:8888/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:8888/employees
+http://localhost:8888/users
+
+ *  History restored 
+
+(c) Microsoft Corporation. All rights reserved.
+
+D:\CDAC\Adventure\WPT\WPT Lb\Ajax>json-server --watch -p 8888 db.json
+--watch/-w can be omitted, JSON Server 1+ watches for file changes by default
+JSON Server started on PORT :8888
+Press CTRL-C to stop
+Watching db.json...
+
+♡( ◡‿◡ )
+
+Index:
+http://localhost:8888/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:8888/employees
+http://localhost:8888/users
+
+ *  History restored 
+
+Microsoft Windows [Version 10.0.26200.8039]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\CDAC\Adventure\WPT\WPT Lb\Ajax>node 
+Welcome to Node.js v24.14.1.
+Type ".help" for more information.
+> let greet = "Welcome you to all In Nodejs REPL"
+undefined
+> greet
+'Welcome you to all In Nodejs REPL'
+> function evenNum(num){
+| return num%2==0;
+| }
+undefined
+> evenNum(10)
+true
+> .save nodejsProgram.js
+Session saved to: nodejsProgram.js
+> .load newProgram.js
+Failed to load: newProgram.js
+> .load newProgram.js
+Failed to load: newProgram.js
+> exit
+Uncaught ReferenceError: exit is not defined
+> .exit
+
+D:\CDAC\Adventure\WPT\WPT Lb\Ajax>cd NodePrograms
+The system cannot find the path specified.
+
+D:\CDAC\Adventure\WPT\WPT Lb\Ajax>cd. NodePrograms
+The system cannot find the path specified.
+
+D:\CDAC\Adventure\WPT\WPT Lb\Ajax>cd ..           
+
+D:\CDAC\Adventure\WPT\WPT Lb>cd. NodePrograms
+The system cannot find the path specified.
+
+D:\CDAC\Adventure\WPT\WPT Lb>cd NodePrograms 
+
+D:\CDAC\Adventure\WPT\WPT Lb\NodePrograms>node
+Welcome to Node.js v24.14.1.
+Type ".help" for more information.
+> .load newPrograms.js
+Failed to load: newPrograms.js
+> .load newProgram.js
+function fullName(firttName,mName,lName)
+{
+    return firttName + mName + lName;
+}
+undefined
+> fullName("sagar","r","ambekar")
+'sagarrambekar'
+> .exit
+
+D:\CDAC\Adventure\WPT\WPT Lb\NodePrograms>node 
+Welcome to Node.js v24.14.1.
+Type ".help" for more information.
+> .load newProgram.js
+function fullName(firttName,mName,lName)
+{
+    return firttName + mName + lName;
+}
+undefined
+> fullName("sagar "," r "," ambekar")
+'sagar  r  ambekar'
+> .exit
+
+D:\CDAC\Adventure\WPT\WPT Lb\NodePrograms>node coremodule.js
+x64
+
+D:\CDAC\Adventure\WPT\WPT Lb\NodePrograms>node coremodule.js
+x64
+LAPTOP-8HOG39JT
+
+D:\CDAC\Adventure\WPT\WPT Lb\NodePrograms>node coremodule.js
+x64
+LAPTOP-8HOG39JT
+
+D:\CDAC\Adventure\WPT\WPT Lb\NodePrograms>node coremodule.js
+x64
+LAPTOP-8HOG39JT
+C:\Users\saisagar
+8452902912
+2185461760
