@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+</head>
+<style>
+    #outer
+    {
+        border: 2px solid black;
+        border-radius: 5px;
+        display: inline-block;
+        padding: 20px;
+        position: relative;
+        left: 45%;
+        top: 100px;
+
+    }
+    #img
+    {
+        width: 100px;
+        height: 100px;
+    }
+    button
+    {
+        width: 60px;
+        height: 30px;
+        margin-top: 30px;
+        position: relative;
+        left: 20px;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <div id="outer">
+        <img src="../Assets/images/gulabJamun.jpg" id="img"><br>
+        <button type="button" onclick="toggle()">Toggle</button>
+    </div>
+
+    <script>
+        let src = ["../Assets/images/brownie.jpg","../Assets/images/dosa.jpg","../Assets/images/gulabJamun.jpg"];
+        let index = 0;
+        function toggle()
+        {
+            index = (index + 1) % src.length;
+            document.getElementById("img").src =src[index];
+        }
+    </script>
+</body>
+</html>

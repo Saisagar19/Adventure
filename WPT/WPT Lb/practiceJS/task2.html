@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Swap</title>
+</head>
+<style>
+    .outer
+    {
+        border: 5px solid black;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        padding: 30px;
+        position: relative;
+        left: 33%;
+        top: 200px;
+    }
+    button
+    {
+        margin: 10px;
+    }
+    input{
+        width: 180px;
+        height: 100px;
+    }
+</style>
+<body>
+    <div class="outer">
+        <div class="leftAdd">
+            <label for="">Enter Your Current Address:</label><br>
+            <input type="text" name="address" id="add">
+        </div>
+        <div>
+            <button type="button" id="btn" onclick="change()">Same As</button>
+        </div>
+        <div class="rightAdd">
+            <label for="">Enter Your Permanent Address:</label><br>
+            <input type="text" name="Peraddress" id="per">
+        </div>
+    </div>
+    <script>
+        function change()
+        {
+            let add = document.getElementById("add").value;
+            document.getElementById("per").value = add;
+        }
+    </script>
+</body>
+</html>

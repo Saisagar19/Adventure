@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+
+    <style>
+        .outer{
+            border: 2px solid black;
+            display: inline-block;
+            padding: 20px;
+            position: relative;
+            left: 40%;
+            top: 100px;
+            
+        }
+        #txt1,#txt2{
+            height: 100px;
+            margin: 10px;
+        }
+
+        .Controls
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        button
+        {
+            width: 80px;
+            position: relative;
+            left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+    <!-- <input type="text" id="txt1"> -->
+    <textarea id="txt1" rows="3" cols="25"></textarea>
+    <div class="Controls">
+        <input type="text" id="replaceOld" placeholder="Type Your OldText To Replace">
+        <input type="text" id="replaceNew" placeholder="Type Your NewText To Replace">
+        <button type="button" onclick="replaceText()">Replace</button>
+        <button type="button" onclick="replaceAllText()">ReplaceAll</button>
+    </div>
+    <textarea id="txt2" rows="3" cols="25"></textarea>
+    <!-- <input type="text" id="txt2"> -->
+    </div>
+
+    <script>
+        
+        function replaceText()
+        {
+            let or1 = document.getElementById("replaceOld").value;
+            let nr2 = document.getElementById("replaceNew").value;
+            let textO = document.getElementById("txt1").value;
+            // let textU = document.getElementById("txt2").value;
+            let textU = textO.replace(or1,nr2);
+            document.getElementById("txt2").value = textU;
+        }
+        function replaceAllText()
+        {
+            let or1 = document.getElementById("replaceOld").value;
+            let nr2 = document.getElementById("replaceNew").value;
+            let textO = document.getElementById("txt1").value;
+            let textU = textO.replaceAll(or1,nr2);
+            document.getElementById("txt2").value = textU;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #change{
+        width: 300px;
+    }
+    .imgArea{
+        display: block;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        border: 5px solid black;
+        position: relative;
+        left: 600px;
+        top: 200px;
+        padding: 10px;
+    }
+    button
+    {
+        margin: 13px;
+    }
+</style>
+<body>
+    <div class="imgArea">
+        <img src="../Assets/images/brownie.jpg" id="change">
+        <p id="text">brownie</p>
+    <button type="button" onclick="change()">Imrati</button>
+    <button type="button" onclick="change1()">Kajukatli</button>
+    <button type="button" onclick="change2()">Gulab Jamun</button>
+    </div>
+    
+
+    <script>
+        function change2()
+        {
+            document.getElementById("change").src = "../Assets/images/gulabJamun.jpg"
+            document.getElementById("text").innerHTML = "gulab Jamun"
+        }
+        function change1()
+        {
+            document.getElementById("change").src = "../Assets/images/Kajukatli.jpg"
+            document.getElementById("text").innerHTML = "kaju katali"
+        }
+        function change()
+        {
+            document.getElementById("change").src = "../Assets/images/imrati.jpg"
+            document.getElementById("text").innerHTML = "imrati"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Function</title>
+</head>
+<style>
+    #outer
+    {
+        border: 2px solid black;
+        border-radius: 5px;
+        display: inline-block;
+        position: relative;
+        left:40%;
+        top: 300px;
+        padding: 20px;
+    }
+
+    button{
+        display: block;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div id="outer">
+        <label for="num1">Enter Number</label>
+        <input type="text" name="number" id="num1"><br>
+        <span id="sqr">Square Result: </span><span id="resSqr">0</span><br>
+        <span id="cub">Cube Result: </span><span id="resCub">0</span><br>
+        <span id="evnOdd">Even/Odd Result: </span><span id="resEvn"></span>
+        <button type="button" onclick="mathFun()">Calculate</button>
+    </div>
+    <script>
+        function mathFun()
+        {
+            let num = parseInt(document.getElementById("num1").value);
+            if(num%2==0)
+            {
+                document.getElementById("resEvn").innerHTML = `${num} is Even`;
+            }
+            else
+            {
+                document.getElementById("resEvn").innerHTML = `${num} is odd`;
+            }
+
+            let sqr = num*num;
+            document.getElementById("resSqr").innerHTML = sqr;
+
+            let cub = (num*num*num);
+            document.getElementById("resCub").innerHTML = cub;
+
+        }
+    </script>
+</body>
+</html>

@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body>    
     <script>
         let data = prompt("Enter Single Alphabet: ")
         if(data == "A" || data == "E" || data == "I" || data == "O" || data == "U" || data == "a" || data == "e" || data == "i" || data == "o" || data == "u"){
@@ -25,16 +24,15 @@
             {
                 document.writeln(`${num} is Odd`);
             }
-
         document.write("<br>")
-        let validEmail = prompt("Enter Num: ")
+        let validEmail = prompt("Enter Email: ")
         
-        if(){
-            document.writeln(`${validEmail}`);
+        if(validEmail.includes("gmail") || validEmail.includes("yahoo") || validEmail.includes("hotmail") || validEmail.includes("outlook")){
+            document.writeln(`${validEmail} : valid mail`);
             }
         else
             {
-                document.writeln(`${validEmail} is Odd`);
+                document.writeln(`${validEmail} not a valid mail`);
             }
     </script>
 </body>
@@ -42,4 +40,4 @@
 <!-- 
 Task1: using prompt enter single alphabet and identify it wether is consonent or vovels
 Task1:using prompt enter number and find it is even or odd number 
-Task1: using prompt enter user email id, diplay wether is gemail or yahoo or hotmail,outlook  -->
+Task1: using prompt enter user email id, diplay wether is gmail or yahoo or hotmail outlook  -->

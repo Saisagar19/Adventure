@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage</title>
+</head>
+<style>
+#tableData{
+    text-align: center;
+}
+</style>
+<body>
+    <button type="button" onclick="generateTable()" id="b1">Generate Table</button>
+    <table id="tableData" border="1px">
+    <thead>
+        <tr >
+            <td rowspan="2">Id</td>
+            <td rowspan="2">Name</td>
+            <td colspan="5">Subjects</td>
+            <td rowspan="2">Percentage</td>
+        </tr>
+        <tr>
+            <th>Maths</th>
+            <th>ENG</th>
+            <th>Marathi</th>
+            <th>Science</th>
+            <th>Geo</th>
+        </tr>
+    </thead>
+    <tbody id="tb"></tbody>
+    </table>
+
+    <script>
+        let students = [
+    {
+        id: 1,
+        name: "Amit",
+        subject: { maths: 85, eng: 78, marathi: 82, sci: 88, geo: 75 },
+        per:0
+    },
+    {
+        id: 2,
+        name: "Sneha",
+        subject: { maths: 92, eng: 81, marathi: 79, sci: 90, geo: 84 },
+        per:0
+    },
+    {
+        id: 3,
+        name: "Rahul",
+        subject: { maths: 76, eng: 69, marathi: 72, sci: 80, geo: 68 },
+        per:0
+    },
+    {
+        id: 4,
+        name: "Pooja",
+        subject: { maths: 88, eng: 85, marathi: 87, sci: 91, geo: 89 },
+        per:0
+    },
+    {
+        id: 5,
+        name: "Vikram",
+        subject: { maths: 67, eng: 72, marathi: 70, sci: 74, geo: 71 },
+        per:0
+    },
+    {
+        id: 6,
+        name: "Neha",
+        subject: { maths: 91, eng: 89, marathi: 84, sci: 93, geo: 90 },
+        per:0
+    },
+    {
+        id: 7,
+        name: "Karan",
+        subject: { maths: 73, eng: 77, marathi: 75, sci: 79, geo: 76 },
+        per:0
+    },
+    {
+        id: 8,
+        name: "Anjali",
+        subject: { maths: 86, eng: 83, marathi: 80, sci: 88, geo: 85 },
+        per:0
+    },
+    {
+        id: 9,
+        name: "Rohit",
+        subject: { maths: 78, eng: 74, marathi: 69, sci: 81, geo: 73 },
+        per:0
+    },
+    {
+        id: 10,
+        name: "Meena",
+        subject: { maths: 90, eng: 88, marathi: 86, sci: 92, geo: 87 },
+        per:0
+    }
+];
+
+const generateTable = ()=>{
+
+    let tbody = document.getElementById("tb");
+    for(let i=0; i < students.length;i++)
+    {
+        let total = (students[i].subject.maths)+(students[i].subject.eng)+(students[i].subject.marathi)+(students[i].subject.sci)+(students[i].subject.geo)
+        let percent = parseInt((total/500)*100);
+        students[i].per = percent; 
+        let newRow = document.createElement('tr');
+        newRow.innerHTML = `<td>${students[i].id}</td><td>${students[i].name}</td><td>${students[i].subject.maths}</td><td>${students[i].subject.eng}</td><td>${students[i].subject.marathi}</td><td>${students[i].subject.sci}</td><td>${students[i].subject.geo}</td><td>${students[i].per}</td>`
+        tbody.appendChild(newRow); 
+    }
+}
+    </script>
+</body>
+</html>
