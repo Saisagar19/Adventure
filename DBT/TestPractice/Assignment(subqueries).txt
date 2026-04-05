@@ -1,0 +1,1565 @@
+Microsoft Windows [Version 10.0.26200.8117]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\saisagar>mysql -h localhost -u root -p -P 1919
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 19
+Server version: 9.6.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| demo               |
+| information_schema |
+| infoway            |
+| infoway_c          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.199 sec)
+
+mysql> use infoway_c
+Database changed
+mysql> show tables;
++------------------------+
+| Tables_in_infoway_c    |
++------------------------+
+| batch_students         |
+| books                  |
+| course                 |
+| course_batches         |
+| course_modules         |
+| faculty                |
+| faculty_address        |
+| faculty_phone          |
+| faculty_qualifications |
+| modules                |
+| newbooks               |
+| student                |
+| student_address        |
+| student_cards          |
+| student_order          |
+| student_phone          |
+| student_qualifications |
++------------------------+
+17 rows in set (0.228 sec)
+
+mysql> select * from batch_students;
++----+---------+-----------+
+| ID | batchID | studentID |
++----+---------+-----------+
+|  1 |       1 |         1 |
+|  2 |       7 |         5 |
+|  3 |       3 |         4 |
+|  4 |       6 |         3 |
+|  5 |      10 |         6 |
+|  6 |      17 |         8 |
+|  7 |      20 |        12 |
+|  8 |       1 |         7 |
+|  9 |       2 |        12 |
+| 10 |       4 |        15 |
+| 11 |       5 |        20 |
+| 12 |       6 |         5 |
+| 13 |       7 |         3 |
+| 14 |       1 |        20 |
+| 15 |       2 |        10 |
+| 16 |       3 |         5 |
+| 17 |       4 |         6 |
+| 18 |       5 |         3 |
+| 19 |       6 |         1 |
+| 20 |      12 |        10 |
+| 21 |      15 |        17 |
+| 22 |      15 |        18 |
+| 23 |      16 |        18 |
+| 24 |      17 |        12 |
+| 25 |       3 |        20 |
+| 26 |       4 |        17 |
++----+---------+-----------+
+26 rows in set (0.284 sec)
+
+mysql> select * from batch_students order by batchid asc;
++----+---------+-----------+
+| ID | batchID | studentID |
++----+---------+-----------+
+|  1 |       1 |         1 |
+|  8 |       1 |         7 |
+| 14 |       1 |        20 |
+|  9 |       2 |        12 |
+| 15 |       2 |        10 |
+|  3 |       3 |         4 |
+| 16 |       3 |         5 |
+| 25 |       3 |        20 |
+| 10 |       4 |        15 |
+| 17 |       4 |         6 |
+| 26 |       4 |        17 |
+| 11 |       5 |        20 |
+| 18 |       5 |         3 |
+|  4 |       6 |         3 |
+| 12 |       6 |         5 |
+| 19 |       6 |         1 |
+|  2 |       7 |         5 |
+| 13 |       7 |         3 |
+|  5 |      10 |         6 |
+| 20 |      12 |        10 |
+| 21 |      15 |        17 |
+| 22 |      15 |        18 |
+| 23 |      16 |        18 |
+|  6 |      17 |         8 |
+| 24 |      17 |        12 |
+|  7 |      20 |        12 |
++----+---------+-----------+
+26 rows in set (0.030 sec)
+
+mysql> select * from batch_students order by studentid asc;
++----+---------+-----------+
+| ID | batchID | studentID |
++----+---------+-----------+
+|  1 |       1 |         1 |
+| 19 |       6 |         1 |
+|  4 |       6 |         3 |
+| 13 |       7 |         3 |
+| 18 |       5 |         3 |
+|  3 |       3 |         4 |
+|  2 |       7 |         5 |
+| 12 |       6 |         5 |
+| 16 |       3 |         5 |
+|  5 |      10 |         6 |
+| 17 |       4 |         6 |
+|  8 |       1 |         7 |
+|  6 |      17 |         8 |
+| 15 |       2 |        10 |
+| 20 |      12 |        10 |
+|  7 |      20 |        12 |
+|  9 |       2 |        12 |
+| 24 |      17 |        12 |
+| 10 |       4 |        15 |
+| 21 |      15 |        17 |
+| 26 |       4 |        17 |
+| 22 |      15 |        18 |
+| 23 |      16 |        18 |
+| 11 |       5 |        20 |
+| 14 |       1 |        20 |
+| 25 |       3 |        20 |
++----+---------+-----------+
+26 rows in set (0.011 sec)
+
+mysql> SELECT studentID FROM batch_students GROUP BY studentID HAIVING COUNT(studentID) > 2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'HAIVING COUNT(studentID) > 2' at line 1
+mysql> SELECT studentID FROM batch_students GROUP BY studentID HAIVING COUNT(*) > 2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'HAIVING COUNT(*) > 2' at line 1
+mysql> SELECT studentID FROM batch_students GROUP BY studentID HAVING COUNT(*) > 2;
++-----------+
+| studentID |
++-----------+
+|         3 |
+|         5 |
+|        12 |
+|        20 |
++-----------+
+4 rows in set (0.168 sec)
+
+mysql> SELECT * FROM STUDENT WHERE ID IN (SELECT studentID FROM batch_students GROUP BY studentID HAVING COUNT(studentID) > 2);
++----+-----------+----------+------------+-------------------------+
+| ID | namefirst | namelast | DOB        | emailID                 |
++----+-----------+----------+------------+-------------------------+
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com    |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com   |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com     |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com |
++----+-----------+----------+------------+-------------------------+
+4 rows in set (0.050 sec)
+
+mysql> SELECT ID FROM student WHERE namefirst = "saleel";
++----+
+| ID |
++----+
+|  1 |
++----+
+1 row in set (0.109 sec)
+
+mysql> SELECT batchID FROM batch_students WHERE stdeuntID = (SELECT ID FROM student WHERE namefirst ="saleel");
+ERROR 1054 (42S22): Unknown column 'stdeuntID' in 'where clause'
+mysql> SELECT batchID FROM batch_students WHERE stdentID = (SELECT ID FROM student WHERE namefirst = "saleel");
+ERROR 1054 (42S22): Unknown column 'stdentID' in 'where clause'
+mysql> SELECT batchID FROM batch_students WHERE studentID = (SELECT ID FROM student WHERE namefirst ="saleel");
++---------+
+| batchID |
++---------+
+|       1 |
+|       6 |
++---------+
+2 rows in set (0.116 sec)
+
+mysql> SELECT * FROM Student WHERE ID = (SELECT batchID FROM batch_students WHERE studentID = (SELECTID FROM student WHERE namefirst = "saleel"));
+ERROR 1242 (21000): Subquery returns more than 1 row
+mysql> SELECT * FROM Student WHERE ID in (SELECT batchID FROM batch_students WHERE studentID = (SELECT ID FROM student WHERE namefirst = "saleel"));
++----+-----------+----------+------------+------------------------+
+| ID | namefirst | namelast | DOB        | emailID                |
++----+-----------+----------+------------+------------------------+
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com  |
++----+-----------+----------+------------+------------------------+
+2 rows in set (0.125 sec)
+
+mysql> SELECT * FROM Student WHERE ID in (SELECT studentID FROM batch_students WHERE studentID = (SELECT ID FROM student WHERE namefirst = "saleel"));
++----+-----------+----------+------------+------------------------+
+| ID | namefirst | namelast | DOB        | emailID                |
++----+-----------+----------+------------+------------------------+
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com |
++----+-----------+----------+------------+------------------------+
+1 row in set (0.013 sec)
+
+mysql> SELECT studentID FROM batch_students WHERE batchID in (SELECT batchID FROM batch_students WHERE studentID = (SELECT ID FROM student WHERE namefirst = "saleel"));
++-----------+
+| studentID |
++-----------+
+|         1 |
+|         7 |
+|        20 |
+|         3 |
+|         5 |
+|         1 |
++-----------+
+6 rows in set (0.113 sec)
+
+mysql> SELECT DISTINCT(studentID) FROM batch_students WHERE batchID in (SELECT batchID FROM batch_students WHERE studentID = (SELECT ID FROM student WHERE namefirst = "saleel"));
++-----------+
+| studentID |
++-----------+
+|         1 |
+|         7 |
+|        20 |
+|         3 |
+|         5 |
++-----------+
+5 rows in set (0.015 sec)
+
+mysql> SELECT * FROM student WHERE id IN (SELECT DISTINCT(studentID) FROM batch_students WHERE batchID in (SELECT batchID FROM batch_students WHERE studentID = (SELECT ID FROM student WHERE namefirst = "saleel")));
++----+-----------+----------+------------+-------------------------+
+| ID | namefirst | namelast | DOB        | emailID                 |
++----+-----------+----------+------------+-------------------------+
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com  |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com    |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com   |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com |
++----+-----------+----------+------------+-------------------------+
+5 rows in set (0.022 sec)
+
+mysql> select * from courses;
+ERROR 1146 (42S02): Table 'infoway_c.courses' doesn't exist
+mysql> select * from course;
++----+---------+----------+------------------------------------+
+| ID | name    | duration | summery                            |
++----+---------+----------+------------------------------------+
+|  1 | PG-DAC  |        6 | This course is designed by CDAC    |
+|  2 | DBDA    |        6 | This course is designed by CDAC    |
+|  3 | Pre-DAC |        2 | This course is designed by CDAC    |
+|  4 | JAVA    |        3 | This course is designed by Infoway |
+|  5 | .NET    |        3 | This course is designed by Infoway |
+|  6 | DMC     |        6 | This course is designed by CDAC    |
+|  7 | DSSD    |        6 | This course is designed by CDAC    |
++----+---------+----------+------------------------------------+
+7 rows in set (0.022 sec)
+
+mysql> select * from course_admission;
+ERROR 1146 (42S02): Table 'infoway_c.course_admission' doesn't exist
+mysql> select * from course_batches;
++----+---------+----------+------------+------------+----------+
+| ID | name    | courseID | starton    | endson     | capacity |
++----+---------+----------+------------+------------+----------+
+|  1 | Batch1  |        1 | 2016-02-01 | 2016-08-31 |       80 |
+|  2 | Batch2  |        2 | 2016-02-01 | 2016-08-31 |       30 |
+|  3 | Batch3  |        3 | 2016-02-01 | 2016-03-31 |       35 |
+|  4 | Batch4  |        4 | 2016-07-01 | 2016-09-30 |       25 |
+|  5 | Batch5  |        5 | 2016-07-01 | 2016-09-30 |       25 |
+|  6 | Batch6  |        1 | 2015-02-01 | 2015-08-31 |       80 |
+|  7 | Batch7  |        2 | 2015-02-01 | 2015-08-31 |       30 |
+|  8 | Batch8  |        3 | 2017-04-01 | 2017-05-31 |       30 |
+|  9 | Batch9  |        4 | 2018-07-01 | 2018-09-30 |       25 |
+| 10 | Batch10 |        5 | 2018-09-01 | 2018-11-30 |       25 |
+| 11 | Batch11 |        1 | 2017-08-01 | 2018-02-28 |       80 |
+| 12 | Batch12 |        2 | 2017-08-01 | 2018-02-28 |       30 |
+| 13 | Batch13 |        3 | 2017-07-01 | 2017-08-31 |       30 |
+| 14 | Batch14 |        4 | 2018-05-01 | 2018-07-31 |       25 |
+| 15 | Batch15 |        5 | 2018-06-01 | 2018-08-30 |       25 |
+| 16 | Batch16 |        1 | 2014-08-01 | 2015-02-28 |       80 |
+| 17 | Batch17 |        2 | 2014-08-01 | 2015-02-28 |       30 |
+| 18 | Batch18 |        3 | 2018-03-01 | 2018-04-30 |       35 |
+| 19 | Batch19 |        4 | 2019-01-01 | 2019-03-30 |       25 |
+| 20 | Batch20 |        5 | 2018-12-01 | 2019-02-28 |       25 |
+| 21 | Batch21 |        1 | 2015-08-01 | 2016-02-28 |       80 |
+| 22 | Batch22 |        2 | 2015-08-01 | 2016-02-28 |       30 |
+| 23 | Batch23 |        3 | 2019-03-01 | 2019-04-30 |       40 |
+| 24 | Batch24 |        4 | 2019-01-01 | 2019-03-30 |       30 |
+| 25 | Batch25 |        6 | 2019-01-01 | 2019-03-30 |       30 |
++----+---------+----------+------------+------------+----------+
+25 rows in set (0.016 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_infoway_c    |
++------------------------+
+| batch_students         |
+| books                  |
+| course                 |
+| course_batches         |
+| course_modules         |
+| faculty                |
+| faculty_address        |
+| faculty_phone          |
+| faculty_qualifications |
+| modules                |
+| newbooks               |
+| student                |
+| student_address        |
+| student_cards          |
+| student_order          |
+| student_phone          |
+| student_qualifications |
++------------------------+
+17 rows in set (0.026 sec)
+
+mysql> select * from batch_students;
++----+---------+-----------+
+| ID | batchID | studentID |
++----+---------+-----------+
+|  1 |       1 |         1 |
+|  2 |       7 |         5 |
+|  3 |       3 |         4 |
+|  4 |       6 |         3 |
+|  5 |      10 |         6 |
+|  6 |      17 |         8 |
+|  7 |      20 |        12 |
+|  8 |       1 |         7 |
+|  9 |       2 |        12 |
+| 10 |       4 |        15 |
+| 11 |       5 |        20 |
+| 12 |       6 |         5 |
+| 13 |       7 |         3 |
+| 14 |       1 |        20 |
+| 15 |       2 |        10 |
+| 16 |       3 |         5 |
+| 17 |       4 |         6 |
+| 18 |       5 |         3 |
+| 19 |       6 |         1 |
+| 20 |      12 |        10 |
+| 21 |      15 |        17 |
+| 22 |      15 |        18 |
+| 23 |      16 |        18 |
+| 24 |      17 |        12 |
+| 25 |       3 |        20 |
+| 26 |       4 |        17 |
++----+---------+-----------+
+26 rows in set (0.010 sec)
+
+mysql> select * from course_batches;
++----+---------+----------+------------+------------+----------+
+| ID | name    | courseID | starton    | endson     | capacity |
++----+---------+----------+------------+------------+----------+
+|  1 | Batch1  |        1 | 2016-02-01 | 2016-08-31 |       80 |
+|  2 | Batch2  |        2 | 2016-02-01 | 2016-08-31 |       30 |
+|  3 | Batch3  |        3 | 2016-02-01 | 2016-03-31 |       35 |
+|  4 | Batch4  |        4 | 2016-07-01 | 2016-09-30 |       25 |
+|  5 | Batch5  |        5 | 2016-07-01 | 2016-09-30 |       25 |
+|  6 | Batch6  |        1 | 2015-02-01 | 2015-08-31 |       80 |
+|  7 | Batch7  |        2 | 2015-02-01 | 2015-08-31 |       30 |
+|  8 | Batch8  |        3 | 2017-04-01 | 2017-05-31 |       30 |
+|  9 | Batch9  |        4 | 2018-07-01 | 2018-09-30 |       25 |
+| 10 | Batch10 |        5 | 2018-09-01 | 2018-11-30 |       25 |
+| 11 | Batch11 |        1 | 2017-08-01 | 2018-02-28 |       80 |
+| 12 | Batch12 |        2 | 2017-08-01 | 2018-02-28 |       30 |
+| 13 | Batch13 |        3 | 2017-07-01 | 2017-08-31 |       30 |
+| 14 | Batch14 |        4 | 2018-05-01 | 2018-07-31 |       25 |
+| 15 | Batch15 |        5 | 2018-06-01 | 2018-08-30 |       25 |
+| 16 | Batch16 |        1 | 2014-08-01 | 2015-02-28 |       80 |
+| 17 | Batch17 |        2 | 2014-08-01 | 2015-02-28 |       30 |
+| 18 | Batch18 |        3 | 2018-03-01 | 2018-04-30 |       35 |
+| 19 | Batch19 |        4 | 2019-01-01 | 2019-03-30 |       25 |
+| 20 | Batch20 |        5 | 2018-12-01 | 2019-02-28 |       25 |
+| 21 | Batch21 |        1 | 2015-08-01 | 2016-02-28 |       80 |
+| 22 | Batch22 |        2 | 2015-08-01 | 2016-02-28 |       30 |
+| 23 | Batch23 |        3 | 2019-03-01 | 2019-04-30 |       40 |
+| 24 | Batch24 |        4 | 2019-01-01 | 2019-03-30 |       30 |
+| 25 | Batch25 |        6 | 2019-01-01 | 2019-03-30 |       30 |
++----+---------+----------+------------+------------+----------+
+25 rows in set (0.013 sec)
+
+mysql> SELECT MIN(capacity) FROM course_batches;
++---------------+
+| MIN(capacity) |
++---------------+
+|            25 |
++---------------+
+1 row in set (0.114 sec)
+
+mysql> SEELCT courseID FROM course_batches WHERE capacity = (SELECT MIN(capacity) FROM course_batches);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SEELCT courseID FROM course_batches WHERE capacity = (SELECT MIN(capacity) FROM ' at line 1
+mysql> SELECT courseID FROM course_batches WHERE capacity = (SELECT MIN(capacity) FROM course_batches);
++----------+
+| courseID |
++----------+
+|        4 |
+|        5 |
+|        4 |
+|        5 |
+|        4 |
+|        5 |
+|        4 |
+|        5 |
++----------+
+8 rows in set (0.014 sec)
+
+mysql> SELECT DISTINCT courseID FROM course_batches WHERE capacity = (SELECT MIN(capacity) FROM course_batches);
++----------+
+| courseID |
++----------+
+|        4 |
+|        5 |
++----------+
+2 rows in set (0.110 sec)
+
+mysql> SELECT * FROM course WHERE id IN (SELECT DISTINCT courseID FROM course_batches WHERE capacity = (SELECT MIN(capacity) FROM course_batches));
++----+------+----------+------------------------------------+
+| ID | name | duration | summery                            |
++----+------+----------+------------------------------------+
+|  4 | JAVA |        3 | This course is designed by Infoway |
+|  5 | .NET |        3 | This course is designed by Infoway |
++----+------+----------+------------------------------------+
+2 rows in set (0.013 sec)
+
+mysql> SELECT DISTINCT studentID FROM batch_students;
++-----------+
+| studentID |
++-----------+
+|         1 |
+|         3 |
+|         4 |
+|         5 |
+|         6 |
+|         7 |
+|         8 |
+|        10 |
+|        12 |
+|        15 |
+|        17 |
+|        18 |
+|        20 |
++-----------+
+13 rows in set (0.127 sec)
+
+mysql> SELECT * FROM stduent WHERE id NOT IN (SELECT DISTINCT studentID FROM batch_students);
+ERROR 1146 (42S02): Table 'infoway_c.stduent' doesn't exist
+mysql> SELECT * FROM student WHERE id NOT IN (SELECT DISTINCT studentID FROM batch_students);
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     |
+| 29 | yuvi      | patil    | 1987-01-28 | yuvi.patil@gmail.com     |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     |
++----+-----------+----------+------------+--------------------------+
+17 rows in set (0.013 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_infoway_c    |
++------------------------+
+| batch_students         |
+| books                  |
+| course                 |
+| course_batches         |
+| course_modules         |
+| faculty                |
+| faculty_address        |
+| faculty_phone          |
+| faculty_qualifications |
+| modules                |
+| newbooks               |
+| student                |
+| student_address        |
+| student_cards          |
+| student_order          |
+| student_phone          |
+| student_qualifications |
++------------------------+
+17 rows in set (0.032 sec)
+
+mysql> select * from modules
+    -> ;
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set (0.018 sec)
+
+mysql> select * from couse_modules;
+ERROR 1146 (42S02): Table 'infoway_c.couse_modules' doesn't exist
+mysql> select * from course_modules;
++----+----------+----------+
+| ID | courseID | moduleID |
++----+----------+----------+
+|  1 |        1 |        1 |
+|  2 |        1 |        2 |
+|  3 |        1 |        3 |
+|  4 |        1 |        4 |
+|  5 |        1 |        5 |
+|  6 |        1 |        6 |
+|  7 |        1 |        7 |
+|  8 |        1 |        8 |
+|  9 |        1 |        9 |
+| 10 |        2 |        1 |
+| 11 |        2 |        2 |
+| 12 |        2 |        3 |
+| 13 |        2 |       11 |
+| 14 |        2 |       12 |
+| 15 |        2 |        9 |
+| 16 |        3 |       13 |
+| 17 |        3 |        5 |
+| 18 |        3 |        6 |
+| 19 |        4 |        1 |
+| 20 |        4 |        7 |
+| 21 |        4 |        8 |
+| 22 |        5 |        1 |
+| 23 |        5 |        7 |
+| 24 |        5 |        8 |
+| 25 |        6 |       14 |
+| 26 |        6 |       15 |
+| 27 |        6 |       16 |
+| 28 |        6 |       17 |
++----+----------+----------+
+28 rows in set (0.014 sec)
+
+mysql> select * from course;
++----+---------+----------+------------------------------------+
+| ID | name    | duration | summery                            |
++----+---------+----------+------------------------------------+
+|  1 | PG-DAC  |        6 | This course is designed by CDAC    |
+|  2 | DBDA    |        6 | This course is designed by CDAC    |
+|  3 | Pre-DAC |        2 | This course is designed by CDAC    |
+|  4 | JAVA    |        3 | This course is designed by Infoway |
+|  5 | .NET    |        3 | This course is designed by Infoway |
+|  6 | DMC     |        6 | This course is designed by CDAC    |
+|  7 | DSSD    |        6 | This course is designed by CDAC    |
++----+---------+----------+------------------------------------+
+7 rows in set (0.009 sec)
+
+mysql> select * from course
+    -> ;
++----+---------+----------+------------------------------------+
+| ID | name    | duration | summery                            |
++----+---------+----------+------------------------------------+
+|  1 | PG-DAC  |        6 | This course is designed by CDAC    |
+|  2 | DBDA    |        6 | This course is designed by CDAC    |
+|  3 | Pre-DAC |        2 | This course is designed by CDAC    |
+|  4 | JAVA    |        3 | This course is designed by Infoway |
+|  5 | .NET    |        3 | This course is designed by Infoway |
+|  6 | DMC     |        6 | This course is designed by CDAC    |
+|  7 | DSSD    |        6 | This course is designed by CDAC    |
++----+---------+----------+------------------------------------+
+7 rows in set (0.010 sec)
+
+mysql> select * from course_moduls;
+ERROR 1146 (42S02): Table 'infoway_c.course_moduls' doesn't exist
+mysql> select * from course_modules;
++----+----------+----------+
+| ID | courseID | moduleID |
++----+----------+----------+
+|  1 |        1 |        1 |
+|  2 |        1 |        2 |
+|  3 |        1 |        3 |
+|  4 |        1 |        4 |
+|  5 |        1 |        5 |
+|  6 |        1 |        6 |
+|  7 |        1 |        7 |
+|  8 |        1 |        8 |
+|  9 |        1 |        9 |
+| 10 |        2 |        1 |
+| 11 |        2 |        2 |
+| 12 |        2 |        3 |
+| 13 |        2 |       11 |
+| 14 |        2 |       12 |
+| 15 |        2 |        9 |
+| 16 |        3 |       13 |
+| 17 |        3 |        5 |
+| 18 |        3 |        6 |
+| 19 |        4 |        1 |
+| 20 |        4 |        7 |
+| 21 |        4 |        8 |
+| 22 |        5 |        1 |
+| 23 |        5 |        7 |
+| 24 |        5 |        8 |
+| 25 |        6 |       14 |
+| 26 |        6 |       15 |
+| 27 |        6 |       16 |
+| 28 |        6 |       17 |
++----+----------+----------+
+28 rows in set (0.008 sec)
+
+mysql> select * from modules;
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set (0.009 sec)
+
+mysql> SELECT * FROM course_modules WHERE moduleID IN (SELECT id FROM modules);
++----+----------+----------+
+| ID | courseID | moduleID |
++----+----------+----------+
+|  1 |        1 |        1 |
+| 10 |        2 |        1 |
+| 19 |        4 |        1 |
+| 22 |        5 |        1 |
+|  2 |        1 |        2 |
+| 11 |        2 |        2 |
+|  3 |        1 |        3 |
+| 12 |        2 |        3 |
+|  4 |        1 |        4 |
+|  5 |        1 |        5 |
+| 17 |        3 |        5 |
+|  6 |        1 |        6 |
+| 18 |        3 |        6 |
+|  7 |        1 |        7 |
+| 20 |        4 |        7 |
+| 23 |        5 |        7 |
+|  8 |        1 |        8 |
+| 21 |        4 |        8 |
+| 24 |        5 |        8 |
+|  9 |        1 |        9 |
+| 15 |        2 |        9 |
+| 13 |        2 |       11 |
+| 14 |        2 |       12 |
+| 16 |        3 |       13 |
+| 25 |        6 |       14 |
+| 26 |        6 |       15 |
+| 27 |        6 |       16 |
+| 28 |        6 |       17 |
++----+----------+----------+
+28 rows in set (0.117 sec)
+
+mysql> SELECT * FROM course_modules WHERE moduleID NOT IN (SELECT id FROM modules);
+Empty set (0.012 sec)
+
+mysql> SELECT * FROM course_modules;
++----+----------+----------+
+| ID | courseID | moduleID |
++----+----------+----------+
+|  1 |        1 |        1 |
+|  2 |        1 |        2 |
+|  3 |        1 |        3 |
+|  4 |        1 |        4 |
+|  5 |        1 |        5 |
+|  6 |        1 |        6 |
+|  7 |        1 |        7 |
+|  8 |        1 |        8 |
+|  9 |        1 |        9 |
+| 10 |        2 |        1 |
+| 11 |        2 |        2 |
+| 12 |        2 |        3 |
+| 13 |        2 |       11 |
+| 14 |        2 |       12 |
+| 15 |        2 |        9 |
+| 16 |        3 |       13 |
+| 17 |        3 |        5 |
+| 18 |        3 |        6 |
+| 19 |        4 |        1 |
+| 20 |        4 |        7 |
+| 21 |        4 |        8 |
+| 22 |        5 |        1 |
+| 23 |        5 |        7 |
+| 24 |        5 |        8 |
+| 25 |        6 |       14 |
+| 26 |        6 |       15 |
+| 27 |        6 |       16 |
+| 28 |        6 |       17 |
++----+----------+----------+
+28 rows in set (0.013 sec)
+
+mysql> SELECT  DISTINCT moduleID FROM course_modules;
++----------+
+| moduleID |
++----------+
+|        1 |
+|        2 |
+|        3 |
+|        4 |
+|        5 |
+|        6 |
+|        7 |
+|        8 |
+|        9 |
+|       11 |
+|       12 |
+|       13 |
+|       14 |
+|       15 |
+|       16 |
+|       17 |
++----------+
+16 rows in set (0.010 sec)
+
+mysql> select * from modules where id not in (SELECT DISTINCT moduleID FROM course_modules);
++----+------+----------+
+| ID | name | duration |
++----+------+----------+
+| 10 | NET  |        2 |
++----+------+----------+
+1 row in set (0.016 sec)
+
+mysql> select * from modules where id not in (SELECT DISTINCT moduleID FROM course_modules));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> select * from modules where id not in (SELECT DISTINCT moduleID FROM course_modules));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> select * from modules where id not in (SELECT DISTINCT moduleID FROM course_modules));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select * from course_batches;
++----+---------+----------+------------+------------+----------+
+| ID | name    | courseID | starton    | endson     | capacity |
++----+---------+----------+------------+------------+----------+
+|  1 | Batch1  |        1 | 2016-02-01 | 2016-08-31 |       80 |
+|  2 | Batch2  |        2 | 2016-02-01 | 2016-08-31 |       30 |
+|  3 | Batch3  |        3 | 2016-02-01 | 2016-03-31 |       35 |
+|  4 | Batch4  |        4 | 2016-07-01 | 2016-09-30 |       25 |
+|  5 | Batch5  |        5 | 2016-07-01 | 2016-09-30 |       25 |
+|  6 | Batch6  |        1 | 2015-02-01 | 2015-08-31 |       80 |
+|  7 | Batch7  |        2 | 2015-02-01 | 2015-08-31 |       30 |
+|  8 | Batch8  |        3 | 2017-04-01 | 2017-05-31 |       30 |
+|  9 | Batch9  |        4 | 2018-07-01 | 2018-09-30 |       25 |
+| 10 | Batch10 |        5 | 2018-09-01 | 2018-11-30 |       25 |
+| 11 | Batch11 |        1 | 2017-08-01 | 2018-02-28 |       80 |
+| 12 | Batch12 |        2 | 2017-08-01 | 2018-02-28 |       30 |
+| 13 | Batch13 |        3 | 2017-07-01 | 2017-08-31 |       30 |
+| 14 | Batch14 |        4 | 2018-05-01 | 2018-07-31 |       25 |
+| 15 | Batch15 |        5 | 2018-06-01 | 2018-08-30 |       25 |
+| 16 | Batch16 |        1 | 2014-08-01 | 2015-02-28 |       80 |
+| 17 | Batch17 |        2 | 2014-08-01 | 2015-02-28 |       30 |
+| 18 | Batch18 |        3 | 2018-03-01 | 2018-04-30 |       35 |
+| 19 | Batch19 |        4 | 2019-01-01 | 2019-03-30 |       25 |
+| 20 | Batch20 |        5 | 2018-12-01 | 2019-02-28 |       25 |
+| 21 | Batch21 |        1 | 2015-08-01 | 2016-02-28 |       80 |
+| 22 | Batch22 |        2 | 2015-08-01 | 2016-02-28 |       30 |
+| 23 | Batch23 |        3 | 2019-03-01 | 2019-04-30 |       40 |
+| 24 | Batch24 |        4 | 2019-01-01 | 2019-03-30 |       30 |
+| 25 | Batch25 |        6 | 2019-01-01 | 2019-03-30 |       30 |
++----+---------+----------+------------+------------+----------+
+25 rows in set (0.014 sec)
+
+mysql> select * rom course;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rom course' at line 1
+mysql> select * from course;
++----+---------+----------+------------------------------------+
+| ID | name    | duration | summery                            |
++----+---------+----------+------------------------------------+
+|  1 | PG-DAC  |        6 | This course is designed by CDAC    |
+|  2 | DBDA    |        6 | This course is designed by CDAC    |
+|  3 | Pre-DAC |        2 | This course is designed by CDAC    |
+|  4 | JAVA    |        3 | This course is designed by Infoway |
+|  5 | .NET    |        3 | This course is designed by Infoway |
+|  6 | DMC     |        6 | This course is designed by CDAC    |
+|  7 | DSSD    |        6 | This course is designed by CDAC    |
++----+---------+----------+------------------------------------+
+7 rows in set (0.011 sec)
+
+mysql> select * from batch_students;
++----+---------+-----------+
+| ID | batchID | studentID |
++----+---------+-----------+
+|  1 |       1 |         1 |
+|  2 |       7 |         5 |
+|  3 |       3 |         4 |
+|  4 |       6 |         3 |
+|  5 |      10 |         6 |
+|  6 |      17 |         8 |
+|  7 |      20 |        12 |
+|  8 |       1 |         7 |
+|  9 |       2 |        12 |
+| 10 |       4 |        15 |
+| 11 |       5 |        20 |
+| 12 |       6 |         5 |
+| 13 |       7 |         3 |
+| 14 |       1 |        20 |
+| 15 |       2 |        10 |
+| 16 |       3 |         5 |
+| 17 |       4 |         6 |
+| 18 |       5 |         3 |
+| 19 |       6 |         1 |
+| 20 |      12 |        10 |
+| 21 |      15 |        17 |
+| 22 |      15 |        18 |
+| 23 |      16 |        18 |
+| 24 |      17 |        12 |
+| 25 |       3 |        20 |
+| 26 |       4 |        17 |
++----+---------+-----------+
+26 rows in set (0.012 sec)
+
+mysql> select distinct studentID from batch_students;
++-----------+
+| studentID |
++-----------+
+|         1 |
+|         3 |
+|         4 |
+|         5 |
+|         6 |
+|         7 |
+|         8 |
+|        10 |
+|        12 |
+|        15 |
+|        17 |
+|        18 |
+|        20 |
++-----------+
+13 rows in set (0.011 sec)
+
+mysql>
+mysql> select * from course_batches;
++----+---------+----------+------------+------------+----------+
+| ID | name    | courseID | starton    | endson     | capacity |
++----+---------+----------+------------+------------+----------+
+|  1 | Batch1  |        1 | 2016-02-01 | 2016-08-31 |       80 |
+|  2 | Batch2  |        2 | 2016-02-01 | 2016-08-31 |       30 |
+|  3 | Batch3  |        3 | 2016-02-01 | 2016-03-31 |       35 |
+|  4 | Batch4  |        4 | 2016-07-01 | 2016-09-30 |       25 |
+|  5 | Batch5  |        5 | 2016-07-01 | 2016-09-30 |       25 |
+|  6 | Batch6  |        1 | 2015-02-01 | 2015-08-31 |       80 |
+|  7 | Batch7  |        2 | 2015-02-01 | 2015-08-31 |       30 |
+|  8 | Batch8  |        3 | 2017-04-01 | 2017-05-31 |       30 |
+|  9 | Batch9  |        4 | 2018-07-01 | 2018-09-30 |       25 |
+| 10 | Batch10 |        5 | 2018-09-01 | 2018-11-30 |       25 |
+| 11 | Batch11 |        1 | 2017-08-01 | 2018-02-28 |       80 |
+| 12 | Batch12 |        2 | 2017-08-01 | 2018-02-28 |       30 |
+| 13 | Batch13 |        3 | 2017-07-01 | 2017-08-31 |       30 |
+| 14 | Batch14 |        4 | 2018-05-01 | 2018-07-31 |       25 |
+| 15 | Batch15 |        5 | 2018-06-01 | 2018-08-30 |       25 |
+| 16 | Batch16 |        1 | 2014-08-01 | 2015-02-28 |       80 |
+| 17 | Batch17 |        2 | 2014-08-01 | 2015-02-28 |       30 |
+| 18 | Batch18 |        3 | 2018-03-01 | 2018-04-30 |       35 |
+| 19 | Batch19 |        4 | 2019-01-01 | 2019-03-30 |       25 |
+| 20 | Batch20 |        5 | 2018-12-01 | 2019-02-28 |       25 |
+| 21 | Batch21 |        1 | 2015-08-01 | 2016-02-28 |       80 |
+| 22 | Batch22 |        2 | 2015-08-01 | 2016-02-28 |       30 |
+| 23 | Batch23 |        3 | 2019-03-01 | 2019-04-30 |       40 |
+| 24 | Batch24 |        4 | 2019-01-01 | 2019-03-30 |       30 |
+| 25 | Batch25 |        6 | 2019-01-01 | 2019-03-30 |       30 |
++----+---------+----------+------------+------------+----------+
+25 rows in set (0.012 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_infoway_c    |
++------------------------+
+| batch_students         |
+| books                  |
+| course                 |
+| course_batches         |
+| course_modules         |
+| faculty                |
+| faculty_address        |
+| faculty_phone          |
+| faculty_qualifications |
+| modules                |
+| newbooks               |
+| student                |
+| student_address        |
+| student_cards          |
+| student_order          |
+| student_phone          |
+| student_qualifications |
++------------------------+
+17 rows in set (0.028 sec)
+
+mysql> select * from course_modules;
++----+----------+----------+
+| ID | courseID | moduleID |
++----+----------+----------+
+|  1 |        1 |        1 |
+|  2 |        1 |        2 |
+|  3 |        1 |        3 |
+|  4 |        1 |        4 |
+|  5 |        1 |        5 |
+|  6 |        1 |        6 |
+|  7 |        1 |        7 |
+|  8 |        1 |        8 |
+|  9 |        1 |        9 |
+| 10 |        2 |        1 |
+| 11 |        2 |        2 |
+| 12 |        2 |        3 |
+| 13 |        2 |       11 |
+| 14 |        2 |       12 |
+| 15 |        2 |        9 |
+| 16 |        3 |       13 |
+| 17 |        3 |        5 |
+| 18 |        3 |        6 |
+| 19 |        4 |        1 |
+| 20 |        4 |        7 |
+| 21 |        4 |        8 |
+| 22 |        5 |        1 |
+| 23 |        5 |        7 |
+| 24 |        5 |        8 |
+| 25 |        6 |       14 |
+| 26 |        6 |       15 |
+| 27 |        6 |       16 |
+| 28 |        6 |       17 |
++----+----------+----------+
+28 rows in set (0.010 sec)
+
+mysql> select * from course_batches;
++----+---------+----------+------------+------------+----------+
+| ID | name    | courseID | starton    | endson     | capacity |
++----+---------+----------+------------+------------+----------+
+|  1 | Batch1  |        1 | 2016-02-01 | 2016-08-31 |       80 |
+|  2 | Batch2  |        2 | 2016-02-01 | 2016-08-31 |       30 |
+|  3 | Batch3  |        3 | 2016-02-01 | 2016-03-31 |       35 |
+|  4 | Batch4  |        4 | 2016-07-01 | 2016-09-30 |       25 |
+|  5 | Batch5  |        5 | 2016-07-01 | 2016-09-30 |       25 |
+|  6 | Batch6  |        1 | 2015-02-01 | 2015-08-31 |       80 |
+|  7 | Batch7  |        2 | 2015-02-01 | 2015-08-31 |       30 |
+|  8 | Batch8  |        3 | 2017-04-01 | 2017-05-31 |       30 |
+|  9 | Batch9  |        4 | 2018-07-01 | 2018-09-30 |       25 |
+| 10 | Batch10 |        5 | 2018-09-01 | 2018-11-30 |       25 |
+| 11 | Batch11 |        1 | 2017-08-01 | 2018-02-28 |       80 |
+| 12 | Batch12 |        2 | 2017-08-01 | 2018-02-28 |       30 |
+| 13 | Batch13 |        3 | 2017-07-01 | 2017-08-31 |       30 |
+| 14 | Batch14 |        4 | 2018-05-01 | 2018-07-31 |       25 |
+| 15 | Batch15 |        5 | 2018-06-01 | 2018-08-30 |       25 |
+| 16 | Batch16 |        1 | 2014-08-01 | 2015-02-28 |       80 |
+| 17 | Batch17 |        2 | 2014-08-01 | 2015-02-28 |       30 |
+| 18 | Batch18 |        3 | 2018-03-01 | 2018-04-30 |       35 |
+| 19 | Batch19 |        4 | 2019-01-01 | 2019-03-30 |       25 |
+| 20 | Batch20 |        5 | 2018-12-01 | 2019-02-28 |       25 |
+| 21 | Batch21 |        1 | 2015-08-01 | 2016-02-28 |       80 |
+| 22 | Batch22 |        2 | 2015-08-01 | 2016-02-28 |       30 |
+| 23 | Batch23 |        3 | 2019-03-01 | 2019-04-30 |       40 |
+| 24 | Batch24 |        4 | 2019-01-01 | 2019-03-30 |       30 |
+| 25 | Batch25 |        6 | 2019-01-01 | 2019-03-30 |       30 |
++----+---------+----------+------------+------------+----------+
+25 rows in set (0.010 sec)
+
+mysql> select * from course;
++----+---------+----------+------------------------------------+
+| ID | name    | duration | summery                            |
++----+---------+----------+------------------------------------+
+|  1 | PG-DAC  |        6 | This course is designed by CDAC    |
+|  2 | DBDA    |        6 | This course is designed by CDAC    |
+|  3 | Pre-DAC |        2 | This course is designed by CDAC    |
+|  4 | JAVA    |        3 | This course is designed by Infoway |
+|  5 | .NET    |        3 | This course is designed by Infoway |
+|  6 | DMC     |        6 | This course is designed by CDAC    |
+|  7 | DSSD    |        6 | This course is designed by CDAC    |
++----+---------+----------+------------------------------------+
+7 rows in set (0.010 sec)
+
+mysql> select id from student where naefirst = "ulka" ;
+ERROR 1054 (42S22): Unknown column 'naefirst' in 'where clause'
+mysql> select id from student where namefirst = "ulka" ;
++----+
+| id |
++----+
+|  3 |
++----+
+1 row in set (0.012 sec)
+
+mysql> SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "ulka");
++-------+
+| marks |
++-------+
+| 75    |
+| 86    |
+| 67    |
++-------+
+3 rows in set (0.121 sec)
+
+mysql> SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "ulka") AND name = "BE";
++-------+
+| marks |
++-------+
+| 67    |
++-------+
+1 row in set (0.014 sec)
+
+mysql> SELECT studentID FROM student_qualifications WHERE marks = (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "ulka") AND name = "BE") and name ="BE";
++-----------+
+| studentID |
++-----------+
+|         3 |
++-----------+
+1 row in set (0.021 sec)
+
+mysql> SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "ulka") AND name = "BE";
++-------+
+| marks |
++-------+
+| 67    |
++-------+
+1 row in set (0.012 sec)
+
+mysql> SELECT * from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "ulka") AND name = "BE");
++----+-----------+--------+---------------+-------------------------+-------+------+
+| ID | studentID | name   | college       | university              | marks | year |
++----+-----------+--------+---------------+-------------------------+-------+------+
+|  2 |         1 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+|  3 |         1 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+|  4 |         2 | 10     | Alaska        | University of Chicago   | 68    | 2013 |
+|  7 |         3 | 10     | Arizona       | Yale University         | 75    | 2011 |
+|  8 |         3 | 12     | California    | California University   | 86    | 2013 |
+| 11 |         4 | 12     | New Hampshire | Yale University         | 97    | 2012 |
+| 12 |         4 | M.Com. | Montana       | Columbia University     | 77    | 2016 |
+| 15 |         5 | M.Com. | Oklahoma      | Stanford University     | 86    | 2014 |
+| 17 |         6 | 12     | Alabama       | Harvard University      | 76    | 2011 |
+| 18 |         6 | BE     | Indiana       | University of Chicago   | 87    | 2015 |
+| 19 |         7 | 10     | Ohio          | University of Ohio      | 87    | 2011 |
+| 20 |         7 | 12     | Iowa          | Stanford University     | 78    | 2013 |
+| 21 |         7 | BE     | Kentucky      | Harvard University      | 97    | 2017 |
+| 24 |         8 | M.Com. | Virginia      | University of Florida   | 87    | 2016 |
+| 25 |         9 | 10     | Maine         | Pennsylvania University | 98    | 2012 |
+| 27 |         9 | BE     | Kansas        | Columbia University     | 87    | 2018 |
+| 29 |        10 | 12     | Oregon        | University of Michigan  | 76    | 2014 |
+| 34 |        12 | 10     | New Hampshire | Yale University         | 75    | 2010 |
+| 38 |        13 | 12     | Maine         | University of Chicago   | 78    | 2014 |
+| 39 |        13 | BE     | Texas         | University of Florida   | 68    | 2018 |
+| 41 |        14 | 12     | Florida       | University of Florida   | 87    | 2015 |
+| 43 |        15 | 10     | New Hampshire | California University   | 96    | 2011 |
+| 46 |        16 | 10     | Michigan      | University of Michigan  | 76    | 2012 |
+| 48 |        16 | BE     | Mississippi   | University of Michigan  | 76    | 2018 |
+| 49 |        17 | 10     | Alabama       | University of Michigan  | 88    | 2013 |
+| 50 |        17 | 12     | Indiana       | University of Michigan  | 76    | 2015 |
+| 51 |        17 | BE     | Ohio          | University of Ohio      | 68    | 2019 |
+| 52 |        18 | 10     | Iowa          | Stanford University     | 86    | 2011 |
+| 54 |        18 | BE     | Maryland      | Harvard University      | 75    | 2017 |
+| 55 |        19 | 10     | Alabama       | University of Chicago   | 69    | 2013 |
+| 58 |        20 | 10     | Vermont       | Pennsylvania University | 72    | 2013 |
+| 59 |        20 | 12     | Iowa          | Yale University         | 83    | 2015 |
+| 60 |        20 | BE     | Maryland      | Columbia University     | 72    | 2019 |
+| 62 |        21 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+| 63 |        21 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+| 65 |        22 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+| 66 |        22 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+| 68 |        23 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+| 69 |        23 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+| 70 |        24 | 10     | Ohio          | University of Ohio      | 87    | 2011 |
+| 71 |        24 | 12     | Iowa          | Stanford University     | 78    | 2013 |
+| 72 |        24 | BE     | Kentucky      | Harvard University      | 97    | 2017 |
+| 73 |        25 | 10     | Ohio          | University of Ohio      | 87    | 2011 |
+| 74 |        25 | 12     | Iowa          | Stanford University     | 78    | 2013 |
+| 75 |        25 | BE     | Kentucky      | Harvard University      | 97    | 2017 |
+| 78 |        26 | BE     | Maryland      | Harvard University      | 68    | 2000 |
+| 84 |        28 | 12     | Maryland      | Columbia University     | 68    | 2006 |
++----+-----------+--------+---------------+-------------------------+-------+------+
+47 rows in set (0.018 sec)
+
+mysql> SELECT * from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "ulka") AND name = "BE") AND name = "BE";
++----+-----------+------+-------------+------------------------+-------+------+
+| ID | studentID | name | college     | university             | marks | year |
++----+-----------+------+-------------+------------------------+-------+------+
+|  3 |         1 | BE   | Arizona     | Harvard University     | 68    | 2018 |
+| 18 |         6 | BE   | Indiana     | University of Chicago  | 87    | 2015 |
+| 21 |         7 | BE   | Kentucky    | Harvard University     | 97    | 2017 |
+| 27 |         9 | BE   | Kansas      | Columbia University    | 87    | 2018 |
+| 39 |        13 | BE   | Texas       | University of Florida  | 68    | 2018 |
+| 48 |        16 | BE   | Mississippi | University of Michigan | 76    | 2018 |
+| 51 |        17 | BE   | Ohio        | University of Ohio     | 68    | 2019 |
+| 54 |        18 | BE   | Maryland    | Harvard University     | 75    | 2017 |
+| 60 |        20 | BE   | Maryland    | Columbia University    | 72    | 2019 |
+| 63 |        21 | BE   | Arizona     | Harvard University     | 68    | 2018 |
+| 66 |        22 | BE   | Arizona     | Harvard University     | 68    | 2018 |
+| 69 |        23 | BE   | Arizona     | Harvard University     | 68    | 2018 |
+| 72 |        24 | BE   | Kentucky    | Harvard University     | 97    | 2017 |
+| 75 |        25 | BE   | Kentucky    | Harvard University     | 97    | 2017 |
+| 78 |        26 | BE   | Maryland    | Harvard University     | 68    | 2000 |
++----+-----------+------+-------------+------------------------+-------+------+
+15 rows in set (0.015 sec)
+
+mysql> SELECT * from student where id in (SELECT studentID from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "ulka") AND name = "BE") AND name = "BE");
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     |
++----+-----------+----------+------------+--------------------------+
+15 rows in set (0.022 sec)
+
+mysql> SELECT * from student where id in (SELECT studentID from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10"));
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   |
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     |
++----+-----------+----------+------------+--------------------------+
+26 rows in set (0.021 sec)
+
+mysql> SELECT * from student where id in (SELECT studentID from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10") and name = '10' );
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    |
++----+-----------+----------+------------+--------------------------+
+13 rows in set (0.018 sec)
+
+mysql> SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10";
++-------+
+| marks |
++-------+
+| 67    |
++-------+
+1 row in set (0.012 sec)
+
+mysql> SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel");
++-------+
+| marks |
++-------+
+| 67    |
+| 74    |
+| 68    |
++-------+
+3 rows in set (0.012 sec)
+
+mysql> SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10";
++-------+
+| marks |
++-------+
+| 67    |
++-------+
+1 row in set (0.015 sec)
+
+mysql> SELECT studentID from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10"));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> SELECT studentID from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10");
++-----------+
+| studentID |
++-----------+
+|         1 |
+|         1 |
+|         2 |
+|         3 |
+|         3 |
+|         4 |
+|         4 |
+|         5 |
+|         6 |
+|         6 |
+|         7 |
+|         7 |
+|         7 |
+|         8 |
+|         9 |
+|         9 |
+|        10 |
+|        12 |
+|        13 |
+|        13 |
+|        14 |
+|        15 |
+|        16 |
+|        16 |
+|        17 |
+|        17 |
+|        17 |
+|        18 |
+|        18 |
+|        19 |
+|        20 |
+|        20 |
+|        20 |
+|        21 |
+|        21 |
+|        22 |
+|        22 |
+|        23 |
+|        23 |
+|        24 |
+|        24 |
+|        24 |
+|        25 |
+|        25 |
+|        25 |
+|        26 |
+|        28 |
++-----------+
+47 rows in set (0.017 sec)
+
+mysql> SELECT * from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10");
++----+-----------+--------+---------------+-------------------------+-------+------+
+| ID | studentID | name   | college       | university              | marks | year |
++----+-----------+--------+---------------+-------------------------+-------+------+
+|  2 |         1 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+|  3 |         1 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+|  4 |         2 | 10     | Alaska        | University of Chicago   | 68    | 2013 |
+|  7 |         3 | 10     | Arizona       | Yale University         | 75    | 2011 |
+|  8 |         3 | 12     | California    | California University   | 86    | 2013 |
+| 11 |         4 | 12     | New Hampshire | Yale University         | 97    | 2012 |
+| 12 |         4 | M.Com. | Montana       | Columbia University     | 77    | 2016 |
+| 15 |         5 | M.Com. | Oklahoma      | Stanford University     | 86    | 2014 |
+| 17 |         6 | 12     | Alabama       | Harvard University      | 76    | 2011 |
+| 18 |         6 | BE     | Indiana       | University of Chicago   | 87    | 2015 |
+| 19 |         7 | 10     | Ohio          | University of Ohio      | 87    | 2011 |
+| 20 |         7 | 12     | Iowa          | Stanford University     | 78    | 2013 |
+| 21 |         7 | BE     | Kentucky      | Harvard University      | 97    | 2017 |
+| 24 |         8 | M.Com. | Virginia      | University of Florida   | 87    | 2016 |
+| 25 |         9 | 10     | Maine         | Pennsylvania University | 98    | 2012 |
+| 27 |         9 | BE     | Kansas        | Columbia University     | 87    | 2018 |
+| 29 |        10 | 12     | Oregon        | University of Michigan  | 76    | 2014 |
+| 34 |        12 | 10     | New Hampshire | Yale University         | 75    | 2010 |
+| 38 |        13 | 12     | Maine         | University of Chicago   | 78    | 2014 |
+| 39 |        13 | BE     | Texas         | University of Florida   | 68    | 2018 |
+| 41 |        14 | 12     | Florida       | University of Florida   | 87    | 2015 |
+| 43 |        15 | 10     | New Hampshire | California University   | 96    | 2011 |
+| 46 |        16 | 10     | Michigan      | University of Michigan  | 76    | 2012 |
+| 48 |        16 | BE     | Mississippi   | University of Michigan  | 76    | 2018 |
+| 49 |        17 | 10     | Alabama       | University of Michigan  | 88    | 2013 |
+| 50 |        17 | 12     | Indiana       | University of Michigan  | 76    | 2015 |
+| 51 |        17 | BE     | Ohio          | University of Ohio      | 68    | 2019 |
+| 52 |        18 | 10     | Iowa          | Stanford University     | 86    | 2011 |
+| 54 |        18 | BE     | Maryland      | Harvard University      | 75    | 2017 |
+| 55 |        19 | 10     | Alabama       | University of Chicago   | 69    | 2013 |
+| 58 |        20 | 10     | Vermont       | Pennsylvania University | 72    | 2013 |
+| 59 |        20 | 12     | Iowa          | Yale University         | 83    | 2015 |
+| 60 |        20 | BE     | Maryland      | Columbia University     | 72    | 2019 |
+| 62 |        21 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+| 63 |        21 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+| 65 |        22 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+| 66 |        22 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+| 68 |        23 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+| 69 |        23 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+| 70 |        24 | 10     | Ohio          | University of Ohio      | 87    | 2011 |
+| 71 |        24 | 12     | Iowa          | Stanford University     | 78    | 2013 |
+| 72 |        24 | BE     | Kentucky      | Harvard University      | 97    | 2017 |
+| 73 |        25 | 10     | Ohio          | University of Ohio      | 87    | 2011 |
+| 74 |        25 | 12     | Iowa          | Stanford University     | 78    | 2013 |
+| 75 |        25 | BE     | Kentucky      | Harvard University      | 97    | 2017 |
+| 78 |        26 | BE     | Maryland      | Harvard University      | 68    | 2000 |
+| 84 |        28 | 12     | Maryland      | Columbia University     | 68    | 2006 |
++----+-----------+--------+---------------+-------------------------+-------+------+
+47 rows in set (0.019 sec)
+
+mysql> SELECT studentID from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10"));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> SELECT studentID from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10");
++-----------+
+| studentID |
++-----------+
+|         1 |
+|         1 |
+|         2 |
+|         3 |
+|         3 |
+|         4 |
+|         4 |
+|         5 |
+|         6 |
+|         6 |
+|         7 |
+|         7 |
+|         7 |
+|         8 |
+|         9 |
+|         9 |
+|        10 |
+|        12 |
+|        13 |
+|        13 |
+|        14 |
+|        15 |
+|        16 |
+|        16 |
+|        17 |
+|        17 |
+|        17 |
+|        18 |
+|        18 |
+|        19 |
+|        20 |
+|        20 |
+|        20 |
+|        21 |
+|        21 |
+|        22 |
+|        22 |
+|        23 |
+|        23 |
+|        24 |
+|        24 |
+|        24 |
+|        25 |
+|        25 |
+|        25 |
+|        26 |
+|        28 |
++-----------+
+47 rows in set (0.020 sec)
+
+mysql> select * from student where id in (SELECT distinct studentID from student_qualifications wheremarks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10"));
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   |
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     |
++----+-----------+----------+------------+--------------------------+
+26 rows in set (0.020 sec)
+
+mysql> select * from student;
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   |
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     |
+| 29 | yuvi      | patil    | 1987-01-28 | yuvi.patil@gmail.com     |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     |
++----+-----------+----------+------------+--------------------------+
+30 rows in set (0.012 sec)
+
+mysql> ^C
+mysql> SELECT distinct studentID from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10");
++-----------+
+| studentID |
++-----------+
+|         1 |
+|         2 |
+|         3 |
+|         4 |
+|         5 |
+|         6 |
+|         7 |
+|         8 |
+|         9 |
+|        10 |
+|        12 |
+|        13 |
+|        14 |
+|        15 |
+|        16 |
+|        17 |
+|        18 |
+|        19 |
+|        20 |
+|        21 |
+|        22 |
+|        23 |
+|        24 |
+|        25 |
+|        26 |
+|        28 |
++-----------+
+26 rows in set (0.024 sec)
+
+mysql> SELECT * from student_qualifications where marks > (SELECT marks FROM student_qualifications WHERE studentID = (select id from student where namefirst = "saleel") AND name = "10");
++----+-----------+--------+---------------+-------------------------+-------+------+
+| ID | studentID | name   | college       | university              | marks | year |
++----+-----------+--------+---------------+-------------------------+-------+------+
+|  2 |         1 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+|  3 |         1 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+|  4 |         2 | 10     | Alaska        | University of Chicago   | 68    | 2013 |
+|  7 |         3 | 10     | Arizona       | Yale University         | 75    | 2011 |
+|  8 |         3 | 12     | California    | California University   | 86    | 2013 |
+| 11 |         4 | 12     | New Hampshire | Yale University         | 97    | 2012 |
+| 12 |         4 | M.Com. | Montana       | Columbia University     | 77    | 2016 |
+| 15 |         5 | M.Com. | Oklahoma      | Stanford University     | 86    | 2014 |
+| 17 |         6 | 12     | Alabama       | Harvard University      | 76    | 2011 |
+| 18 |         6 | BE     | Indiana       | University of Chicago   | 87    | 2015 |
+| 19 |         7 | 10     | Ohio          | University of Ohio      | 87    | 2011 |
+| 20 |         7 | 12     | Iowa          | Stanford University     | 78    | 2013 |
+| 21 |         7 | BE     | Kentucky      | Harvard University      | 97    | 2017 |
+| 24 |         8 | M.Com. | Virginia      | University of Florida   | 87    | 2016 |
+| 25 |         9 | 10     | Maine         | Pennsylvania University | 98    | 2012 |
+| 27 |         9 | BE     | Kansas        | Columbia University     | 87    | 2018 |
+| 29 |        10 | 12     | Oregon        | University of Michigan  | 76    | 2014 |
+| 34 |        12 | 10     | New Hampshire | Yale University         | 75    | 2010 |
+| 38 |        13 | 12     | Maine         | University of Chicago   | 78    | 2014 |
+| 39 |        13 | BE     | Texas         | University of Florida   | 68    | 2018 |
+| 41 |        14 | 12     | Florida       | University of Florida   | 87    | 2015 |
+| 43 |        15 | 10     | New Hampshire | California University   | 96    | 2011 |
+| 46 |        16 | 10     | Michigan      | University of Michigan  | 76    | 2012 |
+| 48 |        16 | BE     | Mississippi   | University of Michigan  | 76    | 2018 |
+| 49 |        17 | 10     | Alabama       | University of Michigan  | 88    | 2013 |
+| 50 |        17 | 12     | Indiana       | University of Michigan  | 76    | 2015 |
+| 51 |        17 | BE     | Ohio          | University of Ohio      | 68    | 2019 |
+| 52 |        18 | 10     | Iowa          | Stanford University     | 86    | 2011 |
+| 54 |        18 | BE     | Maryland      | Harvard University      | 75    | 2017 |
+| 55 |        19 | 10     | Alabama       | University of Chicago   | 69    | 2013 |
+| 58 |        20 | 10     | Vermont       | Pennsylvania University | 72    | 2013 |
+| 59 |        20 | 12     | Iowa          | Yale University         | 83    | 2015 |
+| 60 |        20 | BE     | Maryland      | Columbia University     | 72    | 2019 |
+| 62 |        21 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+| 63 |        21 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+| 65 |        22 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+| 66 |        22 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+| 68 |        23 | 12     | Alaska        | Harvard University      | 74    | 2014 |
+| 69 |        23 | BE     | Arizona       | Harvard University      | 68    | 2018 |
+| 70 |        24 | 10     | Ohio          | University of Ohio      | 87    | 2011 |
+| 71 |        24 | 12     | Iowa          | Stanford University     | 78    | 2013 |
+| 72 |        24 | BE     | Kentucky      | Harvard University      | 97    | 2017 |
+| 73 |        25 | 10     | Ohio          | University of Ohio      | 87    | 2011 |
+| 74 |        25 | 12     | Iowa          | Stanford University     | 78    | 2013 |
+| 75 |        25 | BE     | Kentucky      | Harvard University      | 97    | 2017 |
+| 78 |        26 | BE     | Maryland      | Harvard University      | 68    | 2000 |
+| 84 |        28 | 12     | Maryland      | Columbia University     | 68    | 2006 |
++----+-----------+--------+---------------+-------------------------+-------+------+
+47 rows in set (0.019 sec)
+
+mysql>

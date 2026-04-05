@@ -1,0 +1,478 @@
+Microsoft Windows [Version 10.0.26200.8117]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\saisagar>mysql -u root -p root -P 1919
+Enter password: ****
+ERROR 1049 (42000): Unknown database 'root'
+
+C:\Users\saisagar>mysql -u infoway -p root -P 1919
+Enter password: ****
+ERROR 1045 (28000): Access denied for user 'infoway'@'localhost' (using password: YES)
+
+C:\Users\saisagar>mysql -u infoway -p -P 1919
+Enter password: ****
+ERROR 1045 (28000): Access denied for user 'infoway'@'localhost' (using password: YES)
+
+C:\Users\saisagar>mysql -h localhost -u root -p root -P 1919
+Enter password: ****
+ERROR 1049 (42000): Unknown database 'root'
+
+C:\Users\saisagar>mysql -h localhost -P 1919 -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 9.6.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> clss
+    -> cls
+    -> cls;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'clss
+cls
+cls' at line 1
+mysql> cls
+    -> /!cls
+    -> /!cls^C
+mysql> /!cls
+    -> cls
+    -> ^C
+mysql> /! cls
+    -> ! cls
+    -> \! cls
+ERROR:
+'system' command received, but the --system-command option is off. Skipping.
+    -> \! cls
+ERROR:
+'system' command received, but the --system-command option is off. Skipping.
+    -> ^C
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> \! qcls
+ERROR:
+'system' command received, but the --system-command option is off. Skipping.
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| infoway            |
+| infoway_c          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.028 sec)
+
+mysql> use infoway_c
+Database changed
+mysql> show tables
+    -> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show table' at line 2
+mysql> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> show tables;
++------------------------+
+| Tables_in_infoway_c    |
++------------------------+
+| batch_students         |
+| books                  |
+| course                 |
+| course_batches         |
+| course_modules         |
+| faculty                |
+| faculty_address        |
+| faculty_phone          |
+| faculty_qualifications |
+| modules                |
+| newbooks               |
+| student                |
+| student_address        |
+| student_cards          |
+| student_order          |
+| student_phone          |
+| student_qualifications |
++------------------------+
+17 rows in set (0.100 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| infoway            |
+| infoway_c          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.023 sec)
+
+mysql> create database Demo;
+Query OK, 1 row affected (0.305 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| demo               |
+| information_schema |
+| infoway            |
+| infoway_c          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.021 sec)
+
+mysql> use demo
+Database changed
+mysql> show tables;
+Empty set (0.022 sec)
+
+mysql> create table COURSE(ID int PRIMARY KEY, name VARCHAR(45), duration VARCHAR(45), summary VARCHAR(1024));
+Query OK, 0 rows affected (0.536 sec)
+
+mysql> show tables;
++----------------+
+| Tables_in_demo |
++----------------+
+| course         |
++----------------+
+1 row in set (0.027 sec)
+
+mysql> desc course;
++----------+---------------+------+-----+---------+-------+
+| Field    | Type          | Null | Key | Default | Extra |
++----------+---------------+------+-----+---------+-------+
+| ID       | int           | NO   | PRI | NULL    |       |
+| name     | varchar(45)   | YES  |     | NULL    |       |
+| duration | varchar(45)   | YES  |     | NULL    |       |
+| summary  | varchar(1024) | YES  |     | NULL    |       |
++----------+---------------+------+-----+---------+-------+
+4 rows in set (0.035 sec)
+
+mysql> explains course
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'explains course' at line 1
+mysql> explains course
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'explains course' at line 1
+mysql> explain course;
++----------+---------------+------+-----+---------+-------+
+| Field    | Type          | Null | Key | Default | Extra |
++----------+---------------+------+-----+---------+-------+
+| ID       | int           | NO   | PRI | NULL    |       |
+| name     | varchar(45)   | YES  |     | NULL    |       |
+| duration | varchar(45)   | YES  |     | NULL    |       |
+| summary  | varchar(1024) | YES  |     | NULL    |       |
++----------+---------------+------+-----+---------+-------+
+4 rows in set (0.025 sec)
+
+mysql> select user();
++----------------+
+| user()         |
++----------------+
+| root@localhost |
++----------------+
+1 row in set (0.007 sec)
+
+mysql> select database()
+    -> ;
++------------+
+| database() |
++------------+
+| demo       |
++------------+
+1 row in set (0.007 sec)
+
+mysql> select schema()
+    -> ;
++----------+
+| schema() |
++----------+
+| demo     |
++----------+
+1 row in set (0.009 sec)
+
+mysql> select version()
+    -> ;
++-----------+
+| version() |
++-----------+
+| 9.6.0     |
++-----------+
+1 row in set (0.007 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> CREATE TABLE STUDENT
+    -> (ID int PRIMARY KEY, namefirst VARCHAR(45),namelast VARCHAR(45),DOB date,emailID VARCHAR(128));
+Query OK, 0 rows affected (0.391 sec)
+
+mysql> show tables;
++----------------+
+| Tables_in_demo |
++----------------+
+| course         |
+| student        |
++----------------+
+2 rows in set (0.024 sec)
+
+mysql> desc student;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| ID        | int          | NO   | PRI | NULL    |       |
+| namefirst | varchar(45)  | YES  |     | NULL    |       |
+| namelast  | varchar(45)  | YES  |     | NULL    |       |
+| DOB       | date         | YES  |     | NULL    |       |
+| emailID   | varchar(128) | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+5 rows in set (0.033 sec)
+
+mysql> explain student;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| ID        | int          | NO   | PRI | NULL    |       |
+| namefirst | varchar(45)  | YES  |     | NULL    |       |
+| namelast  | varchar(45)  | YES  |     | NULL    |       |
+| DOB       | date         | YES  |     | NULL    |       |
+| emailID   | varchar(128) | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+5 rows in set (0.024 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> CREATE TABLE STUDENT_PHONE
+    -> (ID int PRIMARY KEY,)
+    -> (ID int PRIMARY KEY,)^C
+mysql> CREATE TABLE STUDENT_PHONE
+    -> (ID int PRIMARY KEY, studentID foreign key(studentID) references student(ID),number VARCHAR(45),isActive bool);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key(studentID) references student(ID),number VARCHAR(45),isActive bool)' at line 2
+mysql> (ID int PRIMARY KEY, studentID int foreign key(studentID) references student(ID),number VARCHAR(45),isActive bool);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ID int PRIMARY KEY, studentIDint foreign key(studentID) references student(ID),' at line 1
+mysql> (ID int PRIMARY KEY, studentID int foreign key(studentID) references student(id),number VARCHAR(45),isActive bool);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ID int PRIMARY KEY, studentIDint foreign key(studentID) references student(id),' at line 1
+mysql> CREATE TABLE STUDENT_PHONE
+    -> (ID int PRIMARY KEY, studentID foreign key(studentID) references student(ID),number VARCHAR(45),isActive bool);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key(studentID) references student(ID),number VARCHAR(45),isActive bool)' at line 2
+mysql> CREATE TABLE STUDENT_PHONE
+    -> (ID int PRIMARY KEY, studentID int foreign key(studentID) references student(ID),number VARCHAR(45),isActive bool);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key(studentID) references student(ID),number VARCHAR(45),isActive bool)' at line 2
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> CREATE TABLE STUDENT_PHONE
+    -> (ID int PRIMARY KEY, studentID int,foreign key(studentID) references student(ID),number VARCHAR(45),isActive bool);
+Query OK, 0 rows affected (1.049 sec)
+
+mysql> show tables;
++----------------+
+| Tables_in_demo |
++----------------+
+| course         |
+| student        |
+| student_phone  |
++----------------+
+3 rows in set (0.023 sec)
+
+mysql> desc student_phone;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| ID        | int         | NO   | PRI | NULL    |       |
+| studentID | int         | YES  | MUL | NULL    |       |
+| number    | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.030 sec)
+
+mysql> CREATE STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int unique not null,address VARCHAR(45),foreign key(studentID) references student(id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int unique not null,address VARCHA' at line 1
+mysql> CREATE STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int,address VARCHAR(45),unique not null foreign key(studentID) references student(id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int,address VARCHAR(45),unique not' at line 1
+mysql> CREATE STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int,address VARCHAR(45),unique notnull foreign key(studentID) references student(id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int,address VARCHAR(45),unique not' at line 1
+mysql> CREATE STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int not null unique,address VARCHAR(45),foreign key(studentID) references student(id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int not null unique,address VARCHA' at line 1
+mysql> CREATE STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int not null unique,foreign key(studentID) references student(id),address varchar(45));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int not null unique,foreign key(st' at line 1
+mysql> CREATE TABLE STUDENT_ADDRESS(ID int PRIMARY KEY, studentID int not null unique,address VARCHAR(45),foreign key(studentID) references student(id));
+Query OK, 0 rows affected (0.804 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_demo  |
++-----------------+
+| course          |
+| student         |
+| student_address |
+| student_phone   |
++-----------------+
+4 rows in set (0.028 sec)
+
+mysql> desc student_address;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| ID        | int         | NO   | PRI | NULL    |       |
+| studentID | int         | NO   | UNI | NULL    |       |
+| address   | varchar(45) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+3 rows in set (0.030 sec)
+
+mysql> SHOW CREATE TABLE STUDENT_ADDRESS;
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table           | Create Table                                                                                                                                                                                |
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| STUDENT_ADDRESS | CREATE TABLE `student_address` (
+  `ID` int NOT NULL,
+  `studentID` int NOT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `studentID` (`studentID`),
+  CONSTRAINT `student_address_ibfk_1` FOREIGN KEY (`studentID`) REFERENCES `student` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.191 sec)
+
+mysql>
+mysql>
+mysql> CREATE TABLE FACULTY(ID int PRIMARY KEY, namefirst VARCHAR(45),namelast VARCHAR(45),DOB date,emailID varchar(128));
+Query OK, 0 rows affected (0.358 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_demo  |
++-----------------+
+| course          |
+| faculty         |
+| student         |
+| student_address |
+| student_phone   |
++-----------------+
+5 rows in set (0.029 sec)
+
+mysql> explain faculty;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| ID        | int          | NO   | PRI | NULL    |       |
+| namefirst | varchar(45)  | YES  |     | NULL    |       |
+| namelast  | varchar(45)  | YES  |     | NULL    |       |
+| DOB       | date         | YES  |     | NULL    |       |
+| emailID   | varchar(128) | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+5 rows in set (0.032 sec)
+
+mysql> CREATE TABLE FACULTY_PHONE(ID int PRIMARY KEY, facultyID int,number VARCHAR(10), foreign key(facultyID) references faculty(ID));
+Query OK, 0 rows affected (0.740 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_demo  |
++-----------------+
+| course          |
+| faculty         |
+| faculty_phone   |
+| student         |
+| student_address |
+| student_phone   |
++-----------------+
+6 rows in set (0.024 sec)
+
+mysql> desc faculty_phone;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| ID        | int         | NO   | PRI | NULL    |       |
+| facultyID | int         | YES  | MUL | NULL    |       |
+| number    | varchar(10) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+3 rows in set (0.029 sec)
+
+mysql> CREATE TABLE FACULTY_ADDRESS(ID int PRIMARY KEY, facultyID int UNIQUE NOT NULL,address VARCHAR(45), foreign key(facultyID) references faculty(ID));
+Query OK, 0 rows affected (0.846 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_demo  |
++-----------------+
+| course          |
+| faculty         |
+| faculty_address |
+| faculty_phone   |
+| student         |
+| student_address |
+| student_phone   |
++-----------------+
+7 rows in set (0.022 sec)
+
+mysql> explain faculty_address;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| ID        | int         | NO   | PRI | NULL    |       |
+| facultyID | int         | NO   | UNI | NULL    |       |
+| address   | varchar(45) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+3 rows in set (0.030 sec)
+
+mysql> SHOW CREATE TABLE FACULTY_ADDRESS:
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':' at line 1
+mysql> SHOW CREATE TABLE FACULTY_ADDRESS;
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table           | Create Table                                                                                                                                                                                |
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| FACULTY_ADDRESS | CREATE TABLE `faculty_address` (
+  `ID` int NOT NULL,
+  `facultyID` int NOT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `facultyID` (`facultyID`),
+  CONSTRAINT `faculty_address_ibfk_1` FOREIGN KEY (`facultyID`) REFERENCES `faculty` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.020 sec)
+
+mysql>

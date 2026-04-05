@@ -1,0 +1,565 @@
+Microsoft Windows [Version 10.0.26200.8117]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\saisagar>mysql -h localhost -P 1919 -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: 9.6.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| demo               |
+| information_schema |
+| infoway            |
+| infoway_c          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.211 sec)
+
+mysql> use infoway_c
+Database changed
+mysql> show tables;
++------------------------+
+| Tables_in_infoway_c    |
++------------------------+
+| batch_students         |
+| books                  |
+| course                 |
+| course_batches         |
+| course_modules         |
+| faculty                |
+| faculty_address        |
+| faculty_phone          |
+| faculty_qualifications |
+| modules                |
+| newbooks               |
+| student                |
+| student_address        |
+| student_cards          |
+| student_order          |
+| student_phone          |
+| student_qualifications |
++------------------------+
+17 rows in set (0.075 sec)
+
+mysql> select * from course where 1=1;
++----+---------+----------+------------------------------------+
+| ID | name    | duration | summery                            |
++----+---------+----------+------------------------------------+
+|  1 | PG-DAC  |        6 | This course is designed by CDAC    |
+|  2 | DBDA    |        6 | This course is designed by CDAC    |
+|  3 | Pre-DAC |        2 | This course is designed by CDAC    |
+|  4 | JAVA    |        3 | This course is designed by Infoway |
+|  5 | .NET    |        3 | This course is designed by Infoway |
+|  6 | DMC     |        6 | This course is designed by CDAC    |
+|  7 | DSSD    |        6 | This course is designed by CDAC    |
++----+---------+----------+------------------------------------+
+7 rows in set (0.525 sec)
+
+mysql> select * from course where 1;
++----+---------+----------+------------------------------------+
+| ID | name    | duration | summery                            |
++----+---------+----------+------------------------------------+
+|  1 | PG-DAC  |        6 | This course is designed by CDAC    |
+|  2 | DBDA    |        6 | This course is designed by CDAC    |
+|  3 | Pre-DAC |        2 | This course is designed by CDAC    |
+|  4 | JAVA    |        3 | This course is designed by Infoway |
+|  5 | .NET    |        3 | This course is designed by Infoway |
+|  6 | DMC     |        6 | This course is designed by CDAC    |
+|  7 | DSSD    |        6 | This course is designed by CDAC    |
++----+---------+----------+------------------------------------+
+7 rows in set (0.010 sec)
+
+mysql> select namefirst,namelast
+    -> FROM student;
++-----------+----------+
+| namefirst | namelast |
++-----------+----------+
+| saleel    | bagde    |
+| omkar     | rokde    |
+| ulka      | joshi    |
+| rahul     | patil    |
+| ruhan     | bagde    |
+| lala      | prasad   |
+| sharmin   | bagde    |
+| vrushali  | bagde    |
+| vasant    | khande   |
+| nitish    | patil    |
+| neel      | save     |
+| deep      | save     |
+| nrupali   | save     |
+| supriya   | karnik   |
+| bandish   | karnik   |
+| sangita   | karnik   |
+| sangita   | menon    |
+| rahul     | shah     |
+| bhavin    | patel    |
+| kaushal   | patil    |
+| pankaj    | gandhi   |
+| rajan     | patel    |
+| bhavin    | patel    |
+| mukesh    | bhavsar  |
+| dilu      | khande   |
+| sonam     | khan     |
+| rohit     | patil    |
+| raj       | bubber   |
+| yuvi      | patil    |
+| kris      | patil    |
++-----------+----------+
+30 rows in set (0.404 sec)
+
+mysql> SELECT namefirst, namelast, emailID , DOB from student;
++-----------+----------+--------------------------+------------+
+| namefirst | namelast | emailID                  | DOB        |
++-----------+----------+--------------------------+------------+
+| saleel    | bagde    | saleel.bagde@gmail.com   | 1984-06-12 |
+| omkar     | rokde    | omkar.rakde@gmail.com    | 1969-10-25 |
+| ulka      | joshi    | ulka.joshi@gmail.com     | 1970-10-25 |
+| rahul     | patil    | rahul.patil@gmail.com    | 1982-10-31 |
+| ruhan     | bagde    | ruhan.bagde@gmail.com    | 1984-01-12 |
+| lala      | prasad   | lala.prasad@gmail.com    | 1980-12-01 |
+| sharmin   | bagde    | sharmin.bagde@gmail.com  | 1986-12-14 |
+| vrushali  | bagde    | vrushali.bagde@gmail.com | 1984-12-29 |
+| vasant    | khande   | vasant.khande@gmail.com  | 1992-10-26 |
+| nitish    | patil    | nitish.patil@gmail.com   | 1990-10-26 |
+| neel      | save     | neel.save@gmail.com      | 1975-10-30 |
+| deep      | save     | deep.save@gmail.com      | 1986-11-30 |
+| nrupali   | save     | nrupali.save@gmail.com   | 1981-12-01 |
+| supriya   | karnik   | supriya.karnik@gmail.com | 1983-12-15 |
+| bandish   | karnik   | bandish.karnik@gmail.com | 1987-12-30 |
+| sangita   | karnik   | sangita.karnik@gmail.com | 1990-12-01 |
+| sangita   | menon    | sangita.menon@gmail.com  | 1989-10-26 |
+| rahul     | shah     | rahul.shah@gmail.com     | 1982-06-12 |
+| bhavin    | patel    | bhavin.patel@gmail.com   | 1983-11-13 |
+| kaushal   | patil    | kaushal.patil@gmail.com  | 1982-07-30 |
+| pankaj    | gandhi   | pankaj.gandhi@gmail.com  | 1982-07-30 |
+| rajan     | patel    | rajan.patel@gmail.com    | 1982-07-30 |
+| bhavin    | patel    | bhavin.patel@gmail.com   | 1982-07-30 |
+| mukesh    | bhavsar  | mukesh.bhavsar@gmail.com | 1982-07-30 |
+| dilu      | khande   | dilu.khande@gmail.com    | 1982-07-30 |
+| sonam     | khan     | sonam.khan@gmail.com     | 1972-05-13 |
+| rohit     | patil    | rohit.patil@gmail.com    | 1976-12-31 |
+| raj       | bubber   | raj.bubber@gmail.com     | 1982-02-28 |
+| yuvi      | patil    | yuvi.patil@gmail.com     | 1987-01-28 |
+| kris      | patil    | kris.patil@gmail.com     | 1999-01-15 |
++-----------+----------+--------------------------+------------+
+30 rows in set (0.017 sec)
+
+mysql> SELECT * from STUDENt WHERE id = 15;
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
++----+-----------+----------+------------+--------------------------+
+1 row in set (0.055 sec)
+
+mysql> SELECT namefirst, namelast, emailID from student where namefirst = "nitish";
++-----------+----------+------------------------+
+| namefirst | namelast | emailID                |
++-----------+----------+------------------------+
+| nitish    | patil    | nitish.patil@gmail.com |
++-----------+----------+------------------------+
+1 row in set (0.010 sec)
+
+mysql> SELECT namefirst, namelast, emailID from student where namefirst = nitish;
+ERROR 1054 (42S22): Unknown column 'nitish' in 'where clause'
+mysql> SELECT namefirst, namelast, emailID from student where namefirst = "nitish";
++-----------+----------+------------------------+
+| namefirst | namelast | emailID                |
++-----------+----------+------------------------+
+| nitish    | patil    | nitish.patil@gmail.com |
++-----------+----------+------------------------+
+1 row in set (0.010 sec)
+
+mysql> SELECT * FROM student WHERE ID >= 12;
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     |
+| 29 | yuvi      | patil    | 1987-01-28 | yuvi.patil@gmail.com     |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     |
++----+-----------+----------+------------+--------------------------+
+19 rows in set (0.116 sec)
+
+mysql> SELECT * FROM STUDENT WHERE DOB = '1980-12-01';
++----+-----------+----------+------------+-----------------------+
+| ID | namefirst | namelast | DOB        | emailID               |
++----+-----------+----------+------------+-----------------------+
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com |
++----+-----------+----------+------------+-----------------------+
+1 row in set (0.035 sec)
+
+mysql> SELECT * FROM STUDENT_PHONE WHERE ID = 5;
++----+-----------+------------+----------+
+| ID | studentID | number     | isActive |
++----+-----------+------------+----------+
+|  5 |         5 | 7032300001 |        1 |
++----+-----------+------------+----------+
+1 row in set (0.327 sec)
+
+mysql> SELECT * FROM STUDENT_PHONE WHERE studentID = 5;
++----+-----------+------------+----------+
+| ID | studentID | number     | isActive |
++----+-----------+------------+----------+
+|  5 |         5 | 7032300001 |        1 |
+| 25 |         5 | 7032300001 |        1 |
++----+-----------+------------+----------+
+2 rows in set (0.114 sec)
+
+mysql> SELECT * FROM STUDENT_ADDRESS WHERE studentID=5;
++----+-----------+----------------------------------------------+
+| ID | studentID | address                                      |
++----+-----------+----------------------------------------------+
+|  5 |         5 | 15 Hempstead, St, Saugus, MA, Las Vega, 1906 |
++----+-----------+----------------------------------------------+
+1 row in set (0.309 sec)
+
+mysql> SELECT * FROM STUDENT_ADDRESS WHERE studentID=10;
++----+-----------+-----------------------------------------------------+
+| ID | studentID | address                                             |
++----+-----------+-----------------------------------------------------+
+| 10 |        10 | 7710 Covington Rd , New State Road, New York, 37188 |
++----+-----------+-----------------------------------------------------+
+1 row in set (0.010 sec)
+
+mysql> SELECT * FROM FACULTY WHERE 1=1;
++----+-----------+----------+------------+------------------------+
+| ID | namefirst | namelast | DOB        | emailID                |
++----+-----------+----------+------------+------------------------+
+|  1 | prachi    | gupta    | 1974-06-12 | prachi.gupta@gmail.com |
+|  2 | ketan     | shukla   | 1972-10-25 | ketan.shukla@gmail.com |
+|  3 | kiran     | dev      | 1971-10-25 | kiran.dev@gmail.com    |
+|  4 | parag     | patil    | 1972-10-31 | parag.patil@gmail.com  |
++----+-----------+----------+------------+------------------------+
+4 rows in set (0.362 sec)
+
+mysql> SELECT * FROM FACULTY_PHONE WHERE facultyID = 2;
++----+-----------+------------+
+| ID | facultyID | number     |
++----+-----------+------------+
+|  2 |         2 | 7032300039 |
+|  6 |         2 | 7032303479 |
++----+-----------+------------+
+2 rows in set (0.279 sec)
+
+mysql> SELECT * FROM STUDENT_PHONE WHERE studentID =13;
++----+-----------+------------+----------+
+| ID | studentID | number     | isActive |
++----+-----------+------------+----------+
+| 13 |        13 | 7032300055 |        1 |
+| 33 |        13 | 7132300055 |        0 |
+| 34 |        13 | 7132300055 |        0 |
+| 35 |        13 | 7132300055 |        1 |
++----+-----------+------------+----------+
+4 rows in set (0.011 sec)
+
+mysql> SELECT * FROM modules;
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set (0.294 sec)
+
+mysql> SELECT * FROM modules WHERE 1=1;
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set (0.010 sec)
+
+mysql> SELECT * FROM modules WHERE "0";
+Empty set (0.107 sec)
+
+mysql> SELECT * FROM modules WHERE "10";
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set (0.010 sec)
+
+mysql> SELECT * FROM modules WHERE "A";
+Empty set, 1 warning (0.127 sec)
+
+mysql> SELECT * FROM modules WHERE "1A";
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set, 1 warning (0.009 sec)
+
+mysql> SELECT * FROM modules WHERE "A4";
+Empty set, 1 warning (0.008 sec)
+
+mysql> SELECT * FROM modules WHERE "A" = 1;
+Empty set, 1 warning (0.008 sec)
+
+mysql> SELECT * FROM modules WHERE "A" = "A";
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set (0.010 sec)
+
+mysql> SELECT * FROM modules WHERE "A" = "1A";
+Empty set (0.009 sec)
+
+mysql> SELECT * FROM modules WHERE "1" = "1A";
+Empty set (0.009 sec)
+
+mysql> SELECT * FROM modules WHERE 1 = "1A";
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set, 1 warning (0.011 sec)
+
+mysql> SELECT * FROM modules WHERE 1 = "A1";
+Empty set, 1 warning (0.009 sec)
+
+mysql> SELECT * FROM modules WHERE "!1" = "A1";
+Empty set (0.010 sec)
+
+mysql> SELECT * FROM modules WHERE "!1" = "!1";
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set (0.011 sec)
+
+mysql> SELECT * FROM modules WHERE "!1" = "1!";
+Empty set (0.009 sec)
+
+mysql> SELECT * FROM modules WHERE ! = !;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= !' at line 1
+mysql> SELECT * FROM modules WHERE ! = 1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 1' at line 1
+mysql> SELECT * FROM modules WHERE "L" = 1;
+Empty set, 1 warning (0.009 sec)
+
+mysql> SELECT * FROM modules WHERE "L" = L;
+ERROR 1054 (42S22): Unknown column 'L' in 'where clause'
+mysql> SELECT * FROM modules WHERE "L" = 'L';
++----+---------------------------+----------+
+| ID | name                      | duration |
++----+---------------------------+----------+
+|  1 | Oracle                    |        1 |
+|  2 | PHP                       |        1 |
+|  3 | MySQL                     |        1 |
+|  4 | Node                      |        1 |
+|  5 | C++                       |        1 |
+|  6 | C                         |        1 |
+|  7 | JAVA1                     |        2 |
+|  8 | JAVA2                     |        2 |
+|  9 | MongoDB                   |        1 |
+| 10 | NET                       |        2 |
+| 11 | Hive                      |        1 |
+| 12 | Python                    |        1 |
+| 13 | Aptitude                  |        1 |
+| 14 | OOPs with C++ Programming |        6 |
+| 15 | Data Structures           |        6 |
+| 16 | OS Concepts               |        6 |
+| 17 | iOS Programming           |        6 |
++----+---------------------------+----------+
+17 rows in set (0.012 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_infoway_c    |
++------------------------+
+| batch_students         |
+| books                  |
+| course                 |
+| course_batches         |
+| course_modules         |
+| faculty                |
+| faculty_address        |
+| faculty_phone          |
+| faculty_qualifications |
+| modules                |
+| newbooks               |
+| student                |
+| student_address        |
+| student_cards          |
+| student_order          |
+| student_phone          |
+| student_qualifications |
++------------------------+
+17 rows in set (0.035 sec)
+
+mysql> SELECT * FROM course_modules WHERE courseID = 1;
++----+----------+----------+
+| ID | courseID | moduleID |
++----+----------+----------+
+|  1 |        1 |        1 |
+|  2 |        1 |        2 |
+|  3 |        1 |        3 |
+|  4 |        1 |        4 |
+|  5 |        1 |        5 |
+|  6 |        1 |        6 |
+|  7 |        1 |        7 |
+|  8 |        1 |        8 |
+|  9 |        1 |        9 |
++----+----------+----------+
+9 rows in set (0.300 sec)
+
+mysql> SELECT * FROM course_batches WHERE capacity = 80;
++----+---------+----------+------------+------------+----------+
+| ID | name    | courseID | starton    | endson     | capacity |
++----+---------+----------+------------+------------+----------+
+|  1 | Batch1  |        1 | 2016-02-01 | 2016-08-31 |       80 |
+|  6 | Batch6  |        1 | 2015-02-01 | 2015-08-31 |       80 |
+| 11 | Batch11 |        1 | 2017-08-01 | 2018-02-28 |       80 |
+| 16 | Batch16 |        1 | 2014-08-01 | 2015-02-28 |       80 |
+| 21 | Batch21 |        1 | 2015-08-01 | 2016-02-28 |       80 |
++----+---------+----------+------------+------------+----------+
+5 rows in set (0.315 sec)
+
+mysql>

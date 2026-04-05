@@ -1,0 +1,724 @@
+
+C:\Users\saisagar>mysql -h localhost -u root -p -P 1919
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 9.6.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| demo               |
+| information_schema |
+| infoway            |
+| infoway_c          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.068 sec)
+
+mysql> use infoway_c;
+Database changed
+mysql> show tables;
++------------------------+
+| Tables_in_infoway_c    |
++------------------------+
+| batch_students         |
+| books                  |
+| course                 |
+| course_batches         |
+| course_modules         |
+| faculty                |
+| faculty_address        |
+| faculty_phone          |
+| faculty_qualifications |
+| modules                |
+| newbooks               |
+| student                |
+| student_address        |
+| student_cards          |
+| student_order          |
+| student_phone          |
+| student_qualifications |
++------------------------+
+17 rows in set (0.053 sec)
+
+mysql> select namefirst,namelast,emailid from student where id =5 or id = 10 or id = 15;
++-----------+----------+--------------------------+
+| namefirst | namelast | emailid                  |
++-----------+----------+--------------------------+
+| ruhan     | bagde    | ruhan.bagde@gmail.com    |
+| nitish    | patil    | nitish.patil@gmail.com   |
+| bandish   | karnik   | bandish.karnik@gmail.com |
++-----------+----------+--------------------------+
+3 rows in set (0.072 sec)
+
+mysql> select namefirst,namelast,emailid from student where id =5 or id = 10 or id = 15;
++-----------+----------+--------------------------+
+| namefirst | namelast | emailid                  |
++-----------+----------+--------------------------+
+| ruhan     | bagde    | ruhan.bagde@gmail.com    |
+| nitish    | patil    | nitish.patil@gmail.com   |
+| bandish   | karnik   | bandish.karnik@gmail.com |
++-----------+----------+--------------------------+
+3 rows in set (0.013 sec)
+
+mysql> select namefirst,namelast,emailid from student where id =5 or id = 10 or id = 15 limit 7;;
++-----------+----------+--------------------------+
+| namefirst | namelast | emailid                  |
++-----------+----------+--------------------------+
+| ruhan     | bagde    | ruhan.bagde@gmail.com    |
+| nitish    | patil    | nitish.patil@gmail.com   |
+| bandish   | karnik   | bandish.karnik@gmail.com |
++-----------+----------+--------------------------+
+3 rows in set (0.015 sec)
+
+ERROR:
+No query specified
+
+mysql> select namefirst,namelast,emailid from student where id <> 5 or id <> 10 or id <> 15 limit 7;
++-----------+----------+-------------------------+
+| namefirst | namelast | emailid                 |
++-----------+----------+-------------------------+
+| saleel    | bagde    | saleel.bagde@gmail.com  |
+| omkar     | rokde    | omkar.rakde@gmail.com   |
+| ulka      | joshi    | ulka.joshi@gmail.com    |
+| rahul     | patil    | rahul.patil@gmail.com   |
+| ruhan     | bagde    | ruhan.bagde@gmail.com   |
+| lala      | prasad   | lala.prasad@gmail.com   |
+| sharmin   | bagde    | sharmin.bagde@gmail.com |
++-----------+----------+-------------------------+
+7 rows in set (0.012 sec)
+
+mysql> select namefirst,namelast,emailid from student where id not 5 or id not 10 or id not 15 limit 7;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '5 or id not 10 or id not 15 limit 7' at line 1
+mysql> select namefirst,namelast,emailid from student where id not in (5) or id not in (10) or id notin (15) limit 7;
++-----------+----------+-------------------------+
+| namefirst | namelast | emailid                 |
++-----------+----------+-------------------------+
+| saleel    | bagde    | saleel.bagde@gmail.com  |
+| omkar     | rokde    | omkar.rakde@gmail.com   |
+| ulka      | joshi    | ulka.joshi@gmail.com    |
+| rahul     | patil    | rahul.patil@gmail.com   |
+| ruhan     | bagde    | ruhan.bagde@gmail.com   |
+| lala      | prasad   | lala.prasad@gmail.com   |
+| sharmin   | bagde    | sharmin.bagde@gmail.com |
++-----------+----------+-------------------------+
+7 rows in set (0.112 sec)
+
+mysql> select month(now());
++--------------+
+| month(now()) |
++--------------+
+|            4 |
++--------------+
+1 row in set (0.119 sec)
+
+mysql> select monthname(now());
++------------------+
+| monthname(now()) |
++------------------+
+| April            |
++------------------+
+1 row in set (0.106 sec)
+
+mysql> select monthname(curdate());
++----------------------+
+| monthname(curdate()) |
++----------------------+
+| April                |
++----------------------+
+1 row in set (0.010 sec)
+
+mysql> select extract(curdate());
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'curdate())' at line 1
+mysql> select curdate();
++------------+
+| curdate()  |
++------------+
+| 2026-04-05 |
++------------+
+1 row in set (0.010 sec)
+
+mysql> select year(curdate());
++-----------------+
+| year(curdate()) |
++-----------------+
+|            2026 |
++-----------------+
+1 row in set (0.016 sec)
+
+mysql> select * from student where dob = '1984' order by namefirst asc;
+ERROR 1525 (HY000): Incorrect DATE value: '1984'
+mysql> select * from student where year(dob) = '1984' order by namefirst asc;
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    |
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com |
++----+-----------+----------+------------+--------------------------+
+3 rows in set (0.116 sec)
+
+mysql> SELECT * FROM student WHERE QUATER(DOB) = 4;
+ERROR 1305 (42000): FUNCTION infoway_c.QUATER does not exist
+mysql> SELECT * FROM student WHERE QUATER(DOB);
+ERROR 1305 (42000): FUNCTION infoway_c.QUATER does not exist
+mysql> SELECT * FROM student WHERE QUARTER(DOB)=4;
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    |
++----+-----------+----------+------------+--------------------------+
+17 rows in set (0.014 sec)
+
+mysql> SELECT WEEK(DOB) FROM student;
++-----------+
+| WEEK(DOB) |
++-----------+
+|        24 |
+|        42 |
+|        43 |
+|        44 |
+|         2 |
+|        48 |
+|        50 |
+|        52 |
+|        43 |
+|        42 |
+|        43 |
+|        48 |
+|        48 |
+|        50 |
+|        52 |
+|        47 |
+|        43 |
+|        23 |
+|        46 |
+|        30 |
+|        30 |
+|        30 |
+|        30 |
+|        30 |
+|        30 |
+|        19 |
+|        52 |
+|         9 |
+|         4 |
+|         2 |
++-----------+
+30 rows in set (0.115 sec)
+
+mysql> SELECT * FROM student WHERE WEEK(DOB) = 43;
++----+-----------+----------+------------+-------------------------+
+| ID | namefirst | namelast | DOB        | emailID                 |
++----+-----------+----------+------------+-------------------------+
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com    |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com     |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com |
++----+-----------+----------+------------+-------------------------+
+4 rows in set (0.014 sec)
+
+mysql> SELECT * FROM student WHERE DAY(DOB) BETWEEN 10 AND 19;
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     |
++----+-----------+----------+------------+--------------------------+
+8 rows in set (0.132 sec)
+
+mysql> SELECT RAND()*100;
++-------------------+
+| RAND()*100        |
++-------------------+
+| 45.92566773847273 |
++-------------------+
+1 row in set (0.124 sec)
+
+mysql> SELECT ROUND(RAND()*100);
++-------------------+
+| ROUND(RAND()*100) |
++-------------------+
+|                81 |
++-------------------+
+1 row in set (0.108 sec)
+
+mysql> SELECT ROUND(RAND()*100);
++-------------------+
+| ROUND(RAND()*100) |
++-------------------+
+|                66 |
++-------------------+
+1 row in set (0.009 sec)
+
+mysql> SELECT LEFT(namefirst,5) FROM student;
++-------------------+
+| LEFT(namefirst,5) |
++-------------------+
+| salee             |
+| omkar             |
+| ulka              |
+| rahul             |
+| ruhan             |
+| lala              |
+| sharm             |
+| vrush             |
+| vasan             |
+| nitis             |
+| neel              |
+| deep              |
+| nrupa             |
+| supri             |
+| bandi             |
+| sangi             |
+| sangi             |
+| rahul             |
+| bhavi             |
+| kaush             |
+| panka             |
+| rajan             |
+| bhavi             |
+| mukes             |
+| dilu              |
+| sonam             |
+| rohit             |
+| raj               |
+| yuvi              |
+| kris              |
++-------------------+
+30 rows in set (0.117 sec)
+
+mysql> SELECT student.*, DAYNAME(DOB) FROM student ORDER BY DAYNAME(DOB) ASC;
++----+-----------+----------+------------+--------------------------+--------------+
+| ID | namefirst | namelast | DOB        | emailID                  | DAYNAME(DOB) |
++----+-----------+----------+------------+--------------------------+--------------+
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   | Friday       |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  | Friday       |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  | Friday       |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    | Friday       |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   | Friday       |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com | Friday       |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    | Friday       |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    | Friday       |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     | Friday       |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    | Monday       |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  | Monday       |
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    | Saturday     |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com | Saturday     |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com | Saturday     |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     | Saturday     |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     | Saturday     |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     | Sunday       |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    | Sunday       |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  | Sunday       |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      | Sunday       |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   | Sunday       |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     | Sunday       |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    | Thursday     |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      | Thursday     |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com | Thursday     |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  | Thursday     |
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   | Tuesday      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   | Tuesday      |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com | Wednesday    |
+| 29 | yuvi      | patil    | 1987-01-28 | yuvi.patil@gmail.com     | Wednesday    |
++----+-----------+----------+------------+--------------------------+--------------+
+30 rows in set (0.126 sec)
+
+mysql> SELECT student.*, DAYNAME(DOB) FROM student ORDER BY FIELD(DAYNAME(DOB), "Monday","Tuesday","Wenesday","Thursday","Friday","Saturday","Sunday");
++----+-----------+----------+------------+--------------------------+--------------+
+| ID | namefirst | namelast | DOB        | emailID                  | DAYNAME(DOB) |
++----+-----------+----------+------------+--------------------------+--------------+
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com | Wednesday    |
+| 29 | yuvi      | patil    | 1987-01-28 | yuvi.patil@gmail.com     | Wednesday    |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    | Monday       |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  | Monday       |
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   | Tuesday      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   | Tuesday      |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    | Thursday     |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      | Thursday     |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com | Thursday     |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  | Thursday     |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   | Friday       |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  | Friday       |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  | Friday       |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    | Friday       |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   | Friday       |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com | Friday       |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    | Friday       |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    | Friday       |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     | Friday       |
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    | Saturday     |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com | Saturday     |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com | Saturday     |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     | Saturday     |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     | Saturday     |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     | Sunday       |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    | Sunday       |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  | Sunday       |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      | Sunday       |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   | Sunday       |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     | Sunday       |
++----+-----------+----------+------------+--------------------------+--------------+
+30 rows in set (0.110 sec)
+
+mysql> SELECT student.*, DAYNAME(DOB) FROM student ORDER BY FIELD(DAYNAME(DOB), "Monday","Tuesday","Wenesday","Thursday","Friday","Saturday","Sunday") ASC;
++----+-----------+----------+------------+--------------------------+--------------+
+| ID | namefirst | namelast | DOB        | emailID                  | DAYNAME(DOB) |
++----+-----------+----------+------------+--------------------------+--------------+
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com | Wednesday    |
+| 29 | yuvi      | patil    | 1987-01-28 | yuvi.patil@gmail.com     | Wednesday    |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    | Monday       |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  | Monday       |
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   | Tuesday      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   | Tuesday      |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    | Thursday     |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      | Thursday     |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com | Thursday     |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  | Thursday     |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   | Friday       |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  | Friday       |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  | Friday       |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    | Friday       |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   | Friday       |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com | Friday       |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    | Friday       |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    | Friday       |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     | Friday       |
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    | Saturday     |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com | Saturday     |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com | Saturday     |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     | Saturday     |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     | Saturday     |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     | Sunday       |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    | Sunday       |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  | Sunday       |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      | Sunday       |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   | Sunday       |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     | Sunday       |
++----+-----------+----------+------------+--------------------------+--------------+
+30 rows in set (0.019 sec)
+
+mysql> SELECT student.*, DAYNAME(DOB) FROM student ORDER BY FIELD(DAYNAME(DOB), "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
++----+-----------+----------+------------+--------------------------+--------------+
+| ID | namefirst | namelast | DOB        | emailID                  | DAYNAME(DOB) |
++----+-----------+----------+------------+--------------------------+--------------+
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    | Monday       |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  | Monday       |
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   | Tuesday      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   | Tuesday      |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com | Wednesday    |
+| 29 | yuvi      | patil    | 1987-01-28 | yuvi.patil@gmail.com     | Wednesday    |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    | Thursday     |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      | Thursday     |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com | Thursday     |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  | Thursday     |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   | Friday       |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  | Friday       |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  | Friday       |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    | Friday       |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   | Friday       |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com | Friday       |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    | Friday       |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    | Friday       |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     | Friday       |
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    | Saturday     |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com | Saturday     |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com | Saturday     |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     | Saturday     |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     | Saturday     |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     | Sunday       |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    | Sunday       |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  | Sunday       |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      | Sunday       |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   | Sunday       |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     | Sunday       |
++----+-----------+----------+------------+--------------------------+--------------+
+30 rows in set (0.017 sec)
+
+mysql> SELECT student.*, DAYNAME(DOB) FROM student ORDER BY WEEKDAY(DOB);
++----+-----------+----------+------------+--------------------------+--------------+
+| ID | namefirst | namelast | DOB        | emailID                  | DAYNAME(DOB) |
++----+-----------+----------+------------+--------------------------+--------------+
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    | Monday       |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  | Monday       |
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   | Tuesday      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   | Tuesday      |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com | Wednesday    |
+| 29 | yuvi      | patil    | 1987-01-28 | yuvi.patil@gmail.com     | Wednesday    |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    | Thursday     |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      | Thursday     |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com | Thursday     |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  | Thursday     |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   | Friday       |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  | Friday       |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  | Friday       |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    | Friday       |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   | Friday       |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com | Friday       |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    | Friday       |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    | Friday       |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     | Friday       |
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    | Saturday     |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com | Saturday     |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com | Saturday     |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     | Saturday     |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     | Saturday     |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     | Sunday       |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    | Sunday       |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  | Sunday       |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      | Sunday       |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   | Sunday       |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     | Sunday       |
++----+-----------+----------+------------+--------------------------+--------------+
+30 rows in set (0.123 sec)
+
+mysql> SELECT * FROM student WHERE QUARTER(DOB) in (4);
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    |
++----+-----------+----------+------------+--------------------------+
+17 rows in set (0.015 sec)
+
+mysql> SELECT * FROM student WHERE DAYNAME(DOB) = "Sunday";
++----+-----------+----------+------------+-------------------------+
+| ID | namefirst | namelast | DOB        | emailID                 |
++----+-----------+----------+------------+-------------------------+
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com    |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com   |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com     |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com  |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com    |
++----+-----------+----------+------------+-------------------------+
+6 rows in set (0.016 sec)
+
+mysql> SELECT student.*, CONCAT(DAY(DOB),"th"," of ",MONTHNAME(DOB)," ",YEAR(DOB)) FROM student;
++----+-----------+----------+------------+--------------------------+-----------------------------------------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  | CONCAT(DAY(DOB),"th"," of ",MONTHNAME(DOB)," ",YEAR(DOB)) |
++----+-----------+----------+------------+--------------------------+-----------------------------------------------------------+
+|  1 | saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   | 12th of June 1984                          |
+|  2 | omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    | 25th of October 1969                          |
+|  3 | ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     | 25th of October 1970                          |
+|  4 | rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    | 31th of October 1982                          |
+|  5 | ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    | 12th of January 1984                          |
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    | 1th of December 1980                          |
+|  7 | sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  | 14th of December 1986                          |
+|  8 | vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com | 29th of December 1984                          |
+|  9 | vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  | 26th of October 1992                          |
+| 10 | nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   | 26th of October 1990                          |
+| 11 | neel      | save     | 1975-10-30 | neel.save@gmail.com      | 30th of October 1975                          |
+| 12 | deep      | save     | 1986-11-30 | deep.save@gmail.com      | 30th of November 1986                          |
+| 13 | nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   | 1th of December 1981                          |
+| 14 | supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com | 15th of December 1983                          |
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com | 30th of December 1987                          |
+| 16 | sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com | 1th of December 1990                          |
+| 17 | sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  | 26th of October 1989                          |
+| 18 | rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     | 12th of June 1982                          |
+| 19 | bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   | 13th of November 1983                          |
+| 20 | kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  | 30th of July 1982                          |
+| 21 | pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  | 30th of July 1982                          |
+| 22 | rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    | 30th of July 1982                          |
+| 23 | bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   | 30th of July 1982                          |
+| 24 | mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com | 30th of July 1982                          |
+| 25 | dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    | 30th of July 1982                          |
+| 26 | sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     | 13th of May 1972                          |
+| 27 | rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    | 31th of December 1976                          |
+| 28 | raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     | 28th of February 1982                          |
+| 29 | yuvi      | patil    | 1987-01-28 | yuvi.patil@gmail.com     | 28th of January 1987                          |
+| 30 | kris      | patil    | 1999-01-15 | kris.patil@gmail.com     | 15th of January 1999                          |
++----+-----------+----------+------------+--------------------------+-----------------------------------------------------------+
+30 rows in set (0.117 sec)
+
+mysql> SELECT * from course_batches;
++----+---------+----------+------------+------------+----------+
+| ID | name    | courseID | starton    | endson     | capacity |
++----+---------+----------+------------+------------+----------+
+|  1 | Batch1  |        1 | 2016-02-01 | 2016-08-31 |       80 |
+|  2 | Batch2  |        2 | 2016-02-01 | 2016-08-31 |       30 |
+|  3 | Batch3  |        3 | 2016-02-01 | 2016-03-31 |       35 |
+|  4 | Batch4  |        4 | 2016-07-01 | 2016-09-30 |       25 |
+|  5 | Batch5  |        5 | 2016-07-01 | 2016-09-30 |       25 |
+|  6 | Batch6  |        1 | 2015-02-01 | 2015-08-31 |       80 |
+|  7 | Batch7  |        2 | 2015-02-01 | 2015-08-31 |       30 |
+|  8 | Batch8  |        3 | 2017-04-01 | 2017-05-31 |       30 |
+|  9 | Batch9  |        4 | 2018-07-01 | 2018-09-30 |       25 |
+| 10 | Batch10 |        5 | 2018-09-01 | 2018-11-30 |       25 |
+| 11 | Batch11 |        1 | 2017-08-01 | 2018-02-28 |       80 |
+| 12 | Batch12 |        2 | 2017-08-01 | 2018-02-28 |       30 |
+| 13 | Batch13 |        3 | 2017-07-01 | 2017-08-31 |       30 |
+| 14 | Batch14 |        4 | 2018-05-01 | 2018-07-31 |       25 |
+| 15 | Batch15 |        5 | 2018-06-01 | 2018-08-30 |       25 |
+| 16 | Batch16 |        1 | 2014-08-01 | 2015-02-28 |       80 |
+| 17 | Batch17 |        2 | 2014-08-01 | 2015-02-28 |       30 |
+| 18 | Batch18 |        3 | 2018-03-01 | 2018-04-30 |       35 |
+| 19 | Batch19 |        4 | 2019-01-01 | 2019-03-30 |       25 |
+| 20 | Batch20 |        5 | 2018-12-01 | 2019-02-28 |       25 |
+| 21 | Batch21 |        1 | 2015-08-01 | 2016-02-28 |       80 |
+| 22 | Batch22 |        2 | 2015-08-01 | 2016-02-28 |       30 |
+| 23 | Batch23 |        3 | 2019-03-01 | 2019-04-30 |       40 |
+| 24 | Batch24 |        4 | 2019-01-01 | 2019-03-30 |       30 |
+| 25 | Batch25 |        6 | 2019-01-01 | 2019-03-30 |       30 |
++----+---------+----------+------------+------------+----------+
+25 rows in set (0.023 sec)
+
+mysql> SELECT * from course_batches WHERE DAYNAME(endson) = "Sunday";
++----+---------+----------+------------+------------+----------+
+| ID | name    | courseID | starton    | endson     | capacity |
++----+---------+----------+------------+------------+----------+
+|  9 | Batch9  |        4 | 2018-07-01 | 2018-09-30 |       25 |
+| 21 | Batch21 |        1 | 2015-08-01 | 2016-02-28 |       80 |
+| 22 | Batch22 |        2 | 2015-08-01 | 2016-02-28 |       30 |
++----+---------+----------+------------+------------+----------+
+3 rows in set (0.019 sec)
+
+mysql> SELECT student_phone.*,CONCAT(LEFT(number,4),REPEAT(*,6)) AS Pattern FROM student_phone;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*,6)) AS Pattern FROM student_phone' at line 1
+mysql> SELECT student_phone.*,CONCAT(LEFT(number,4),REPEAT("*",6)) AS Pattern FROM student_phone;
++----+-----------+------------+----------+------------+
+| ID | studentID | number     | isActive | Pattern    |
++----+-----------+------------+----------+------------+
+|  1 |         1 | 7032300034 |        1 | 7032****** |
+|  2 |         2 | 7032300039 |        1 | 7032****** |
+|  3 |         3 | 7032300050 |        1 | 7032****** |
+|  4 |         4 | 7032300027 |        1 | 7032****** |
+|  5 |         5 | 7032300001 |        1 | 7032****** |
+|  6 |         6 | 7032300079 |        1 | 7032****** |
+|  7 |         7 | 7032300081 |        1 | 7032****** |
+|  8 |         8 | 7032300054 |        1 | 7032****** |
+|  9 |         9 | 7032300059 |        1 | 7032****** |
+| 10 |        10 | 7032300086 |        1 | 7032****** |
+| 11 |        11 | 7032300082 |        1 | 7032****** |
+| 12 |        12 | 7032300042 |        1 | 7032****** |
+| 13 |        13 | 7032300055 |        1 | 7032****** |
+| 14 |        14 | 7032300013 |        1 | 7032****** |
+| 15 |        15 | 7032300099 |        1 | 7032****** |
+| 16 |        16 | 7032300023 |        1 | 7032****** |
+| 17 |        17 | 7032300084 |        1 | 7032****** |
+| 18 |        18 | 7032300011 |        1 | 7032****** |
+| 19 |        19 | 7032300066 |        1 | 7032****** |
+| 20 |        20 | 7032300096 |        1 | 7032****** |
+| 21 |         1 | 7132300034 |        1 | 7132****** |
+| 22 |         2 | 7132300039 |        1 | 7132****** |
+| 23 |         3 | 7132300050 |        1 | 7132****** |
+| 24 |         4 | 7132300027 |        1 | 7132****** |
+| 25 |         5 | 7032300001 |        1 | 7032****** |
+| 26 |         6 | 7132300079 |        1 | 7132****** |
+| 27 |         7 | 7132300081 |        0 | 7132****** |
+| 28 |         8 | 7132300054 |        0 | 7132****** |
+| 29 |         9 | 7132300059 |        0 | 7132****** |
+| 30 |        10 | 7132300086 |        0 | 7132****** |
+| 31 |        11 | 7132300082 |        0 | 7132****** |
+| 32 |        12 | 7132300042 |        0 | 7132****** |
+| 33 |        13 | 7132300055 |        0 | 7132****** |
+| 34 |        13 | 7132300055 |        0 | 7132****** |
+| 35 |        13 | 7132300055 |        1 | 7132****** |
+| 36 |         6 | 7134567123 |        0 | 7134****** |
+| 37 |        21 | 7156567123 |        1 | 7156****** |
+| 38 |        22 | 7156567134 |        1 | 7156****** |
+| 39 |        23 | 7156563423 |        0 | 7156****** |
+| 40 |        24 | 7156567183 |        0 | 7156****** |
+| 41 |        25 | 7146566412 |        1 | 7146****** |
++----+-----------+------------+----------+------------+
+41 rows in set (0.042 sec)
+
+mysql> SELECT student_phone.*,CONCAT(LEFT(number,4),REPEAT("*",4),RIGHT(number,4)) AS Pattern FROM student_phone;
++----+-----------+------------+----------+--------------+
+| ID | studentID | number     | isActive | Pattern      |
++----+-----------+------------+----------+--------------+
+|  1 |         1 | 7032300034 |        1 | 7032****0034 |
+|  2 |         2 | 7032300039 |        1 | 7032****0039 |
+|  3 |         3 | 7032300050 |        1 | 7032****0050 |
+|  4 |         4 | 7032300027 |        1 | 7032****0027 |
+|  5 |         5 | 7032300001 |        1 | 7032****0001 |
+|  6 |         6 | 7032300079 |        1 | 7032****0079 |
+|  7 |         7 | 7032300081 |        1 | 7032****0081 |
+|  8 |         8 | 7032300054 |        1 | 7032****0054 |
+|  9 |         9 | 7032300059 |        1 | 7032****0059 |
+| 10 |        10 | 7032300086 |        1 | 7032****0086 |
+| 11 |        11 | 7032300082 |        1 | 7032****0082 |
+| 12 |        12 | 7032300042 |        1 | 7032****0042 |
+| 13 |        13 | 7032300055 |        1 | 7032****0055 |
+| 14 |        14 | 7032300013 |        1 | 7032****0013 |
+| 15 |        15 | 7032300099 |        1 | 7032****0099 |
+| 16 |        16 | 7032300023 |        1 | 7032****0023 |
+| 17 |        17 | 7032300084 |        1 | 7032****0084 |
+| 18 |        18 | 7032300011 |        1 | 7032****0011 |
+| 19 |        19 | 7032300066 |        1 | 7032****0066 |
+| 20 |        20 | 7032300096 |        1 | 7032****0096 |
+| 21 |         1 | 7132300034 |        1 | 7132****0034 |
+| 22 |         2 | 7132300039 |        1 | 7132****0039 |
+| 23 |         3 | 7132300050 |        1 | 7132****0050 |
+| 24 |         4 | 7132300027 |        1 | 7132****0027 |
+| 25 |         5 | 7032300001 |        1 | 7032****0001 |
+| 26 |         6 | 7132300079 |        1 | 7132****0079 |
+| 27 |         7 | 7132300081 |        0 | 7132****0081 |
+| 28 |         8 | 7132300054 |        0 | 7132****0054 |
+| 29 |         9 | 7132300059 |        0 | 7132****0059 |
+| 30 |        10 | 7132300086 |        0 | 7132****0086 |
+| 31 |        11 | 7132300082 |        0 | 7132****0082 |
+| 32 |        12 | 7132300042 |        0 | 7132****0042 |
+| 33 |        13 | 7132300055 |        0 | 7132****0055 |
+| 34 |        13 | 7132300055 |        0 | 7132****0055 |
+| 35 |        13 | 7132300055 |        1 | 7132****0055 |
+| 36 |         6 | 7134567123 |        0 | 7134****7123 |
+| 37 |        21 | 7156567123 |        1 | 7156****7123 |
+| 38 |        22 | 7156567134 |        1 | 7156****7134 |
+| 39 |        23 | 7156563423 |        0 | 7156****3423 |
+| 40 |        24 | 7156567183 |        0 | 7156****7183 |
+| 41 |        25 | 7146566412 |        1 | 7146****6412 |
++----+-----------+------------+----------+--------------+
+41 rows in set (0.016 sec)
+
+mysql>
