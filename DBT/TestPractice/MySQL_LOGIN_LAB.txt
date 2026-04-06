@@ -1,0 +1,1 @@
+C:\Users\Group044>mysql --host=192.168.100.99 --port=3306 --user=group044 --password=welcome
