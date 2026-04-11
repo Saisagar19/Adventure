@@ -23,13 +23,17 @@ public class SortingDesc {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter size:");
 		int size = sc.nextInt();
-		
-		
 		int[] arr =  new int[size];
+		for(int i = 0; i < arr.length; i++)
+		{
+			arr[i] = sc.nextInt();
+		}
+		
 		bubbleSort(arr);
 		for(int i : arr)
 		{
 			System.out.print(i+" ");
 		}
+		sc.close();
 	}
 }
