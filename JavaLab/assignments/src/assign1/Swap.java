@@ -1,3 +1,4 @@
+package assign1;
 import java.util.Scanner;
 
 public class Swap {
@@ -9,14 +10,6 @@ public class Swap {
 		num2 = temp;
 		System.out.println("Number 1: "+num1+" Number 2: "+num2);
 	}
-	public static void swaps2(int a, int b)
-	{
-		a = a+b;
-		b = a-b;
-		a = a-b;
-		System.out.println("Number 1: "+a+" Number 2: "+b);
-	}
-	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number 1: ");
@@ -24,10 +17,6 @@ public class Swap {
 		System.out.println("Enter the number 2: ");
 		int n2 = sc.nextInt();
 		System.out.println("Swap the provided Numbers: ");
-		System.out.println("Number 1: "+n1+" Number 2: "+n2);
-		System.out.println("After Swapping");
-		Swap.swaps(n1,n2);
-		System.out.println("Swap the provided Numbers without third variable: ");
 		System.out.println("Number 1: "+n1+" Number 2: "+n2);
 		System.out.println("After Swapping");
 		Swap.swaps(n1,n2);
