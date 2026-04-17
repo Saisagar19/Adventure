@@ -2,12 +2,12 @@ package assign4;
 
 import java.util.Scanner;
 
-public class XYZmain {
+public class XYZbhk {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		TwoBHK arr [] = new TwoBHK[1];
+		TwoBHK arr [] = new TwoBHK[2];
 		
 		for(int i = 0; i < arr.length; i++)
 		{
@@ -27,6 +27,7 @@ public class XYZmain {
 		{
 			System.out.println(t);
 		}
+		
 //		TwoBHK b1 = new TwoBHK(478.33,458.66,55.6, 892500.00);
 //		b1.show();
 //		TwoBHK b2 = new TwoBHK(600.33,356.66,55.6, 792500.00);
@@ -34,8 +35,13 @@ public class XYZmain {
 //		TwoBHK b3 = new TwoBHK(500.33,600.66,70.6, 992500.00);
 //		b3.show();
 		
+		double totalAmt = 0;
+		for(int i = 0; i < arr.length; i++)
+		{
+			totalAmt += arr[i].getPrice();
+		}
 //		double totalAmt = b1.getPrice() + b2.getPrice() + b3.getPrice();
-//		System.out.println("The total amount of all flats: "+totalAmt);
+		System.out.println("The total amount of all flats: "+totalAmt);
 	}
 
 }

@@ -2,7 +2,7 @@ package treeSetTest;
 
 import java.util.TreeSet;
 
-public class TestSetDemo {
+public class TreetSetDemo {
 	public static void main(String[] args) {
 		
 		TreeSet t = new TreeSet();
@@ -14,5 +14,4 @@ public class TestSetDemo {
 //		t.add(10.2f); //ClassCastException: class java.lang.Integer cannot be cast to class java.lang.Float 
 		System.out.println(t);
 	}
-
 }

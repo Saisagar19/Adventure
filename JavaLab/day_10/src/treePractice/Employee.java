@@ -1,6 +1,6 @@
-package array_List;
+package treePractice;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	private int empId;
 	private String name;
 	private float sal;
@@ -42,5 +42,21 @@ public class Employee {
 	public String toString() {
 		return "Employee [empId=" + empId + ", name=" + name + ", sal=" + sal + "]";
 	}
+
+	@Override
+	public int compareTo(Employee e) {
+		if(this.empId > e.empId)
+		{
+			return +1;
+		}
+		else if(this.empId < e.empId)
+		{
+			return -1;
+		}
+		else {
+			return 0;
+		}
+	}
+
 
 }
