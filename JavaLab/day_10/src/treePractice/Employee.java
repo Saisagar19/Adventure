@@ -1,9 +1,9 @@
 package treePractice;
 
 public class Employee implements Comparable<Employee>{
-	private int empId;
-	private String name;
-	private float sal;
+	public int empId;
+	public String name;
+	public float sal;
 
 	public Employee() {
 	}
