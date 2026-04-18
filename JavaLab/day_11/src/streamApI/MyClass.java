@@ -28,7 +28,6 @@ public class MyClass {
 		System.out.println(my.getMsg());
 		
 		
-		
 	}
 
 }
