@@ -5,6 +5,7 @@ import java.util.Hashtable;
 public class HashTableDemo {
 	public static void main(String[] args) {
 		Hashtable<Temp, String> h = new Hashtable<Temp, String>(); // default capacity 11
+//		Hashtable h = new Hashtable();
 		h.put(new Temp(1), "C");
 		h.put(new Temp(5), "D");
 		h.put(new Temp(4), "E");
@@ -12,6 +13,7 @@ public class HashTableDemo {
 		h.put(new Temp(15), "B");
 		System.out.println(h);
 		h.put(new Temp(1), "C");
+//		h.put(null, null); //java.lang.NullPointerExceptions
 		System.out.println(h);
 		
 	}
