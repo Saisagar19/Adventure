@@ -1,5 +1,7 @@
 package assign2;
 
+import java.util.Scanner;
+
 public class MathOperation1 {
 	
 	public void multiply(int n1,int n2)
@@ -32,10 +34,29 @@ public class MathOperation1 {
 	}
 	
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		MathOperation1 mp = new MathOperation1();
-		mp.multiply(2, 5);
-		mp.multiply(6.6, 5);
-		mp.multiply(9.2f, 8.3f);
-		mp.multiply(2,5,6);
+//		System.out.println("Enter both integer values: ");
+//		int num1 = sc.nextInt();
+//		int num2 = sc.nextInt();
+//		mp.multiply(num1, num2);
+//		System.out.println("Enter one float and one integer value: ");
+//		float n1 = sc.nextFloat();
+//		float n2 = sc.nextInt();
+//		mp.multiply(n1, n2);
+//		System.out.println("Enter one double type and one integer values: ");
+//		double n01 = sc.nextFloat();
+//		int n02 = sc.nextInt();
+//		mp.multiply(n01, n02);
+		System.out.println("Enter size of an array: ");
+		int size = sc.nextInt();
+		int []n = new int[size];
+		System.out.println("Enter integer array type of values: ");
+		for(int i =0;i<n.length;i++)
+		{
+			n[i] = sc.nextInt();
+		}
+		mp.multiply(n);
+		sc.close();
 	}
 }
