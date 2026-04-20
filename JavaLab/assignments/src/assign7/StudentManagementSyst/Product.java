@@ -14,8 +14,6 @@ public class Product {
 	private double price;
 
 	public Product() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Product(int pid, String name, double price) {

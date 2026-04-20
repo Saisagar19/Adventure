@@ -1,7 +1,6 @@
 package assign7.StudentManagementSyst;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,30 +20,53 @@ public class TestProduct {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Map<Integer, Product> h = new HashMap<Integer, Product>();
-		System.out.println("How Many products you want to enter: ");
-		int d = sc.nextInt();
-
-		List<Product> cart = new ArrayList<Product>();
-		for (int i = 0; i < d; i++) {
-			System.out.println("Enter Product Id: ");
-			int id = sc.nextInt();
-			System.out.println("Enter Product Name: ");
-			String nm = sc.nextLine();
-			sc.nextLine();
-			System.out.println("Enter Product Price: ");
-			double price = sc.nextInt();
-
-			h.put((i + 1), new Product(id, nm, price));
-		}
+		h.put(1, new Product(1, "ChocoLava", 120));
+		h.put(2, new Product(2, "Cake", 150));
+		h.put(3, new Product(3, "Kur-kure", 10));
+		h.put(4, new Product(4, "Chips", 20));
+		h.put(5, new Product(5, "Puff", 25));
+		h.put(6, new Product(6, "Samosa", 20));
+		h.put(7, new Product(7, "Wada", 50));
+		h.put(8, new Product(8, "Dahiwada", 40));
+		h.put(9, new Product(9, "PaperBoat", 10));
+		h.put(10, new Product(10, "Appy", 20));
 		System.out.println(h);
 		
-		Collection<Product> list = h.values();
-//		h.put(1, new Product(1, "ChocoLava", 220));
-//		h.put(2, new Product(2, "Cake", 150));
-//		h.put(3, new Product(3, "Kur-kure", 10));
-//		h.put(4, new Product(4, "Chips", 20));
-//		h.put(5, new Product(5, "Puff", 50));
+		System.out.println("How many products do you want to add: ");
+		int ct = sc.nextInt();
+		List<Product> list = new ArrayList<Product>();
 		
+		for (int i = 0; i < ct; i++) 
+		{
+			System.out.println("Enter Product Id to add Product in to Cart: ");
+			int pdId = sc.nextInt();
+			if (h.containsKey(pdId)) {
+				Product data = h.get(pdId);
+				list.add(data);
+				System.out.println("Product added to cart.");
+			} else {
+				System.out.println("Not a valid Id");
+			}
+		}
+		System.out.println(list);
+		double total = list.stream().map(x -> x.getPrice()).reduce(Double::sum).get();
+		System.out.println(total);
+
+		while (true) 
+		{
+			System.out.println("Enter a Product Id that you want to remove[press 0 to exit]: ");
+			int rmId = sc.nextInt();
+
+			if (rmId == 0)
+				break;
+
+			if (list.removeIf(p -> rmId == p.getPid())) {
+				System.out.println("Item is removed");
+				list.stream().forEach(System.out::println);
+			} else {
+				System.out.println("Enter a valid id");
+			}
+		}
 
 	}
 
