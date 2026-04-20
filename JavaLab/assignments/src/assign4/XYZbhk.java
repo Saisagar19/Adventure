@@ -6,9 +6,8 @@ public class XYZbhk {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		
 		TwoBHK arr [] = new TwoBHK[2];
-		
+
 		for(int i = 0; i < arr.length; i++)
 		{
 			System.out.println("Enter area 1: ");
@@ -18,9 +17,9 @@ public class XYZbhk {
 			System.out.println("Enter Hall Area: ");
 			double hallArea = sc.nextDouble();
 			System.out.println("Enter Price: ");
-			double p = sc.nextDouble();
+			double price = sc.nextDouble();
 			
-			arr[i] = new TwoBHK(area1,area2,hallArea, p);
+			arr[i] = new TwoBHK(area1,area2,hallArea, price);
 		}
 		
 		for(TwoBHK t : arr)
