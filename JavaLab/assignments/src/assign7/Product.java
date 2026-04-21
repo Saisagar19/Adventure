@@ -1,4 +1,4 @@
-package assign7.StudentManagementSyst;
+package assign7;
 
 /*Q4. Online Shopping Cart (30 Marks)
 	Write a Java program to simulate a shopping cart.

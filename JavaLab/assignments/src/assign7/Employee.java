@@ -1,4 +1,4 @@
-package assign7.StudentManagementSyst;
+package assign7;
 
 /*Q3. Employee Payroll System (30 Marks)
 	Write a Java program to manage employees’ payroll.

@@ -1,4 +1,4 @@
-package assign7.StudentManagementSyst;
+package assign7;
 
 import java.util.ArrayList;
 import java.util.HashMap;

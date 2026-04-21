@@ -1,4 +1,4 @@
-package assign7.StudentManagementSyst;
+package assign7;
 /*Q1. Student Result Management (30 Marks)
 Write a Java program to manage students’ exam results.
 	1.Create a Student class with: int id, String name, String department, double marks. (5 Marks)
