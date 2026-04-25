@@ -1,0 +1,30 @@
+classWork/
+│
+├── src/
+│   └── com/
+│       └── dsa/
+│           ├── stack/
+│           │   ├── StackArray.java
+│           │   ├── StackLinkedList.java
+│           │
+│           ├── queue/
+│           │   ├── QueueArray.java
+│           │   ├── CircularQueue.java
+│           │   ├── QueueLinkedList.java
+│           │
+│           ├── linkedlist/
+│           │   ├── SinglyLinkedList.java
+│           │   ├── DoublyLinkedList.java
+│           │
+│           ├── tree/
+│           │   ├── BinaryTree.java
+│           │   ├── BST.java
+│           │
+│           ├── common/
+│           │   ├── Node.java
+│           │
+│           └── main/
+│               ├── TestStack.java
+│               ├── TestQueue.java
+│
+└── README.md
