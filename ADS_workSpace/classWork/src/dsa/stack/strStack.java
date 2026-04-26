@@ -29,11 +29,31 @@ public class strStack {
 		return false;
 	}
 
-	public String push(String data) {
+	public void push(String data) {
 		if (!isFull()) {
-			str[0] = data;
+			top++;
+			str[top] = data;
+			return;
 		}
-		return;
+	}
+	public String pop()
+	{
+		if(!isEmpty())
+		{
+			String s = str[top];
+			top--;
+			return s;
+		}
+		return null;
+	}
+	
+	public String peek()
+	{
+		if(!isEmpty())
+		{
+			return str[top];
+		}
+		return null;
 	}
 
 }
