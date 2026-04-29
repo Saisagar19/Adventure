@@ -1,42 +1,40 @@
-package dsa.stack;
+package dsa.oldData;
 
 import java.util.Scanner;
 
-public class charStackMain {
+public class intStackMain {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter size of Stack: ");
 		int size = sc.nextInt();
-		charStack st = new charStack(size);
+		intStack st = new intStack(size);
 		char ch;
-		char n;
+		int num;
 		do {
-			System.out.println("For Character:");
+			System.out.println("For Integer:");
 			System.out.println(
 					"1.Push in Stack\n2.Pop from stack\n3.Peek an Element from Stack\n4.Check for Stack is Empty\n5.Check for Stack is Full.\n6.Exit");
 			ch = sc.next().charAt(0);
 			switch (ch) {
 			case '1':
-				System.out.println("Enter Your Character: ");
-				char character = sc.next().charAt(0);
-				st.push(character);
+				System.out.println("Enter Your Number: ");
+				int no = sc.nextInt();
+				st.push(no);
 				break;
 			case '2':
-				n = st.pop();
-				System.out.println("Poped Element " + n);
+				num = st.pop();
+				System.out.println("Poped Element " + num);
 				break;
 			case '3':
-				n = st.peek();
-				System.out.println("Peek Element " + n);
+				num = st.peek();
+				System.out.println("Peek Element " + num);
 				break;
 			case '4':
 				System.out.println("Stack is Empty..... " + st.isEmpty());
 				break;
-
 			case '5':
 				System.out.println("Stack is Full..... " + st.isFull());
 				break;
-
 			case '6':
 				break;
 			default:

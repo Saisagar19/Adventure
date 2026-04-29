@@ -1,172 +1,167 @@
 package dsa.stack;
 
-class strStack {
-
-	private String[] str;
-	private int top;
-
-	public strStack() {
-		str = new String[10];
-		top = -1;
-	}
-
-	public strStack(int size) {
-		str = new String[size];
-		top = -1;
-	}
-
-	public boolean isFull() {
-		if (top == str.length - 1) {
-			return true;
-		}
-		return false;
-	}
-
-	public boolean isEmpty() {
-		if (top == -1) {
-			return true;
-		}
-		return false;
-	}
-
-	public void push(String data) {
-		if (!isFull()) {
-			top++;
-			str[top] = data;
-			return;
-		}
-	}
-
-	public String pop() {
-		if (!isEmpty()) {
-			String s = str[top];
-			top--;
-			return s;
-		}
-		return null;
-	}
-
-	public String peek() {
-		if (!isEmpty()) {
-			return str[top];
-		}
-		return null;
-	}
-
-}
+import java.util.Scanner;
 
 class intStack {
+    private int[] arr;
+    private int top;
 
-	private int[] arr;
-	private int top;
+    public intStack(int size) {
+        arr = new int[size];
+        top = -1;
+    }
 
-	public intStack() {
-		arr = new int[10];
-		top = -1;
-	}
+    public boolean isFull() {
+        return top == arr.length - 1;
+    }
 
-	public intStack(int size) {
-		arr = new int[size];
-		top = -1;
-	}
+    public boolean isEmpty() {
+        return top == -1;
+    }
 
-	public boolean isFull() {
-		if (top == arr.length - 1) {
-			return true;
-		}
-		return false;
-	}
+    public void push(int num) {
+        if (!isFull()) {
+            arr[++top] = num;
+        }
+    }
 
-	public boolean isEmpty() {
-		if (top == -1) {
-			return true;
-		}
-		return false;
-	}
+    public int pop() {
+        if (!isEmpty()) {
+            return arr[top--];
+        }
+        return -999;
+    }
 
-	public void push(int num) {
-		if (!isFull()) {
-			top++;
-			arr[top] = num;
-
-		}
-		return;
-	}
-
-	public int pop() {
-		int num = -999;
-		if (!isEmpty()) {
-			num = arr[top];
-			top--;
-			return num;
-		}
-		return num;
-	}
-
-	public int peek() {
-		int num = -999;
-		if (!isEmpty()) {
-			return arr[top];
-		}
-		return num;
-	}
-
+    public int peek() {
+        if (!isEmpty()) {
+            return arr[top];
+        }
+        return -999;
+    }
 }
 
 class charStack {
+    private char[] arr;
+    private int top;
 
-	private char[] arr;
-	private int top;
+    public charStack(int size) {
+        arr = new char[size];
+        top = -1;
+    }
 
-	public charStack() {
-		arr = new char[10];
-		top = -1;
-	}
+    public boolean isFull() {
+        return top == arr.length - 1;
+    }
 
-	public charStack(int size) {
-		arr = new char[size];
-		top = -1;
-	}
+    public boolean isEmpty() {
+        return top == -1;
+    }
 
-	public boolean isFull() {
-		if (top == arr.length - 1) {
-			return true;
-		}
-		return false;
-	}
+    public void push(char ch) {
+        if (!isFull()) {
+            arr[++top] = ch;
+        }
+    }
 
-	public boolean isEmpty() {
-		if (top == -1) {
-			return true;
-		}
-		return false;
-	}
+    public char pop() {
+        if (!isEmpty()) {
+            return arr[top--];
+        }
+        return '*';
+    }
 
-	public void push(char ch) {
-		if (!isFull()) {
-			top++;
-			arr[top] = ch;
+    public char peek() {
+        if (!isEmpty()) {
+            return arr[top];
+        }
+        return '*';
+    }
+}
 
-		}
-		return;
-	}
+class strStack {
+    private String[] arr;
+    private int top;
 
-	public char pop() {
-		char d = '*';
-		if (!isEmpty()) {
-			d = arr[top];
-			top--;
-			return d;
-		}
-		return d;
-	}
+    public strStack(int size) {
+        arr = new String[size];
+        top = -1;
+    }
 
-	public char peek() {
-		char d = '*';
-		if (!isEmpty()) {
-			return arr[top];
-		}
-		return d;
-	}
+    public boolean isFull() {
+        return top == arr.length - 1;
+    }
 
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    public void push(String data) {
+        if (!isFull()) {
+            arr[++top] = data;
+        }
+    }
+
+    public String pop() {
+        if (!isEmpty()) {
+            return arr[top--];
+        }
+        return null;
+    }
+
+    public String peek() {
+        if (!isEmpty()) {
+            return arr[top];
+        }
+        return null;
+    }
+}
+
+public class customStack {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter size of Stack: ");
+        int size = sc.nextInt();
+
+        strStack st = new strStack(size);
+        char ch;
+
+        do {
+            System.out.println("\n1.Push\n2.Pop\n3.Peek\n4.IsEmpty\n5.IsFull\n6.Exit");
+            ch = sc.next().charAt(0);
+
+            switch (ch) {
+                case '1':
+                    System.out.println("Enter String:");
+                    String str = sc.next();
+                    st.push(str);
+                    break;
+
+                case '2':
+                    System.out.println("Popped: " + st.pop());
+                    break;
+
+                case '3':
+                    System.out.println("Peek: " + st.peek());
+                    break;
+
+                case '4':
+                    System.out.println("Is Empty: " + st.isEmpty());
+                    break;
+
+                case '5':
+                    System.out.println("Is Full: " + st.isFull());
+                    break;
+
+                case '6':
+                    break;
+
+                default:
+                    System.out.println("Invalid input");
+            }
+
+        } while (ch != '6');
+
+        sc.close();
+    }
 }

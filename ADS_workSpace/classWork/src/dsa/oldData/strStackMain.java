@@ -1,4 +1,4 @@
-package dsa.stack;
+package dsa.oldData;
 
 import java.util.Scanner;
 
