@@ -31,6 +31,15 @@ class intNode {
 
 class LinkedList11 {
 	private intNode head;
+	
+
+	public intNode getHead() {
+		return head;
+	}
+
+	public void setHead(intNode head) {
+		this.head = head;
+	}
 
 	public void makeCycle(int data) {
 		intNode temp = head;
