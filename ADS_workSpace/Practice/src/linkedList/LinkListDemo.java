@@ -1,4 +1,4 @@
-package linkList;
+package linkedList;
 
 class Node {
 	protected int data;
