@@ -151,6 +151,87 @@ class BST {
 		}
 		return max;
 	}
+	
+	
+	private BTNode inserRec(BTNode ptr, int data)
+	{
+		if(ptr == null)
+		{
+			ptr = new BTNode(data); 
+		}
+		
+		if(data < ptr.getVal())
+		{
+			ptr.setLeft(inserRec(ptr.getLeft(), data));
+		}
+		else if(data > ptr.getVal())
+		{
+			ptr.setRight(inserRec(ptr.getRight(), data));
+		}
+		return ptr;
+		
+	}
+	
+	public void insertR(int data)
+	{
+		root = inserRec(root, data);
+	}
+	
+	private BTNode searchRec(int key, BTNode ptr)
+	{
+		if(ptr == null)
+		{
+			return null;
+		}
+		if(ptr.getVal() == key)
+		{
+			return ptr;
+		}
+		
+		if(key < ptr.getVal())
+		{
+			return searchRec(key, ptr.getLeft());
+		}
+		else if(key > ptr.getVal())
+		{
+			return searchRec(key, ptr.getRight());
+		}
+		return ptr;
+	}
+	
+	public BTNode SearchR(int k)
+	{
+		root = searchRec(k, root);
+		return root;
+	}
+	
+	public  int heightBST(BTNode ptr)
+	{
+		int left = 0;
+		int right = 0;
+		if(ptr == null)
+		{
+			return 0;
+		}
+		
+		if(ptr.getLeft() != null)
+		{
+			left = heightBST(ptr.getLeft());
+		}
+		if(ptr.getRight() != null)
+		{
+			right = heightBST(ptr.getRight());
+		}
+		
+		if(left > right)
+		{
+			return left + 1;
+		}
+		else
+		{
+			return right +1;
+		}
+	}
 
 	@Override
 	public String toString() {
@@ -163,22 +244,34 @@ public class MyBST {
 	public static void main(String[] args) {
 
 		BST b = new BST();
-		BST b1 = new BST();
-		b.insertNonR(45);
-		b.insertNonR(55);
-		b.insertNonR(41);
+//		BST b1 = new BST();
+//		b.insertNonR(45);
+//		b.insertNonR(55);
+//		b.insertNonR(41);
+		b.insertR(45);
+		b.insertR(55);
+		b.insertR(49);
+		
+		BTNode root = new BTNode(1);
+		root.setLeft(new BTNode(2));
+		root.setRight(new BTNode(3));
+		root.getLeft().setLeft(new BTNode(4));
+		
 		System.out.println(b);
-		System.out.println(b.search(45));
-		System.out.println(b.search(55));
-		System.out.println(b.search(41));
-		System.out.println(b.search(99));
-		System.out.println(b.search(199));
+//		System.out.println(b.search(45));
+//		System.out.println(b.search(55));
+//		System.out.println(b.search(41));
+//		System.out.println(b.search(99));
+//		System.out.println(b.search(199));
 //		System.out.println(b1.search(0));
 		System.out.println(b.minBST());
 		System.out.println(b.maxBST());
+		BTNode r = b.SearchR(45);
+		System.out.println(r);
+		System.out.println(root);
+		
+		System.out.println(b.heightBST(root));
 		
 		
-		
-
 	}
 }
