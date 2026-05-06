@@ -97,12 +97,10 @@ class StudLL {
 		itr.next = null;
 		return d;
 	}
-	
-	private static Node LLReverse(Node head)
-	{
+
+	private static Node LLReverse(Node head) {
 		Node rev;
-		if(head.next == null)
-		{
+		if (head.next == null) {
 			return head;
 		}
 		rev = LLReverse(head.next);
@@ -110,8 +108,8 @@ class StudLL {
 		head.next = null;
 		return rev;
 	}
-	public void LLRev(Node h)
-	{
+
+	public void LLRev(Node h) {
 		head = LLReverse(h);
 	}
 
@@ -132,12 +130,12 @@ class StudLL {
 
 public class LLStud {
 	public static void main(String[] args) {
-		Student s1 = new Student(1,"sagar",32);
-		Student s2 = new Student(2,"sidd",36);
-		Student s3 = new Student(3,"swayam",38);
-		Student s4 = new Student(4,"amman",33);
-		Student s5 = new Student(5,"digi",39);
-		
+		Student s1 = new Student(1, "sagar", 32);
+		Student s2 = new Student(2, "sidd", 36);
+		Student s3 = new Student(3, "swayam", 38);
+		Student s4 = new Student(4, "amman", 33);
+		Student s5 = new Student(5, "digi", 39);
+
 		StudLL li = new StudLL();
 		li.insertFirst(s1);
 		li.insertLast(s2);
@@ -156,6 +154,6 @@ public class LLStud {
 		System.out.println("After Reverse");
 		li.LLRev(li.getHead());
 		li.displayStud();
-		
+
 	}
 }

@@ -46,6 +46,17 @@ public class Practice {
 		}
 		return palindromeStr(i + 1, s);
 	}
+	
+	public static int sumOfD(int num)
+	{
+		if(num == 0)
+		{
+			return num;
+		}
+		return num%10 + sumOfD(num/10);  
+	}
+	
+	
 
 	public static void main(String[] args) {
 		int ans = factorial(7);
@@ -57,6 +68,7 @@ public class Practice {
 		reverseStr("sagar");
 		System.out.println(palindrom("racecar"));
 		System.out.println(palindromeStr(0, "racecar"));
+		System.out.println(sumOfD(555));
 	}
 
 }
