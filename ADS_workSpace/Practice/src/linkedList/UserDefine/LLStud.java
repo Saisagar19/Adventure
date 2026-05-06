@@ -179,7 +179,6 @@ class StudLL {
 		}
 		Node temp = head;
 		Student preserve;
-
 		while (temp != null && temp.next != null) {
 			preserve = temp.data;
 			temp.data = temp.next.data;
@@ -193,12 +192,41 @@ class StudLL {
 		Node itr = head;
 		while (itr != null) {
 			System.out.print(itr.data + "--->");
-			if (itr.next == null) {
-				break;
+			if (itr.next != null) {
+				itr = itr.next.next;
+			} else {
+				itr = null;
 			}
-			itr = itr.next.next;
 		}
 		System.out.println("null");
+	}
+
+	public void insertAtPos(Student data, int pos) {
+		Node new_node = new Node(data);
+		if (pos <= 0) {
+			System.out.println("Invalid position");
+			return;
+		}
+		if (pos == 1) {
+			if (head == null) {
+				head = new_node;
+			}
+			new_node.next = head;
+			head = new_node;
+			return;
+		}
+
+		Node itr = head;
+		for (int i = 1; i < pos - 1 && itr != null; i++) {
+			itr = itr.next;
+		}
+		if(itr == null)
+		{
+			System.out.println("Position out of range");
+			return;
+		}
+		new_node.next = itr.next;
+		itr.next = new_node;
 	}
 
 }
@@ -210,6 +238,7 @@ public class LLStud {
 		Student s3 = new Student(3, "swayam", 38);
 		Student s4 = new Student(4, "amman", 33);
 		Student s5 = new Student(5, "digi", 39);
+		Student s6 = new Student(6, "shruti", 31);
 
 		StudLL li = new StudLL();
 		li.insertFirst(s1);
@@ -232,9 +261,11 @@ public class LLStud {
 
 //		System.out.println("Middle Ele: " + li.find_middle());
 //		System.out.println("Even Len Middle Ele: " + li.find_middleEvenLen());
-		li.SwapAlternate();
-		li.displayStud();
+//		li.SwapAlternate();
+//		li.displayStud();
 //		li.displayAlternate();
+		li.insertAtPos(s6, 1);
+		li.displayStud();
 
 	}
 }
