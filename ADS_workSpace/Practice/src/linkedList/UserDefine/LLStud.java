@@ -169,16 +169,24 @@ class StudLL {
 		return slow.data;
 	}
 
-	public void SwapAlternate() {
+	public Node SwapAlternate() {
+
+		if (head == null) {
+			return head;
+		}
+		if (head.next == null) {
+			return head;
+		}
 		Node temp = head;
 		Student preserve;
 
-		while (temp.next != null) {
+		while (temp != null && temp.next != null) {
 			preserve = temp.data;
 			temp.data = temp.next.data;
 			temp.next.data = preserve;
 			temp = temp.next.next;
 		}
+		return head;
 	}
 
 	public void displayAlternate() {
@@ -225,7 +233,7 @@ public class LLStud {
 //		System.out.println("Middle Ele: " + li.find_middle());
 //		System.out.println("Even Len Middle Ele: " + li.find_middleEvenLen());
 		li.SwapAlternate();
-		li.displayStud();	
+		li.displayStud();
 //		li.displayAlternate();
 
 	}
