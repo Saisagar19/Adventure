@@ -97,4 +97,16 @@ public class Sorting_Algo {
 
 	}
 
+	public static void mergeV1(int arr1[], int arr2[], int tar[]) {
+		int i=0;
+		int k = 0;
+		int j =0;
+		while ((i < arr1.length) && (j < arr2.length)) {
+			if(arr1[i] < arr2[j])
+			{
+				 
+			}
+		}
+	}
+
 }

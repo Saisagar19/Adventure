@@ -85,7 +85,12 @@ class LinkListD {
 		while (temp.next.next != null) {
 			temp = temp.next;
 		}
+		Node last = temp.next;
+		d = last.data;
+		last=null;
 		temp.next = null;
+		
+		return d;
 
 	}
 }
