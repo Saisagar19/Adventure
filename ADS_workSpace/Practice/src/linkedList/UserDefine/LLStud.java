@@ -107,6 +107,17 @@ class StudLL {
 		head.next.next = head;
 		head.next = null;
 		return rev;
+//		Node rev;
+//		if(head.next == null)
+//		{
+//			return head;
+//		}
+//		rev = LLReverse(head.next);
+//		Node front = head.next;
+//		front.next = head;
+//		head.next = null;
+//		return rev;
+
 	}
 
 	public void LLRev(Node h) {
@@ -122,6 +133,62 @@ class StudLL {
 		while (itr != null) {
 			System.out.print(itr.data + "---->");
 			itr = itr.next;
+		}
+		System.out.println("null");
+	}
+
+	public Student find_middle() {
+		// for even digit node it will show second middle element
+		// for odd digit node it will show the exact middle node element
+		if (head == null) {
+			return null;
+		}
+		Node slow = head;
+		Node fast = head;
+
+		while (fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+
+		return slow.data;
+	}
+
+	public Student find_middleEvenLen() {
+		// Returns first middle for even
+		if (head == null) {
+			return null;
+		}
+		Node slow = head;
+		Node fast = head;
+
+		while (fast.next != null && fast.next.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		return slow.data;
+	}
+
+	public void SwapAlternate() {
+		Node temp = head;
+		Student preserve;
+
+		while (temp.next != null) {
+			preserve = temp.data;
+			temp.data = temp.next.data;
+			temp.next.data = preserve;
+			temp = temp.next.next;
+		}
+	}
+
+	public void displayAlternate() {
+		Node itr = head;
+		while (itr != null) {
+			System.out.print(itr.data + "--->");
+			if (itr.next == null) {
+				break;
+			}
+			itr = itr.next.next;
 		}
 		System.out.println("null");
 	}
@@ -149,11 +216,17 @@ public class LLStud {
 //		
 //		System.out.println(li.deleteLast());
 //		li.displayStud();
-		System.out.println("Before Reverse");
-		li.displayStud();
-		System.out.println("After Reverse");
-		li.LLRev(li.getHead());
-		li.displayStud();
+//		System.out.println("Before Reverse");
+//		li.displayStud();
+//		System.out.println("After Reverse");
+//		li.LLRev(li.getHead());
+//		li.displayStud();
+
+//		System.out.println("Middle Ele: " + li.find_middle());
+//		System.out.println("Even Len Middle Ele: " + li.find_middleEvenLen());
+		li.SwapAlternate();
+		li.displayStud();	
+//		li.displayAlternate();
 
 	}
 }

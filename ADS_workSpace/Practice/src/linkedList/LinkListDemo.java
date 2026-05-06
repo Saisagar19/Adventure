@@ -11,7 +11,7 @@ class Node {
 }
 
 class LinkListD {
-	private Node head;
+	 Node head;
 
 	public void insertFirst(int d) {
 		Node temp = new Node(d);
@@ -93,6 +93,42 @@ class LinkListD {
 		return d;
 
 	}
+	
+	public void insertAtPos(int val, int pos)
+	{
+		Node new_node = new Node(val);
+		if(pos <= 0)
+		{
+			System.out.println("Enter a valid number");
+			return;
+		}
+		if(pos == 1)
+		{
+			if(head == null)
+			{
+				head = new_node;
+				return;
+			}
+			new_node.next = head;
+			head = new_node;
+			return;
+		}
+		
+		Node itr = head;
+		for(int i = 1; i < pos -1 && itr != null; i++)
+		{
+			itr = itr.next;
+		}
+		
+		if(itr == null)
+		{
+			System.out.println("Invalid Pos");
+			return;
+		}
+		
+		new_node.next = itr.next;
+		itr.next = new_node;
+	}
 }
 
 public class LinkListDemo {
@@ -104,9 +140,12 @@ public class LinkListDemo {
 		li.insertFirst(55);
 		li.insertLast(66);
 		li.display();
-		System.out.println(li.deleteFirst());
-		li.display();
-		System.out.println(li.deleteLast());
+//		System.out.println(li.deleteFirst());
+//		li.display();
+//		System.out.println(li.deleteLast());
+//		li.display();
+		
+		li.insertAtPos(45, 5);
 		li.display();
 
 	}
