@@ -72,10 +72,9 @@ public class SortingStudData {
 	public static void selectionSort(Student[] st) {
 		for (int i = 0; i < st.length - 1; i++) {
 			int min = i;
-			for (int j = i; j < st.length; j++) {
+			for (int j = i+1; j < st.length; j++) {
 //				if(st[j].getName().charAt(0) < st[min].getName().charAt(0))
 				if (st[j].getId() < st[min].getId())
-
 				{
 					min = j;
 				}
@@ -142,9 +141,9 @@ public class SortingStudData {
 		}
 
 //		bubbleSort(st);
-//		selectionSort(st);
+		selectionSort(st);
 //		insertionSort(st);
-		insertionSortV2(st);
+//		insertionSortV2(st);
 		System.out.println();
 		for (Student i : st) {
 			System.out.println(i);

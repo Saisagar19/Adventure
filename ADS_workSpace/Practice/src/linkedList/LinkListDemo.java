@@ -203,7 +203,7 @@ class LinkListD {
 	public Node RemoveNth(int n) {
 		Node slow = head;
 		Node fast = head;
- 
+
 		for (int i = 0; i < n; i++) {
 			fast = fast.next;
 		}
@@ -268,36 +268,32 @@ class LinkListD {
 		} else {
 			temp.next = t2;
 		}
-	
-		return 	dummyNode.next;	
+
+		return dummyNode.next;
 
 	}
-	
+
 //	Merge Two Linked Lists into a 3rd List (Java)
-	public Node mergeList(Node head1, Node head2)
-	{
+	public Node mergeList(Node head1, Node head2) {
 		Node dummy = new Node(0);
 		Node temp = dummy;
-		
-		while(head1 != null && head2 != null)
-		{
+
+		while (head1 != null && head2 != null) {
 			temp.setNext(new Node(head1.getData()));
 			temp = temp.getNext();
 			head1 = head1.getNext();
-			
+
 			temp.setNext(new Node(head2.getData()));
 			temp = temp.getNext();
 			head2 = head2.getNext();
 		}
-		while(head1 != null)
-		{
+		while (head1 != null) {
 			temp.setNext(new Node(head1.getData()));
 			temp = temp.getNext();
 			head1 = head1.getNext();
 		}
-		
-		while(head2 != null)
-		{
+
+		while (head2 != null) {
 			temp.setNext(new Node(head2.getData()));
 			temp = temp.getNext();
 			head2 = head2.getNext();
@@ -306,26 +302,23 @@ class LinkListD {
 	}
 
 //	Merge Two Linked Lists Direct(Java)
-	
-	public Node mergeDirect(Node list1, Node list2)
-	{
+
+	public Node mergeDirect(Node list1, Node list2) {
 		Node dummy = new Node(0);
 		Node temp = dummy;
-		
-		while(list1 != null)
-		{
+
+		while (list1 != null) {
 			temp.setNext(new Node(list1.data));
 			temp = temp.getNext();
 			list1 = list1.getNext();
 		}
-		
-		while(list2 != null)
-		{
+
+		while (list2 != null) {
 			temp.setNext(new Node(list2.data));
 			temp = temp.getNext();
 			list2 = list2.getNext();
 		}
-		
+
 		head = dummy.getNext();
 		return head;
 	}
@@ -361,33 +354,32 @@ public class LinkListDemo {
 
 //		li.deleteMiddleNode();
 //		li.display();
-		
+
 		LinkListD li1 = new LinkListD();
 		li1.insertLast(1);
-		li1.insertLast(2); 
+		li1.insertLast(2);
 		li1.insertLast(5);
 		li1.insertLast(7);
 		li1.insertLast(9);
 		li1.insertLast(10);
-		
+
 //		System.out.println("------Sorted Merge--------");
 //		LinkListD res = new LinkListD();
 //		res.head = li.mergeSortedList(li.head, li1.head);
 //		res.display();
-		//1 -> 2 -> 5 -> 7 -> 9 -> 10 -> 10 -> 20 -> 55 -> 66 -> 77 -> null
-		
+		// 1 -> 2 -> 5 -> 7 -> 9 -> 10 -> 10 -> 20 -> 55 -> 66 -> 77 -> null
+
 //		System.out.println("------Alternate Merge--------");
 //		LinkListD merg = new LinkListD();
 //		merg.setHead(li.mergeList(li.getHead(), li1.getHead())); 
 //		merg.display();
 //		10 -> 1 -> 20 -> 2 -> 55 -> 5 -> 66 -> 7 -> 77 -> 9 -> 10 -> null
-		
+
 //		System.out.println("------Direct Merge--------");
 //		LinkListD mergDirect = new LinkListD();
 //		mergDirect.head = li.mergeDirect(li.getHead(),li1.getHead());
 //		mergDirect.display();
-		//10 -> 20 -> 55 -> 66 -> 77 -> 1 -> 2 -> 5 -> 7 -> 9 -> 10 -> null
-		
+		// 10 -> 20 -> 55 -> 66 -> 77 -> 1 -> 2 -> 5 -> 7 -> 9 -> 10 -> null
 
 	}
 }
