@@ -186,6 +186,31 @@ class MyBST {
 	{
 		root = insertRec(root, data);
 	}
+	
+	private int find_height(BSTNode root)
+	{
+		int left = 0;
+		int right = 0;
+		if(root == null)
+		{
+			return 0;
+		}
+		if(root.getLeft() != null)
+		{
+			left = find_height(root.getLeft());
+		}
+		if(root.getRight() != null)
+		{
+			right = find_height(root.getRight());
+		}
+		
+		return 1 + Math.max(left, right);
+	}
+	
+	public void height()
+	{
+		System.out.println(find_height(root));
+	}
 
 }
 
@@ -195,13 +220,22 @@ public class BST {
 //		t1.insertNon(55);
 //		t1.insertNon(12);
 //		t1.insertNon(65);
-		t1.insert_Rec(64);
-		t1.insert_Rec(55);
-		t1.insert_Rec(96);
-		
+//		t1.insert_Rec(64);
+//		t1.insert_Rec(55);
+//		t1.insert_Rec(96);
+		t1.insert_Rec(8);
+		t1.insert_Rec(3);
+		t1.insert_Rec(10);
+		t1.insert_Rec(1);
+		t1.insert_Rec(6);
+		t1.insert_Rec(4);
+		t1.insert_Rec(7);
+		t1.insert_Rec(14);
+		t1.insert_Rec(13);
 
+		t1.height();
 //		System.out.println(t1);
-		System.out.println(t1.search_Rec(89));
+//		System.out.println(t1.search_Rec(89));
 		
 //		t1.levelWiseDisplay(t1.getRoot());
 //		System.out.println(t1.search(12));
