@@ -8,10 +8,35 @@ class Node {
 		this.data = data;
 		this.next = null;
 	}
+
+	public int getData() {
+		return data;
+	}
+
+	public void setData(int data) {
+		this.data = data;
+	}
+
+	public Node getNext() {
+		return next;
+	}
+
+	public void setNext(Node next) {
+		this.next = next;
+	}
+
 }
 
 class LinkListD {
-	 Node head;
+	Node head;
+
+	public Node getHead() {
+		return head;
+	}
+
+	public void setHead(Node head) {
+		this.head = head;
+	}
 
 	public void insertFirst(int d) {
 		Node temp = new Node(d);
@@ -87,25 +112,21 @@ class LinkListD {
 		}
 		Node last = temp.next;
 		d = last.data;
-		last=null;
+		last = null;
 		temp.next = null;
-		
+
 		return d;
 
 	}
-	
-	public void insertAtPos(int val, int pos)
-	{
+
+	public void insertAtPos(int val, int pos) {
 		Node new_node = new Node(val);
-		if(pos <= 0)
-		{
+		if (pos <= 0) {
 			System.out.println("Enter a valid number");
 			return;
 		}
-		if(pos == 1)
-		{
-			if(head == null)
-			{
+		if (pos == 1) {
+			if (head == null) {
 				head = new_node;
 				return;
 			}
@@ -113,40 +134,188 @@ class LinkListD {
 			head = new_node;
 			return;
 		}
-		
+
 		Node itr = head;
-		for(int i = 1; i < pos -1 && itr != null; i++)
-		{
+		for (int i = 1; i < pos - 1 && itr != null; i++) {
 			itr = itr.next;
 		}
-		
-		if(itr == null)
-		{
+
+		if (itr == null) {
 			System.out.println("Invalid Pos");
 			return;
 		}
-		
+
 		new_node.next = itr.next;
 		itr.next = new_node;
 	}
+
+	public Node SwapOddFirstEvenLast() {
+		if (head == null || head.next == null) {
+			return head;
+		}
+
+		Node odd = head;
+		Node even = head.next;
+		Node evenHead = even;
+
+		while (even != null && even.next != null) {
+			odd.next = odd.next.next;
+			even.next = even.next.next;
+
+			odd = odd.next;
+			even = even.next;
+		}
+		odd.next = evenHead;
+		return head;
+	}
+
+//	Remove Nth Node from the end of the LinkedList
+	public Node RemoveNthNodeFrmEnd(int n) {
+		int cnt = 0;
+		Node itr = head;
+		while (itr != null) {
+			cnt++;
+			itr = itr.next;
+		}
+		if (cnt == n) {
+			Node newNode = head.next;
+			head = newNode;
+			return head;
+		}
+		int res = cnt - n;
+		Node temp = head;
+		while (temp != null) {
+			res--;
+			if (res == 0) {
+				break;
+			}
+			temp = temp.next;
+		}
+		Node deleteNode = temp.next;
+		temp.next = temp.next.next;
+		deleteNode.next = null;
+
+		return head;
+
+	}
+
+//	Remove Nth Node from the end of the LinkedList using Tortoise and Hare Algo.
+	public Node RemoveNth(int n) {
+		Node slow = head;
+		Node fast = head;
+
+		for (int i = 0; i < n; i++) {
+			fast = fast.next;
+		}
+		if (fast == null) {
+			head = head.next;
+			return head;
+		}
+		while (fast.next != null) {
+			fast = fast.next;
+			slow = slow.next;
+		}
+		Node deleteN = slow.next;
+		slow.next = slow.next.next;
+		deleteN.next = null;
+
+		return head;
+	}
+
+//	Delete the middle node of the LinkedList
+
+	public Node deleteMiddleNode() {
+		Node slow = head;
+		Node fast = head;
+
+		if (head == null || head.next == null) {
+			return null;
+		}
+
+		fast = fast.next.next; // we already moved the fast by one step meaning it will skip the slow node by 1
+		while (fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		Node deleteNode = slow.next;
+		slow.next = slow.next.next;
+		deleteNode.next = null;
+
+		return head;
+	}
+
+//Merge two sorted Linked Lists
+	public Node mergeSortedList(Node head1, Node head2) {
+
+		Node t1 = head1;
+		Node t2 = head2;
+		Node dummyNode = new Node(-1);
+		Node temp = dummyNode;
+
+		while (t1 != null && t2 != null) {
+			if (t1.data < t2.data) {
+				temp.next = t1;
+				temp = t1;
+				t1 = t1.next;
+			} else {
+				temp.next = t2;
+				temp = t2;
+				t2 = t2.next;
+			}
+		}
+		if (t1 != null) {
+			temp.next = t1;
+		} else {
+			temp.next = t2;
+		}
+	
+		return 	dummyNode.next;	
+
+	}
+
 }
 
 public class LinkListDemo {
 	public static void main(String[] args) {
 
 		LinkListD li = new LinkListD();
-		li.insertFirst(10);
-		li.insertFirst(20);
-		li.insertFirst(55);
+		li.insertLast(10);
+		li.insertLast(20);
+		li.insertLast(55);
 		li.insertLast(66);
+		li.insertLast(77);
 		li.display();
 //		System.out.println(li.deleteFirst());
 //		li.display();
 //		System.out.println(li.deleteLast());
 //		li.display();
-		
+
 		li.insertAtPos(45, 5);
 		li.display();
+//		System.out.println("------------------SwapOddFirstEvenLast-------------------");
+//		li.SwapOddFirstEvenLast();
+//		li.display();
+//		System.out.println("------------------Remove Nth Node-------------------");
+//		li.RemoveNthNodeFrmEnd(5);
+//		li.display();
+//		System.out.println("------------------Remove Nth Node using algo-------------------");
+//		li.RemoveNth(5);
+//		li.display();
+
+//		li.deleteMiddleNode();
+//		li.display();
+		
+		LinkListD li1 = new LinkListD();
+		li1.insertLast(1);
+		li1.insertLast(2); 
+		li1.insertLast(5);
+		li1.insertLast(7);
+		li1.insertLast(9);
+		li1.insertLast(10);
+		
+		LinkListD res = new LinkListD();
+		res.head = li.mergeSortedList(li.head, li1.head);
+		res.display();
 
 	}
 }
