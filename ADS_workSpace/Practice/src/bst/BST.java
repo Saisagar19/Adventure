@@ -144,7 +144,7 @@ class MyBST {
 
 	}
 
-	public boolean searchRec(BSTNode root, int data) {
+	private boolean searchRec(BSTNode root, int data) {
 		if (root == null) {
 			return false;
 		}
@@ -156,20 +156,56 @@ class MyBST {
 		}
 		return true;
 	}
+	public boolean search_Rec(int d)
+	{
+		if(searchRec(root, d))
+		{
+			return true;
+		}
+		return false;
+	}
+
+	private BSTNode insertRec(BSTNode root, int data) {
+		BSTNode new_node = new BSTNode(data);
+		if (root == null) {
+			root = new_node;
+		}
+		else if (data < root.getData()) 
+		{
+			root.setLeft(insertRec(root.getLeft(), data));
+		} 
+		else if (data > root.getData()) 
+		{
+			root.setRight(insertRec(root.getRight(), data));
+		}
+
+		return root;
+	}
+	
+	public void insert_Rec(int data)
+	{
+		root = insertRec(root, data);
+	}
 
 }
 
 public class BST {
 	public static void main(String[] args) {
 		MyBST t1 = new MyBST();
-		t1.insertNon(55);
-		t1.insertNon(12);
-		t1.insertNon(65);
+//		t1.insertNon(55);
+//		t1.insertNon(12);
+//		t1.insertNon(65);
+		t1.insert_Rec(64);
+		t1.insert_Rec(55);
+		t1.insert_Rec(96);
+		
 
 //		System.out.println(t1);
-		t1.levelWiseDisplay(t1.getRoot());
+		System.out.println(t1.search_Rec(89));
+		
+//		t1.levelWiseDisplay(t1.getRoot());
 //		System.out.println(t1.search(12));
-		System.out.println(t1.searchRec(t1.getRoot(), 69));
+//		System.out.println(t1.searchRec(t1.getRoot(), 69));
 	}
 
 }
