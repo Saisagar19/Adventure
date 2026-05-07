@@ -136,12 +136,25 @@ class MyBST {
 				return true;
 			} else if (data < root.getData()) {
 				itr = itr.getLeft();
-			} else if(data > root.getData()){
+			} else if (data > root.getData()) {
 				itr = itr.getRight();
 			}
 		}
 		return false;
 
+	}
+
+	public boolean searchRec(BSTNode root, int data) {
+		if (root == null) {
+			return false;
+		}
+
+		if (data < root.getData()) {
+			return searchRec(root.getLeft(), data);
+		} else if (data > root.getData()) {
+			return searchRec(root.getRight(), data);
+		}
+		return true;
 	}
 
 }
@@ -155,7 +168,8 @@ public class BST {
 
 //		System.out.println(t1);
 		t1.levelWiseDisplay(t1.getRoot());
-		System.out.println(t1.search(12));
+//		System.out.println(t1.search(12));
+		System.out.println(t1.searchRec(t1.getRoot(), 69));
 	}
 
 }
