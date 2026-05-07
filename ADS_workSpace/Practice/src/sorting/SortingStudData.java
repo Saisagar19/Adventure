@@ -96,6 +96,23 @@ public class SortingStudData {
 			st[j + 1] = temp;
 		}
 	}
+	
+	//insertion Sort using While
+	
+	public static void insertionSortV2(Student[] arr)
+	{
+		for(int i = 1; i < arr.length; i++)
+		{
+			Student curr = arr[i];
+			int prev = i - 1;
+			while(prev >=0 && arr[prev].getAge() > curr.getAge())
+			{
+				arr[prev + 1]= arr[prev];
+				prev--;
+			}
+			arr[prev + 1] = curr;
+		}
+	}
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -126,7 +143,8 @@ public class SortingStudData {
 
 //		bubbleSort(st);
 //		selectionSort(st);
-		insertionSort(st);
+//		insertionSort(st);
+		insertionSortV2(st);
 		System.out.println();
 		for (Student i : st) {
 			System.out.println(i);
