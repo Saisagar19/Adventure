@@ -298,7 +298,7 @@ public class LinkListDemo {
 //		System.out.println("------------------Remove Nth Node-------------------");
 //		li.RemoveNthNodeFrmEnd(5);
 //		li.display();
-//		System.out.println("------------------Remove Nth Node using algo-------------------");
+//		System.out.println("------------------Remove Nth Node using Algo-------------------");
 //		li.RemoveNth(5);
 //		li.display();
 
