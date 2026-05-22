@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Result</title>
+</head>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    form{
+        background-color: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    table{
+        border-collapse: collapse;
+    }
+
+    td{
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"]{
+        width: 220px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"]{
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    input[type="submit"]:hover{
+        background-color: #45a049;
+    }
+</style>
+<body >
+	<form action="serv3" method="post" >
+		<table border="1">
+			<tr>
+				<td>Enter PRN:</td>
+				<td><input type="text" name="txtPRN"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Enter"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
