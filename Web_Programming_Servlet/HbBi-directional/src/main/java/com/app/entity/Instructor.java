@@ -19,7 +19,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table
+@Table(name = "ins")
 public class Instructor {
 
 	@Id
@@ -31,7 +31,7 @@ public class Instructor {
 	private String lastName;
 	@Column
 	private String email;
-	@OneToOne(cascade = CascadeType.PERSIST)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="instructorDetails_id")
 	private InstructorDetails instructorDetails;
 

@@ -21,21 +21,16 @@ public class App {
 
 		Session session = factory.openSession();
 		session.beginTransaction();
-//		InstructorDetails insD = new InstructorDetails("Football", "GullyFootball");
-//		Instructor ins = new Instructor("Sagar", "Ambekar", "sagar@gmail.com", insD);
-//		session.persist(ins);
+//		Instructor ins = new Instructor("Sagar", "Ambekar", "sagar@gmail.com");
+//		InstructorDetails insD = new InstructorDetails("Football", "GullyFootball",ins);
+//		ins.setInstructorDetails(insD);
+//		session.persist(insD);
 		
-//		InstructorDetails insD1 = new InstructorDetails("Table Tenis", "TTYoo");
-//		Instructor ins1 = new Instructor("Sahil", "Jadhav", "sahil@gmail.com", insD1);
-//		session.persist(ins1);
-		
-//		InstructorDetails insD1 = new InstructorDetails("Cricket", "RealCricket");
-//		Instructor ins1 = new Instructor("Amman", "Sayyed", "amman@gmail.com", insD1);
-//		session.persist(ins1);
 		System.out.println("Enter Id: ");
 		int id = sc.nextInt();
 		Instructor ins1 = session.get(Instructor.class, id);
-		session.remove(ins1);
+		InstructorDetails insD = session.get(InstructorDetails.class, id);
+		session.remove(insD);
 		
 		session.getTransaction().commit();
 		session.close();
