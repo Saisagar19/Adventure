@@ -1,3 +1,6 @@
+<%@page import="java.io.PrintWriter"%>
+<%@page import="com.app.dao.StudentDao,com.app.model.Student"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -8,11 +11,43 @@
 <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<form action="serv1">
-		<table >
+	<%
+	String uname = request.getParameter("txtEmail");
+	String pass = request.getParameter("txtPassword");
+
+	if (uname != null && pass != null) {
+		StudentDao stDao = new StudentDao();
+		Student st = stDao.login(uname, pass);
+		if (st != null) {
+			HttpSession s = request.getSession();
+			s.setAttribute("loginStudent", st);
+			response.sendRedirect("courseSelection.jsp");
+			return;
+		} else {
+			response.sendRedirect("index.jsp?error=1");
+			return;
+		}
+	}
+	String error = request.getParameter("error");
+	String errMsg = "";
+
+	if ("1".equals(error)) {
+		errMsg = "Invalid email or password.....";
+	}
+	%>
+
+	<form action="index.jsp" method="post">
+		<%
+		if (!errMsg.isEmpty()) {
+		%>
+		<p style="color: red; text-align: center;"><%=errMsg%></p>
+		<%
+		}
+		%>
+		<table>
 			<tr>
-				<td>Student ID:</td>
-				<td><input type="text" name="txtStudentID"></td>
+				<td>Email:</td>
+				<td><input type="text" name="txtEmail"></td>
 			</tr>
 			<tr>
 				<td>Password:</td>
@@ -20,10 +55,9 @@
 			</tr>
 			<tr>
 				<td><a href="registration.jsp">Register</a></td>
-				<td><input type="button" value="Login"></td>
+				<td><input type="submit" value="Login"></td>
 			</tr>
 		</table>
 	</form>
-
 </body>
 </html>

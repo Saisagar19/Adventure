@@ -25,7 +25,8 @@ td{
 }
 
 input[type="text"],
-input[type="password"]{
+input[type="password"],
+input[type="email"]{
     width: 100%;
     padding: 8px;
     border: 1px solid gray;
@@ -37,7 +38,11 @@ input[type="submit"]{
     background-color: blue;
     color: white;
     border: none;
-    cursor: pointer;
+    cursor: pointer;  
+}
+
+input[type="button"]:hover{
+    background-color: darkgray;
 }
 
 input[type="submit"]:hover{
