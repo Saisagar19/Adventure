@@ -4,7 +4,6 @@ drop table student;
 USE course_db;
 
 DROP TABLE IF EXISTS student;
-
 CREATE TABLE student (
     id         INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
     firstname  VARCHAR(50)  NOT NULL,

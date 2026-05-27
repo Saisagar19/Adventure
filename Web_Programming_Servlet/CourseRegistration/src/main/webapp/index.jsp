@@ -16,12 +16,21 @@
 	String pass = request.getParameter("txtPassword");
 
 	if (uname != null && pass != null) {
+		
+		if (uname.equals("admin") && pass.equals("admin123")) {
+            HttpSession adminSession = request.getSession();
+            adminSession.setAttribute("adminLogin", "admin");
+            response.sendRedirect("admin.jsp");
+            return;
+        }
+		
 		StudentDao stDao = new StudentDao();
 		Student st = stDao.login(uname, pass);
 		if (st != null) {
 			HttpSession s = request.getSession();
 			s.setAttribute("loginStudent", st);
-			response.sendRedirect("courseSelection.jsp");
+			s.setAttribute("studentId", st.getId());
+			response.sendRedirect("CourseServ");
 			return;
 		} else {
 			response.sendRedirect("index.jsp?error=1");

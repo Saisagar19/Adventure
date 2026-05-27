@@ -4,7 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.app.model.Courses;
 import com.app.model.Student;
 import com.app.util.DBConnection;
 
@@ -12,7 +15,8 @@ public class StudentDao {
 
 	public boolean registerStudent(Student student) throws SQLException, ClassNotFoundException {
 		String sqlQuery = "INSERT INTO student (firstname,lastname,email,age,_password) VALUES(?,?,?,?,?)";
-		try (Connection conn = DBConnection.getConnection(); PreparedStatement pstm = conn.prepareStatement(sqlQuery)) {
+		try (Connection conn = DBConnection.getConnection(); 
+				PreparedStatement pstm = conn.prepareStatement(sqlQuery)) {
 			pstm.setString(1, student.getFirstName());
 			pstm.setString(2, student.getLastName());
 			pstm.setString(3, student.getEmail());
@@ -24,6 +28,26 @@ public class StudentDao {
 			e.printStackTrace();
 			return false;
 		}
+	}
+	
+	public Student getAllCoursesById(int i) throws ClassNotFoundException, SQLException {
+		String sql = "SELECT id,firstname,lastname,age,email FROM student Where id = ?";
+		Student c = null;
+		try (Connection conn = DBConnection.getConnection();
+				PreparedStatement pstm = conn.prepareStatement(sql);
+				){
+			pstm.setInt(1, i);
+			ResultSet s = pstm.executeQuery();
+			if(s.next()) {
+				c = new Student();
+				c.setId(s.getInt("id"));
+				c.setFirstName(s.getString("firstname"));
+				c.setLastName(s.getString("lastname"));
+				c.setAge(s.getInt("age"));
+				c.setEmail(s.getString("email"));
+			}
+		}
+		return c;
 	}
 
 	public Student login(String email, String password) throws SQLException, ClassNotFoundException {

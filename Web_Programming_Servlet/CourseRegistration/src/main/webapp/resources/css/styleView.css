@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 400px;
+    margin: 100px auto;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.container h2 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+}
+
+.container p {
+    padding: 8px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.box {
+    margin-top: 20px;
+}
+
+.box ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.box ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid lightgray;
+}
