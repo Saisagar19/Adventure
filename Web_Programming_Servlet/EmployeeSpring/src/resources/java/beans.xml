@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="date" class="com.app.Date">
+	<!-- value passed by constructor method using constructor-arg tag i.e Constructor injection -->
+	<!-- 	<constructor-arg name="dd" type="int" value="28"></constructor-arg>
+		<constructor-arg name="mm" type="int" value="05"></constructor-arg>
+		<constructor-arg name="yy" type="int" value="2026"></constructor-arg> -->
+		
+		<!-- value passed by setter method using property tag i.e setter injection-->
+		<property name="dd" value="28" ></property>
+		<property name="mm" value="05"></property>
+		<property name="yy" value="2026"></property>
+		
+	</bean>
+
+	<bean id="emp" class="com.app.Employee">
+	<!-- 	<constructor-arg name="id" type="int" value="111"></constructor-arg>
+		<constructor-arg name="name" value="Sagar"></constructor-arg>
+		<constructor-arg name="salary" type="double" value="56258.66"></constructor-arg> -->
+		<property name="id" value="88"></property>
+		<property name="name" value="Sahil"></property>
+		<property name="salary" value="450054"></property>	
+		<constructor-arg ref="date"></constructor-arg>
+	</bean>
+
+</beans>

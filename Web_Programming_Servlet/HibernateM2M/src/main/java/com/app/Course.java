@@ -27,37 +27,26 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table
-public class Student {
+public class Course {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column
-	private String firstname;
-	@Column
-	private String lastname;
-	@Column
-	private String email;
+	private String title;
 	@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-	@JoinTable(name = "student_course", joinColumns = @JoinColumn(name = "student_id"), 
-	inverseJoinColumns = @JoinColumn(name = "course_id"))
-	private Set<Course> courses;
-	
-	public void add(Course tempCourse)
-	{
-		if(courses == null)
-		{
-			courses = new HashSet<Course>();
+	@JoinTable(name = "student_course", joinColumns = @JoinColumn(name = "course_id"), inverseJoinColumns = @JoinColumn(name = "student_id"))
+	private Set<Student> students;
+
+	public void add(Student tempStudents) {
+		if (students == null) {
+			students = new HashSet<Student>();
 		}
-		courses.add(tempCourse);
+		students.add(tempStudents);
 	}
 
-	public Student(String firstname, String lastname, String email) {
+	public Course(String title) {
 		super();
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.email = email;
+		this.title = title;
 	}
-	
-	
 
 }
