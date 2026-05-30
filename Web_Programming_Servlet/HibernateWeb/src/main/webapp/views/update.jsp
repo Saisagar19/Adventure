@@ -1,6 +1,6 @@
 <%@page import="com.app.dao.BookDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,14 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:useBean id="b" class="com.app.entity.Book"></jsp:useBean>
-<jsp:setProperty property="*" name="b"/>
-<%
-
- int i = BookDAO.updateBook(b);
-if(i > 0)
-	response.sendRedirect("../viewBookServlet");
-%>
+	<jsp:useBean id="b" class="com.app.entity.Book"></jsp:useBean>
+	<jsp:setProperty property="*" name="b" />
+	<%
+	int i = BookDAO.updateBook(b);
+	if (i > 0)
+		response.sendRedirect("../viewBookServlet");
+	%>
 
 
 </body>
