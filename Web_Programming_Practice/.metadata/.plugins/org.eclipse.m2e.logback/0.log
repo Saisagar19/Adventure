@@ -335,3 +335,136 @@
 2026-05-31 09:56:24,211 [Worker-49: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2026-05-31 09:56:24,214 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\SpringHibernateProject\src\test\resources
 2026-06-01 16:05:06,657 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-06-04 18:19:58,425 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-06-04 18:21:13,934 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.app:ServletJDBC:0.0.1-SNAPSHOT @ D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\pom.xml.
+2026-06-04 18:21:17,193 [Worker-14: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:21:17,194 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:21:17,200 [Worker-14: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:21:17,201 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:21:18,104 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ServletJDBC/src/main/java
+2026-06-04 18:21:18,105 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ServletJDBC/src/main/resources
+2026-06-04 18:21:18,107 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ServletJDBC/src/test/java
+2026-06-04 18:21:18,110 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ServletJDBC/src/test/resources
+2026-06-04 18:21:18,527 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2026-06-04 18:21:19,142 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.app:ServletJDBC:0.0.1-SNAPSHOT @ D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\pom.xml.
+2026-06-04 18:21:19,990 [Worker-16: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:21:19,991 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:21:19,997 [Worker-16: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:21:19,998 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:21:19,999 [Worker-16: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ServletJDBC
+2026-06-04 18:21:20,001 [Worker-16: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ServletJDBC
+2026-06-04 18:21:20,642 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ServletJDBC/src/main/java
+2026-06-04 18:21:20,643 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ServletJDBC/src/main/resources
+2026-06-04 18:21:20,645 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ServletJDBC/src/test/java
+2026-06-04 18:21:20,645 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ServletJDBC/src/test/resources
+2026-06-04 18:21:20,804 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for ServletJDBC
+2026-06-04 18:21:20,824 [Worker-19: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 1.00 sec, update config takes 1.00 sec 
+2026-06-04 18:21:21,660 [Worker-18: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:21:21,661 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:21:21,663 [Worker-18: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:21:21,664 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:21:21,665 [Worker-18: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ServletJDBC
+2026-06-04 18:21:21,665 [Worker-18: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ServletJDBC
+2026-06-04 18:22:32,955 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.app:ServletJDBC:0.0.1-SNAPSHOT @ D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\pom.xml.
+2026-06-04 18:22:33,543 [Worker-25: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:22:33,544 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:22:33,549 [Worker-25: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:22:33,550 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:22:33,551 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ServletJDBC
+2026-06-04 18:22:33,551 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ServletJDBC
+2026-06-04 18:23:48,176 [Worker-16: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:23:48,177 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:23:48,180 [Worker-16: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:23:48,182 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:24:50,796 [Worker-13: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:24:50,797 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:24:50,799 [Worker-13: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:24:50,800 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:27:30,773 [Worker-22: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:27:30,774 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:27:30,777 [Worker-22: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:27:30,778 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:27:36,495 [Worker-22: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:27:36,495 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:27:36,498 [Worker-22: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:27:36,499 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:28:49,426 [Worker-30: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:28:49,427 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:28:49,429 [Worker-30: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:28:49,430 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:49:11,305 [Worker-32: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:49:11,307 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:49:11,310 [Worker-32: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:49:11,337 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 18:50:33,930 [Worker-35: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:50:33,931 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 18:50:33,936 [Worker-35: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 18:50:34,053 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 19:02:07,938 [Worker-36: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 19:02:07,939 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 19:02:07,943 [Worker-36: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 19:02:08,223 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:01:12,959 [Worker-38: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:01:13,027 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:01:13,067 [Worker-38: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:01:13,069 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:04:05,244 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:04:05,246 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:04:05,251 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:04:05,252 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:05:21,629 [Worker-42: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:05:21,631 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:05:21,637 [Worker-42: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:05:21,638 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:07:40,479 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:07:40,481 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:07:40,486 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:07:40,487 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:08:23,072 [Worker-42: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:08:23,074 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:08:23,078 [Worker-42: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:08:23,080 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:10:57,353 [Worker-39: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:10:57,355 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:10:57,359 [Worker-39: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:10:57,361 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:12:52,242 [Worker-38: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:12:52,244 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:12:52,249 [Worker-38: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:12:52,251 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:13:07,273 [Worker-41: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:13:07,275 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:13:07,284 [Worker-41: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:13:07,287 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:13:37,805 [Worker-36: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:13:37,807 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:13:37,813 [Worker-36: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:13:37,815 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:14:26,218 [Worker-36: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:14:26,221 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:14:26,226 [Worker-36: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:14:26,280 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:14:34,542 [Worker-39: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:14:34,544 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:14:34,549 [Worker-39: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:14:34,550 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:15:09,680 [Worker-43: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:15:09,682 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:15:09,687 [Worker-43: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:15:09,689 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:20:30,241 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:20:30,243 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:20:30,247 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:20:30,279 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:20:45,039 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:20:45,040 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:20:45,045 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:20:45,047 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:20:52,359 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:20:52,361 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:20:52,368 [Worker-40: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:20:52,370 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
+2026-06-04 22:22:07,890 [Worker-46: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:22:07,891 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\main\resources
+2026-06-04 22:22:07,920 [Worker-46: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2026-06-04 22:22:07,922 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\CDAC\Adventure\Web_Programming_Practice\ServletJDBC\src\test\resources
