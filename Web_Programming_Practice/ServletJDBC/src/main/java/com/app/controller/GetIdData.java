@@ -5,6 +5,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -29,7 +31,11 @@ public class GetIdData extends HttpServlet {
 		
 		try {
 			Employee e1 = EmployeeDao.getEmpByID(id);
-			out.write("<h2>Employee Details:</h2>"+ e1);
+//			request.setAttribute("empDetails", e1);
+			HttpSession session = request.getSession();
+			session.setAttribute("empDetails", e1);
+			request.getRequestDispatcher("/views/showDetails.jsp").forward(request, response);
+//			out.write("<h2>Employee Details:</h2>"+ e1);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

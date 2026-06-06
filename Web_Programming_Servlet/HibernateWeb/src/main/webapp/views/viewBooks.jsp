@@ -29,7 +29,7 @@
 						<td>${b.getAuthor()}</td>
 						<td>${b.getPrice()}</td>
 						<td><a href="views/updateBook.jsp?id=${b.getId()}">Edit</a></td>
-						<td>Delete</td>
+						<td><a href="views/deleteBook.jsp?id=${b.getId()}">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</c:when>

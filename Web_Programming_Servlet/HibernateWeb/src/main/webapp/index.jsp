@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/views/add.jsp">Add Book</a>
-<a href="viewBookServlet">View Book</a>
+	<a href="${pageContext.request.contextPath}/views/add.jsp">Add Book</a>
+	<a href="viewBookServlet">View Book</a>
 </body>
 </html>

@@ -15,8 +15,7 @@ request.setAttribute("book", book);
 	<form action="update.jsp" method="post">
 		<table>
 			<tr>
-				<td><input hidden="hidden" name="id"
-					value="<%=book.getId()%>"></td>
+				<td><input hidden="hidden" name="id" value="<%=book.getId()%>"></td>
 			</tr>
 			<tr>
 				<td>Enter Book Title:</td>

@@ -67,6 +67,22 @@ public class BookDAO {
 		return book.getId();
 	}
 	
+	public static boolean deleteBook(int id)
+	{
+		session = getSession();
+		session.beginTransaction();
+		Book b = session.get(Book.class, id);
+		if(b != null)
+		{
+			session.remove(b);
+			session.getTransaction().commit();
+			destroy();
+			return true;
+		}
+		session.getTransaction().rollback();
+		destroy();
+		return false;
+	}
 	
 	public static void destroy()
 	{
