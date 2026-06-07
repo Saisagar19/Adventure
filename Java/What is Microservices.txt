@@ -1,0 +1,197 @@
+What is Microservices
+
+A web service.
+Small and responsible for one thing (search, password reset , email verification).
+configured to work in the cloud and is easily.
+
+microservice vs monolithic application 
+
+monolithic application 
+
+user controller 
+addresses controller
+products controller
+search controller
+email verification controller
+
+spring boot, spring mvc
+spring boot, spring mvc
+jersey 2, JAX-RS
+php
+
+
+microservices
+
+user controller 
+addresses controller
+products controller
+search controller
+email verification controller
+
+
+for file uploading requires multipartfile
+
+-----------------------------------------------------------------------------------------------------
+
+
+# Microservices
+
+## What is a Microservice?
+
+A **Microservice** is a small, independent web service that is responsible for performing a specific business function. Each microservice focuses on doing **one thing well** and can be developed, deployed, and scaled independently.
+
+### Characteristics of Microservices
+
+* Small and lightweight.
+* Responsible for a single business capability.
+* Can be deployed independently.
+* Easily scalable in cloud environments.
+* Communicates with other services through APIs.
+* Technology independent (different services can use different technologies).
+
+### Examples of Microservices
+
+* User Management Service
+* Search Service
+* Password Reset Service
+* Email Verification Service
+* Product Service
+* Payment Service
+
+---
+
+# Monolithic Application vs Microservices
+
+## 1. Monolithic Application
+
+In a monolithic architecture, all modules of the application are combined into a single codebase and deployed as one unit.
+
+### Example Structure
+
+```
+Application
+│
+├── User Controller
+├── Address Controller
+├── Product Controller
+├── Search Controller
+└── Email Verification Controller
+```
+
+### Technologies Used
+
+* Spring Boot
+* Spring MVC
+* Jersey 2
+* JAX-RS
+* PHP
+
+### Advantages
+
+* Easy to develop initially.
+* Simple deployment.
+* Easier debugging for small applications.
+
+### Disadvantages
+
+* Difficult to scale individual modules.
+* Entire application must be redeployed for small changes.
+* Large codebase becomes difficult to maintain.
+* Technology stack is usually fixed for the entire application.
+
+---
+
+## 2. Microservices Architecture
+
+In microservices architecture, each business function is separated into its own service.
+
+### Example Structure
+
+```
+User Service
+└── User Controller
+
+Address Service
+└── Address Controller
+
+Product Service
+└── Product Controller
+
+Search Service
+└── Search Controller
+
+Email Verification Service
+└── Email Verification Controller
+```
+
+Each service can have:
+
+* Its own database.
+* Independent deployment.
+* Independent scaling.
+* Different technology stack if required.
+
+### Advantages
+
+* Independent deployment.
+* Better scalability.
+* Improved fault isolation.
+* Easier maintenance.
+* Faster development by multiple teams.
+* Cloud-friendly architecture.
+
+### Disadvantages
+
+* More complex architecture.
+* Service communication overhead.
+* Distributed system challenges.
+* Monitoring and debugging can be difficult.
+
+---
+
+# File Uploading in Spring Boot
+
+For file uploading in Spring Boot, the `MultipartFile` interface is used.
+
+### Example Controller
+
+```java
+@PostMapping("/upload")
+public String uploadFile(@RequestParam("file") MultipartFile file) {
+    System.out.println(file.getOriginalFilename());
+    return "File Uploaded Successfully";
+}
+```
+
+### Common MultipartFile Methods
+
+| Method                | Description                        |
+| --------------------- | ---------------------------------- |
+| getName()             | Returns parameter name             |
+| getOriginalFilename() | Returns original file name         |
+| getContentType()      | Returns file type                  |
+| getSize()             | Returns file size                  |
+| getBytes()            | Returns file content as byte array |
+| transferTo()          | Saves file to a specified location |
+
+### Requirements
+
+Add multipart configuration in `application.properties`:
+
+```properties
+spring.servlet.multipart.enabled=true
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB
+```
+
+### Use Cases
+
+* Profile picture upload
+* Document upload
+* Product image upload
+* Resume upload
+* Image gallery management
+
+```
+```
+
