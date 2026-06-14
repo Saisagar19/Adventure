@@ -4,7 +4,7 @@ A web service.
 Small and responsible for one thing (search, password reset , email verification).
 configured to work in the cloud and is easily.
 
-microservice vs monolithic application 
+microservice vs monolithic applications
 
 monolithic application 
 
