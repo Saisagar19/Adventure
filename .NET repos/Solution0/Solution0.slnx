@@ -1,8 +1,15 @@
 <Solution>
   <Project Path="Ques1/Ques1.csproj" />
+  <Project Path="Ques10/Ques10.csproj" Id="c87d423d-3826-4cc1-bb8e-24e374a25ab6" />
+  <Project Path="Ques11/Ques11.csproj" Id="ac89f460-e2a3-4b92-b029-ed409bdb7133" />
+  <Project Path="Ques14/Ques14.csproj" Id="1686732e-7201-4895-99fd-4c2330e74f5a" />
+  <Project Path="Ques15/Ques15.csproj" Id="600ac69c-ee64-4d7c-982f-9a9ed9db64da" />
   <Project Path="Ques2/Ques2.csproj" />
   <Project Path="Ques3/Ques3.csproj" />
   <Project Path="Ques4/Ques4.csproj" />
   <Project Path="Ques5/Ques5.csproj" />
   <Project Path="Ques6/Ques6.csproj" />
+  <Project Path="Ques7/Ques7.csproj" Id="2411282d-d7da-4910-865d-6db384f27c5c" />
+  <Project Path="Ques8/Ques8.csproj" Id="75f15778-d904-4fee-85bb-414d109fab41" />
+  <Project Path="Ques9/Ques9.csproj" Id="d3bec533-49ec-4d24-bb13-da4a9843fdc5" />
 </Solution>

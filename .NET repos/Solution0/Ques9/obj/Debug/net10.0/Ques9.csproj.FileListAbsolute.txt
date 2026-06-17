@@ -1,0 +1,15 @@
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\bin\Debug\net10.0\Ques9.exe
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\bin\Debug\net10.0\Ques9.deps.json
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\bin\Debug\net10.0\Ques9.runtimeconfig.json
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\bin\Debug\net10.0\Ques9.dll
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\bin\Debug\net10.0\Ques9.pdb
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\Ques9.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\Ques9.AssemblyInfoInputs.cache
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\Ques9.AssemblyInfo.cs
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\Ques9.csproj.CoreCompileInputs.cache
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\Ques9.sourcelink.json
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\Ques9.dll
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\refint\Ques9.dll
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\Ques9.pdb
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\Ques9.genruntimeconfig.cache
+D:\CDAC\Adventure\.NET repos\Solution0\Ques9\obj\Debug\net10.0\ref\Ques9.dll
