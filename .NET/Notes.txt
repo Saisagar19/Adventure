@@ -1,0 +1,32 @@
+.NET Framework				.NET [Core]
+
+https://dotnet.microsoft.com/en-us/download/dotnet [.NET Version]
+
+Multiple Languages [C#, VB.NET, VC++.NET,...]
+	Compile/Strongly Typed Languages
+	Dynamic Languages
+
+Core Components of .NET
+
+1) CLR - Common Language Runtime
+	Execute, Resource Management, Thread Management, IO Management, JIT Compiler, Memory Management
+2) FCL - Framework Class Library
+3) CTS - Common Type System
+4) CLS - Common Language Specification
+
+
+SDLC - Development, Testing, Staging ,Production
+
+Product Owner <=> Business Analyst => Architect => Developer <=> Quality Assurance [Testing] => Deployment Team
+
+
+
+
+
+
+
+
+
+
+
+
