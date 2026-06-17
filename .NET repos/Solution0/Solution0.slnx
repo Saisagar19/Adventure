@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Ques1/Ques1.csproj" />
+  <Project Path="Ques2/Ques2.csproj" />
+  <Project Path="Ques3/Ques3.csproj" />
+  <Project Path="Ques4/Ques4.csproj" />
+  <Project Path="Ques5/Ques5.csproj" />
+  <Project Path="Ques6/Ques6.csproj" />
+</Solution>
