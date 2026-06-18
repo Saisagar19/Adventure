@@ -1,0 +1,243 @@
+.NET Framework				.NET [Core]
+
+https://dotnet.microsoft.com/en-us/download/dotnet [.NET Version]
+
+Multiple Languages [C#, VB.NET, VC++.NET,...]
+	Compile/Strongly Typed Languages
+	Dynamic Languages
+
+Core Components of .NET
+
+1) CLR - Common Language Runtime
+	Execute, Resource Management, Thread Management, IO Management, JIT Compiler, Memory Management
+2) FCL - Framework Class Library
+3) CTS - Common Type System
+4) CLS - Common Language Specification
+
+
+SDLC - Development, Testing, Staging ,Production
+
+Product Owner <=> Business Analyst => Architect => Developer <=> Quality Assurance [Testing] => Deployment Team
+
+
+-------------------------------
+
+Object Oriented Programming Concepts
+
+	Abstraction
+	Encapsulation
+		Class is a template where you bundle the properties, methods, events
+		Access Modifiers - 
+			Private, Protected, Public, Internal, Protected Internal
+	Types of class - Abstract, Concret, Sealed, Static, Partial, Anonymous 
+	Inheritance - Reusability
+		Generalization-To-Specialization
+		Abstract Class <=Concret/Non-Abstract <=Final/Sealed
+		Relationship - IS-A and HAS-Ae
+	Types - Single, Multiple, Multilevel, Hierarchy, Hybrid
+
+	Polymorphism
+		Overloading, Early Binding, Static, Compile Time
+		Overriding, Late Binding, Dynamic, Runtime
+
+Overloading - 
+	int Addition(int i){...}
+	int Addition(int i, int j){...}
+	double Addition(double i, double j){...}
+	int Addition(double i, int j){...}
+	double Addition(double i, double j, double k){...}
+	int Addition(double i, double j){...} [This is not overloaded method as return type is not considered]
+	int Addition(int j, double i){...}
+
+Overriding - 
+	class Parent{
+		virtual int Addition(int i, int j){
+			return i + j;
+		}
+	}
+
+	class Child : Parent{
+		override int Addition(int i, int j){
+			return i + j + 1000;
+		}
+	}
+Parent p1=new Parent();
+p1.Addition(100,200); //300
+
+Child p2=new Child();
+p2.Addition(100,200); //1300
+
+Parent p3=new Child();
+p3.Addition(100,200); //1300
+
+
+Shadowing
+	class Parent{
+		int Addition(int i, int j){
+			return i + j;
+		}
+	}
+
+	class Child : Parent{
+		new int Addition(int i, int j){
+			return i + j + 1000;
+		}
+	}
+
+Parent p3=new Child();
+p3.Addition(100,200); //300
+
+
+
+
+
+	1) Association
+		class Customer{
+			public ICollection<Order> Orders {get;set;}
+		}
+
+	class Repository{
+		public void InsertEntity(Employee e){...}
+	}
+		
+	2) Aggregation
+	3) Composition
+
+
+
+class MyClass{
+	private int A;
+	protected int B;
+	public int C;
+}
+
+class MyChildClass : MyClass{
+	B;
+}
+
+How do we use this class?
+1) By creating an instance
+	MyClass c1=new MyClass();
+	c1.C;
+2) By extending the functionality
+	B,C
+
+interface INormalCustomer{
+	normalCustomer();	
+}
+interface IPrimeCustomer extends INormalCustomer{
+	normalCustomer();	
+}
+class AmazonService implements lionsSubscription{
+	normalCustomer(){...}
+	primeCustomer() {...}
+	erosSubscription(){...}
+	lionsSubscription(){...}
+}
+
+
+INormalCustomer c1=new AmazonService();
+c1.normalCustomer();
+IPrimeCustomer c2=new AmazonService();
+c2.normalCustomer();
+c2.primeCustomer();
+
+Constructors - 
+	1) Default/Parameterless
+	2) Parameterized
+	3) Copy
+	4) Static
+
+Calling and Execution - Bottom-To-Top and Top-To-Bottom
+
+class Parent{
+	public Parent(){
+
+	}
+}
+
+class Child : Parent{
+	public Child(){
+
+	}
+}
+
+Child c1=new Child();
+
+Purchase Order System
+Perform CRUD operations
+
+Customer, Category, Product, Cart, CartDetails, Supplier, Shipper, Employee, Invoice
+
+class CustomerDal {
+	getAll(){...}
+	getDetails(int id) {...}
+	insert(Customer customer){
+		//database operation
+	}
+	update(){...}
+	delete(){...}
+}
+
+
+Generics
+
+interface ICommonCrud<T>{
+	List<T> getAll();
+	T getDetails(int id);
+	insert(T item);
+	update(T item);
+	delete(int id);
+}
+
+class CommonCrud<T> : ICommonCrud<T> where T:Class{
+	List<T> getAll(){
+		//queries/logic
+	}
+	T getDetails(int id){
+		...
+	}
+	insert(T item){
+		...
+	}
+	update(T item){
+		...
+	}
+	delete(int id){
+		...
+	}
+}
+
+
+ICommonRepository<Employee> empCurd=new CommonRepository<Employee>();
+empCurd.getAll(); //List<Employee>
+
+ICommonRepository<Customer> empCurd=new CommonRepository<Customer>();
+
+Class - 
+	Class members without access modifers are private
+	Class Access modifer [Internal/Public]
+
+Function Parameters
+	Input
+	Out
+	Ref
+	Params
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
