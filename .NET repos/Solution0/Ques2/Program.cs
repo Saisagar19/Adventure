@@ -21,16 +21,20 @@
             int sum = 0;
             for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine($"Enter Sub {i + 1} Marks: ");
-                try
+                while (true)
                 {
-                    int m = Convert.ToInt32(Console.ReadLine());
-                    sum += m;
-                }
-                catch (FormatException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    break;
+                    Console.WriteLine($"Enter Sub {i + 1} Marks: ");
+                    try
+                    {
+                        int m = Convert.ToInt32(Console.ReadLine());
+                        sum += m;
+                        break;
+                    }
+                    catch (FormatException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        
+                    }
                 }
             }
             double avg = sum / 5;

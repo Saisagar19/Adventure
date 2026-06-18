@@ -38,7 +38,7 @@
                 Console.WriteLine("Enter Year: ");
                 int year = Convert.ToInt32(Console.ReadLine());
 
-                string res = (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? $"{year} Year is a leap year " : $"{year} Year is not a leap year ";
+                string res = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? $"{year} Year is a leap year " : $"{year} Year is not a leap year ";
                 Console.WriteLine(res);
 
             }

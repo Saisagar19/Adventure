@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{60F62563-24A3-49BB-9E84-944D23E8C5E2}|Ques18\\Ques18.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques18\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60F62563-24A3-49BB-9E84-944D23E8C5E2}|Ques18\\Ques18.csproj|solutionrelative:ques18\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75F15778-D904-4FEE-85BB-414D109FAB41}|Ques8\\Ques8.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75F15778-D904-4FEE-85BB-414D109FAB41}|Ques8\\Ques8.csproj|solutionrelative:ques8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2411282D-D7DA-4910-865D-6DB384F27C5C}|Ques7\\Ques7.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2411282D-D7DA-4910-865D-6DB384F27C5C}|Ques7\\Ques7.csproj|solutionrelative:ques7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C42A5069-F360-DE55-8C47-28C9CA56ADB0}|Ques6\\Ques6.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C42A5069-F360-DE55-8C47-28C9CA56ADB0}|Ques6\\Ques6.csproj|solutionrelative:ques6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA4A0DAB-BC46-6C6E-A061-9CF2453BC258}|Ques5\\Ques5.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA4A0DAB-BC46-6C6E-A061-9CF2453BC258}|Ques5\\Ques5.csproj|solutionrelative:ques5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C983A118-9824-43D2-2D9D-1DADC5BA37E2}|Ques4\\Ques4.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C983A118-9824-43D2-2D9D-1DADC5BA37E2}|Ques4\\Ques4.csproj|solutionrelative:ques4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABCD486-3990-5962-B42D-8197616C7395}|Ques3\\Ques3.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ABCD486-3990-5962-B42D-8197616C7395}|Ques3\\Ques3.csproj|solutionrelative:ques3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66B616F4-9750-1FD8-93D6-B4AAE196806D}|Ques2\\Ques2.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66B616F4-9750-1FD8-93D6-B4AAE196806D}|Ques2\\Ques2.csproj|solutionrelative:ques2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4A1B87E-97CF-04F7-E24F-2204077BC710}|Ques1\\Ques1.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4A1B87E-97CF-04F7-E24F-2204077BC710}|Ques1\\Ques1.csproj|solutionrelative:ques1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56AADDED-312C-43B3-A331-0418A18F73DD}|Ques17\\Ques17.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques17\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56AADDED-312C-43B3-A331-0418A18F73DD}|Ques17\\Ques17.csproj|solutionrelative:ques17\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60F62563-24A3-49BB-9E84-944D23E8C5E2}|Ques18\\Ques18.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques18\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60F62563-24A3-49BB-9E84-944D23E8C5E2}|Ques18\\Ques18.csproj|solutionrelative:ques18\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{552308F8-B033-4F27-8857-A2C5883BF6A8}|Ques16\\Ques16.csproj|d:\\cdac\\adventure\\.net repos\\solution0\\ques16\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -32,6 +64,110 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques8\\Program.cs",
+              "RelativeDocumentMoniker": "Ques8\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques8\\Program.cs",
+              "RelativeToolTip": "Ques8\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwC4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T17:14:55.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques7\\Program.cs",
+              "RelativeDocumentMoniker": "Ques7\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques7\\Program.cs",
+              "RelativeToolTip": "Ques7\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T17:14:49.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques6\\Program.cs",
+              "RelativeDocumentMoniker": "Ques6\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques6\\Program.cs",
+              "RelativeToolTip": "Ques6\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T17:11:17.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques5\\Program.cs",
+              "RelativeDocumentMoniker": "Ques5\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques5\\Program.cs",
+              "RelativeToolTip": "Ques5\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T17:11:01.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques4\\Program.cs",
+              "RelativeDocumentMoniker": "Ques4\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques4\\Program.cs",
+              "RelativeToolTip": "Ques4\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T17:08:52.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques3\\Program.cs",
+              "RelativeDocumentMoniker": "Ques3\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques3\\Program.cs",
+              "RelativeToolTip": "Ques3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T17:07:40.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques2\\Program.cs",
+              "RelativeDocumentMoniker": "Ques2\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques2\\Program.cs",
+              "RelativeToolTip": "Ques2\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T17:02:27.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques1\\Program.cs",
+              "RelativeDocumentMoniker": "Ques1\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques1\\Program.cs",
+              "RelativeToolTip": "Ques1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T17:00:08.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
               "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques18\\Program.cs",
               "RelativeDocumentMoniker": "Ques18\\Program.cs",
               "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques18\\Program.cs",
@@ -43,20 +179,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques17\\Program.cs",
               "RelativeDocumentMoniker": "Ques17\\Program.cs",
               "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques17\\Program.cs",
               "RelativeToolTip": "Ques17\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-17T19:02:16.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques16\\Program.cs",
               "RelativeDocumentMoniker": "Ques16\\Program.cs",
@@ -64,12 +200,11 @@
               "RelativeToolTip": "Ques16\\Program.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAiwE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T18:20:36.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-17T18:20:36.962Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Solution0\\Ques11\\Program.cs",
               "RelativeDocumentMoniker": "Ques11\\Program.cs",
@@ -77,8 +212,7 @@
               "RelativeToolTip": "Ques11\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T17:38:30.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-17T17:38:30.641Z"
             }
           ]
         }

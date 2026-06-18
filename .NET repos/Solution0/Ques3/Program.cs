@@ -6,7 +6,7 @@
         {
             int m1, m2, m3, m4, m5;
             Console.WriteLine("Enter Student Name: ");
-            string? name = Console.ReadLine(); ;
+            string? name = Console.ReadLine();
             try
             {
                 Console.WriteLine("Enter Sub 1 Marks: ");
@@ -34,5 +34,5 @@
             }     
             
         }
-    }
+    }   
 }
