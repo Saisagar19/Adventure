@@ -31,14 +31,33 @@
                         Console.WriteLine("Total number Of days: 28");
                     }
                 }
-                else if (month % 2 == 0 && month != 2)
-                {
-                    Console.WriteLine("Total number Of days: 30");
-                }
-                else
+                else if (month == 8)
                 {
                     Console.WriteLine("Total number Of days: 31");
                 }
+                else if (month >= 1 && month <= 7)
+                {
+                    if ((month % 2 == 0 && month != 2))
+                    {
+                        Console.WriteLine("Total number Of days: 30");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Total number Of days: 31");
+                    }
+                }
+                else if (month >= 8 && month <= 12)
+                {
+                    if ((month % 2 == 0 && month != 2))
+                    {
+                        Console.WriteLine("Total number Of days: 31");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Total number Of days: 30");
+                    }
+                }
+
             }
             catch (FormatException e)
             {

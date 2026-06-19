@@ -1,0 +1,15 @@
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\Ques22.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\Ques22.AssemblyInfoInputs.cache
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\Ques22.AssemblyInfo.cs
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\Ques22.csproj.CoreCompileInputs.cache
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\Ques22.sourcelink.json
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\bin\Debug\net10.0\Ques22.exe
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\bin\Debug\net10.0\Ques22.deps.json
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\bin\Debug\net10.0\Ques22.runtimeconfig.json
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\bin\Debug\net10.0\Ques22.dll
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\bin\Debug\net10.0\Ques22.pdb
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\Ques22.dll
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\refint\Ques22.dll
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\Ques22.pdb
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\Ques22.genruntimeconfig.cache
+D:\CDAC\Adventure\.NET repos\Solution0\Ques22\obj\Debug\net10.0\ref\Ques22.dll

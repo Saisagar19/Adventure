@@ -9,7 +9,11 @@
   <Project Path="Ques16/Ques16.csproj" Id="552308f8-b033-4f27-8857-a2c5883bf6a8" />
   <Project Path="Ques17/Ques17.csproj" Id="56aadded-312c-43b3-a331-0418a18f73dd" />
   <Project Path="Ques18/Ques18.csproj" Id="60f62563-24a3-49bb-9e84-944d23e8c5e2" />
+  <Project Path="Ques19/Ques19.csproj" Id="784c4531-dec3-4802-9415-54112aef6fe8" />
   <Project Path="Ques2/Ques2.csproj" />
+  <Project Path="Ques20/Ques20.csproj" Id="3862cb6b-fe35-4ee1-80cd-1668e3eb9bf4" />
+  <Project Path="Ques21/Ques21.csproj" Id="efaa5afa-9289-433b-abe2-0d06b1bc2fa1" />
+  <Project Path="Ques22/Ques22.csproj" Id="23cc6d09-1ab9-4fe0-9058-3ac1b2187902" />
   <Project Path="Ques3/Ques3.csproj" />
   <Project Path="Ques4/Ques4.csproj" />
   <Project Path="Ques5/Ques5.csproj" />
