@@ -20,12 +20,19 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter day: ");
-            day = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter month: ");
-            month = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter year: ");
-            year = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Enter day: ");
+                day = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter month: ");
+                month = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter year: ");
+                year = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             setDate(day, month, year);
             string res = getDate();
             Console.WriteLine(res);

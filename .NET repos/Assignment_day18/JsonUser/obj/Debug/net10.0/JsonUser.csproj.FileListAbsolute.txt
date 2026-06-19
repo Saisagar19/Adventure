@@ -1,0 +1,15 @@
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\bin\Debug\net10.0\JsonUser.exe
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\bin\Debug\net10.0\JsonUser.deps.json
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\bin\Debug\net10.0\JsonUser.runtimeconfig.json
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\bin\Debug\net10.0\JsonUser.dll
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\bin\Debug\net10.0\JsonUser.pdb
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\JsonUser.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\JsonUser.AssemblyInfoInputs.cache
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\JsonUser.AssemblyInfo.cs
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\JsonUser.csproj.CoreCompileInputs.cache
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\JsonUser.sourcelink.json
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\JsonUser.dll
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\refint\JsonUser.dll
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\JsonUser.pdb
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\JsonUser.genruntimeconfig.cache
+D:\CDAC\Adventure\.NET repos\Assignment_day18\JsonUser\obj\Debug\net10.0\ref\JsonUser.dll

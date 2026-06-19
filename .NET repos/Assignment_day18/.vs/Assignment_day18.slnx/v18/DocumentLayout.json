@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|d:\\cdac\\adventure\\.net repos\\assignment_day18\\jsonuser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|solutionrelative:jsonuser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|d:\\cdac\\adventure\\.net repos\\assignment_day18\\jsonuser\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|solutionrelative:jsonuser\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|d:\\cdac\\adventure\\.net repos\\assignment_day18\\jsonuser\\geo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|solutionrelative:jsonuser\\geo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|d:\\cdac\\adventure\\.net repos\\assignment_day18\\jsonuser\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|solutionrelative:jsonuser\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|d:\\cdac\\adventure\\.net repos\\assignment_day18\\jsonuser\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11BE5375-8468-49A7-B555-515C31F5BF94}|JsonUser\\JsonUser.csproj|solutionrelative:jsonuser\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Company.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\Company.cs",
+              "RelativeDocumentMoniker": "JsonUser\\Company.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\Company.cs",
+              "RelativeToolTip": "JsonUser\\Company.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T17:46:40.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Geo.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\Geo.cs",
+              "RelativeDocumentMoniker": "JsonUser\\Geo.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\Geo.cs",
+              "RelativeToolTip": "JsonUser\\Geo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T17:43:20.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\Program.cs",
+              "RelativeDocumentMoniker": "JsonUser\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\Program.cs",
+              "RelativeToolTip": "JsonUser\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T17:40:59.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Address.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\Address.cs",
+              "RelativeDocumentMoniker": "JsonUser\\Address.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\Address.cs",
+              "RelativeToolTip": "JsonUser\\Address.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T17:39:20.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\User.cs",
+              "RelativeDocumentMoniker": "JsonUser\\User.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\Assignment_day18\\JsonUser\\User.cs",
+              "RelativeToolTip": "JsonUser\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T17:21:20.867Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\bin\Debug\net10.0\Ques2.exe
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\bin\Debug\net10.0\Ques2.deps.json
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\bin\Debug\net10.0\Ques2.runtimeconfig.json
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\bin\Debug\net10.0\Ques2.dll
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\bin\Debug\net10.0\Ques2.pdb
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\Ques2.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\Ques2.AssemblyInfoInputs.cache
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\Ques2.AssemblyInfo.cs
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\Ques2.csproj.CoreCompileInputs.cache
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\Ques2.sourcelink.json
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\Ques2.dll
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\refint\Ques2.dll
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\Ques2.pdb
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\Ques2.genruntimeconfig.cache
+D:\CDAC\Adventure\.NET repos\Assignments_day19\Ques2\obj\Debug\net10.0\ref\Ques2.dll
