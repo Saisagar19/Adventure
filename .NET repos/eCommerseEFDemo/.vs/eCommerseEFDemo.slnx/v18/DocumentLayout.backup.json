@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET repos\\eCommerseEFDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55C58B8F-256E-4467-80E2-80186B85699B}|eCommerceEFDemo\\eCommerceEFDemo.csproj|d:\\cdac\\adventure\\.net repos\\ecommerseefdemo\\ecommerceefdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55C58B8F-256E-4467-80E2-80186B85699B}|eCommerceEFDemo\\eCommerceEFDemo.csproj|solutionrelative:ecommerceefdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD4C5AA0-A0A0-82D5-CF21-33F1390FC02A}|eCommerceEFDemo\\eCommerceEFDemo.csproj|d:\\cdac\\adventure\\.net repos\\ecommerseefdemo\\ecommerceefdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4C5AA0-A0A0-82D5-CF21-33F1390FC02A}|eCommerceEFDemo\\eCommerceEFDemo.csproj|solutionrelative:ecommerceefdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4C5AA0-A0A0-82D5-CF21-33F1390FC02A}|eCommerceEFDemo\\eCommerceEFDemo.csproj|d:\\cdac\\adventure\\.net repos\\ecommerseefdemo\\ecommerceefdemo\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4C5AA0-A0A0-82D5-CF21-33F1390FC02A}|eCommerceEFDemo\\eCommerceEFDemo.csproj|solutionrelative:ecommerceefdemo\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD4C5AA0-A0A0-82D5-CF21-33F1390FC02A}|eCommerceEFDemo\\eCommerceEFDemo.csproj|d:\\cdac\\adventure\\.net repos\\ecommerseefdemo\\ecommerceefdemo\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD4C5AA0-A0A0-82D5-CF21-33F1390FC02A}|eCommerceEFDemo\\eCommerceEFDemo.csproj|solutionrelative:ecommerceefdemo\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +34,37 @@
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\eCommerseEFDemo\\eCommerceEFDemo\\Program.cs",
               "RelativeDocumentMoniker": "eCommerceEFDemo\\Program.cs",
-              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\eCommerseEFDemo\\eCommerceEFDemo\\Program.cs*",
-              "RelativeToolTip": "eCommerceEFDemo\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\eCommerseEFDemo\\eCommerceEFDemo\\Program.cs",
+              "RelativeToolTip": "eCommerceEFDemo\\Program.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAwwJ8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T11:03:10.021Z",
+              "WhenOpened": "2026-06-21T17:55:26.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\eCommerseEFDemo\\eCommerceEFDemo\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "eCommerceEFDemo\\Models\\CartItem.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\eCommerseEFDemo\\eCommerceEFDemo\\Models\\CartItem.cs",
+              "RelativeToolTip": "eCommerceEFDemo\\Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-21T17:28:48.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET repos\\eCommerseEFDemo\\eCommerceEFDemo\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "eCommerceEFDemo\\Models\\Customer.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET repos\\eCommerseEFDemo\\eCommerceEFDemo\\Models\\Customer.cs",
+              "RelativeToolTip": "eCommerceEFDemo\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-21T17:24:27.81Z",
               "EditorCaption": ""
             }
           ]

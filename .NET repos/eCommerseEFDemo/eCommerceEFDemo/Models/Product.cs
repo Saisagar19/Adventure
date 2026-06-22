@@ -4,7 +4,7 @@ namespace eCommerceEFDemo.Models;
 
 public class Product
 {
-    [Key]
+    [Key]//PK
     public int ProductId { get; set; }
     [Required(ErrorMessage = "Product Name is a required field!")]
     [MaxLength(100, ErrorMessage = "Product name can not exceed 100 characters!")]
@@ -14,10 +14,11 @@ public class Product
     public string ProductDescription { get; set; } = string.Empty;
 
     [Required(ErrorMessage = "Product Unit Price is a required field!")]
-    public decimal UnitPrice;
+    public decimal UnitPrice { get; set; }
 
     [Required(ErrorMessage = "Product Stock is a required field!")]
     public int Stock { get; set; }
+    //FK
     public int CategoryId { get; set; }
     //Navigation
     public Category? Category { get; set; }

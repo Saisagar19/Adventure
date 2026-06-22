@@ -1,0 +1,15 @@
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\bin\Debug\net10.0\SimpleThreadEx.exe
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\bin\Debug\net10.0\SimpleThreadEx.deps.json
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\bin\Debug\net10.0\SimpleThreadEx.runtimeconfig.json
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\bin\Debug\net10.0\SimpleThreadEx.dll
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\bin\Debug\net10.0\SimpleThreadEx.pdb
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\SimpleThreadEx.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\SimpleThreadEx.AssemblyInfoInputs.cache
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\SimpleThreadEx.AssemblyInfo.cs
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\SimpleThreadEx.csproj.CoreCompileInputs.cache
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\SimpleThreadEx.sourcelink.json
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\SimpleThreadEx.dll
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\refint\SimpleThreadEx.dll
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\SimpleThreadEx.pdb
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\SimpleThreadEx.genruntimeconfig.cache
+D:\CDAC\Adventure\.NET repos\Day22\SimpleThreadEx\obj\Debug\net10.0\ref\SimpleThreadEx.dll

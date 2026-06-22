@@ -5,7 +5,7 @@ namespace eCommerceEFDemo.Models;
 
 public class Category
 {
-    [Key]
+    [Key]//PK
     public int CategoryId { get; set; }
     [DisplayName("Category Name")]
     [Required(ErrorMessage = "Category name is a required field!")]

@@ -5,7 +5,7 @@ namespace eCommerceEFDemo.Models;
 
 public class Customer
 {
-    [Key]
+    [Key]//PK
     public int CustomerId { get; set; }
     [DisplayName("Contact Name")]
     [Required(ErrorMessage = "Contact name is a required field!")]
@@ -15,4 +15,6 @@ public class Customer
     [Required(ErrorMessage = "City name is a required field!")]
     [MaxLength(50, ErrorMessage = "City Name can not exceed 50 characters!")]
     public string City { get; set; } = string.Empty;
+
+    public ICollection<Cart>? Carts { get; set; }
 }
