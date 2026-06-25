@@ -1,0 +1,17 @@
+﻿@model List<Employee>
+
+<h2>Employee List Data</h2>
+
+<div class="d-flex flex-wrap gap-3">
+    @foreach (var emp in Model)
+    {
+        <div class="card">
+            <h5 class="card-header">Employee ID : @emp.EmpId</h5>
+            <div class="card-body">
+                <p class="card-text">@emp.EmpName</p>
+                <p class="card-text">@emp.Designation</p>
+                <p class="card-text">@emp.Salary</p>
+            </div>
+        </div>
+    }
+</div>

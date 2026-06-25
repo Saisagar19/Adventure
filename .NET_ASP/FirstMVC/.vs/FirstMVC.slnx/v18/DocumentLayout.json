@@ -1,0 +1,47 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3AF77A55-0257-0222-397F-776A37B211B1}|FirstMVC\\FirstMVC.csproj|d:\\cdac\\adventure\\.net_asp\\firstmvc\\firstmvc\\views\\supplier\\card.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3AF77A55-0257-0222-397F-776A37B211B1}|FirstMVC\\FirstMVC.csproj|solutionrelative:firstmvc\\views\\supplier\\card.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Card.cshtml",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstMVC\\FirstMVC\\Views\\Supplier\\Card.cshtml",
+              "RelativeDocumentMoniker": "FirstMVC\\Views\\Supplier\\Card.cshtml",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstMVC\\FirstMVC\\Views\\Supplier\\Card.cshtml",
+              "RelativeToolTip": "FirstMVC\\Views\\Supplier\\Card.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-23T11:20:51.004Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

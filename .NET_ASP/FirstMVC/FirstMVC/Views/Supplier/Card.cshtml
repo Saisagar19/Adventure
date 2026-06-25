@@ -1,0 +1,19 @@
+﻿@model List<Supplier>
+
+<h2>Supplier List Data</h2>
+
+<div class="d-flex flex-wrap gap-3">
+    @foreach (Supplier sup in Model)
+    {
+        <div class="card carousel-dark table-hover">
+            <h5 class="card-header">Supplier ID : @sup.SupplierID</h5>
+            <div class="card-body">
+                <p class="card-text">@sup.SupplierName</p>
+                <p class="card-text">@sup.Product</p>
+                <p class="card-text">@sup.ProductID</p>
+                <p class="card-text">@sup.ProductQuantity</p>
+                <p class="card-text">@sup.UnitPrice</p>
+            </div>
+        </div>
+    }
+</div>
