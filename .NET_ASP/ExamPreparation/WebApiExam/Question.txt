@@ -1,0 +1,28 @@
+Question 1: Hospital Patient Management API
+Problem Statement
+
+Create an ASP.NET Core Web API named HospitalAPI.
+
+Create a model Patient with the following properties:
+
+Property	Type
+PatientId	int
+Name	string
+Disease	string
+Age	int
+Doctor	string
+
+Use the following static data:
+
+PatientId	Name	Disease	Age	Doctor
+101	Rahul	Fever	25	Dr. Mehta
+102	Priya	Diabetes	40	Dr. Shah
+103	Amit	Fever	32	Dr. Mehta
+104	Neha	Asthma	28	Dr. Joshi
+105	Karan	Diabetes	45	Dr. Shah
+
+Implement GET APIs
+Get all patients.
+Get patient by PatientId.
+Get all patients having a specific disease.
+Get all patients assigned to a specific doctor.

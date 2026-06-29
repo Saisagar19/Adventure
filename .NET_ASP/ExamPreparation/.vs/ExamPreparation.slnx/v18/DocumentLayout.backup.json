@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{41C36139-AD5A-4363-8861-41AA1593CBD5}|ControllerToView\\ControllerToView.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\controllertoview\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{41C36139-AD5A-4363-8861-41AA1593CBD5}|ControllerToView\\ControllerToView.csproj|solutionrelative:controllertoview\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41C36139-AD5A-4363-8861-41AA1593CBD5}|ControllerToView\\ControllerToView.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\controllertoview\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41C36139-AD5A-4363-8861-41AA1593CBD5}|ControllerToView\\ControllerToView.csproj|solutionrelative:controllertoview\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41C36139-AD5A-4363-8861-41AA1593CBD5}|ControllerToView\\ControllerToView.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\controllertoview\\views\\product\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{41C36139-AD5A-4363-8861-41AA1593CBD5}|ControllerToView\\ControllerToView.csproj|solutionrelative:controllertoview\\views\\product\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41C36139-AD5A-4363-8861-41AA1593CBD5}|ControllerToView\\ControllerToView.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\controllertoview\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41C36139-AD5A-4363-8861-41AA1593CBD5}|ControllerToView\\ControllerToView.csproj|solutionrelative:controllertoview\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F5A8FC5-51F1-4D81-BDEE-F21310DB8A9B}|WebApiExam\\HospitalWebApiExam.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\webapiexam\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F5A8FC5-51F1-4D81-BDEE-F21310DB8A9B}|WebApiExam\\HospitalWebApiExam.csproj|solutionrelative:webapiexam\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,62 +14,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Success.cshtml",
-              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\ControllerToView\\Views\\Product\\Success.cshtml",
-              "RelativeDocumentMoniker": "ControllerToView\\Views\\Product\\Success.cshtml",
-              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\ControllerToView\\Views\\Product\\Success.cshtml",
-              "RelativeToolTip": "ControllerToView\\Views\\Product\\Success.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-29T18:11:38.484Z",
-              "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\ControllerToView\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "ControllerToView\\Views\\Product\\Index.cshtml",
-              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\ControllerToView\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "ControllerToView\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-29T18:05:53.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\ControllerToView\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "ControllerToView\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\ControllerToView\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "ControllerToView\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAqwCcAAAAAAAAAAAAAAA==",
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\WebApiExam\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "WebApiExam\\Controllers\\PatientController.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\WebApiExam\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "WebApiExam\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAwwEkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T17:49:22.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\ControllerToView\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "ControllerToView\\Models\\Product.cs",
-              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\ControllerToView\\Models\\Product.cs",
-              "RelativeToolTip": "ControllerToView\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T17:47:42.722Z",
+              "WhenOpened": "2026-06-29T18:57:55.073Z",
               "EditorCaption": ""
             }
           ]
