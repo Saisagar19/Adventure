@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D6F7F0F0-6B32-499B-939F-E228C4E8D948}|EFCoreDal\\EFCoreDal.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\efcoredal\\dal\\dbcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6F7F0F0-6B32-499B-939F-E228C4E8D948}|EFCoreDal\\EFCoreDal.csproj|solutionrelative:efcoredal\\dal\\dbcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B1DA8A-8B7F-43AD-9E9F-9B31A8CFAF7E}|LinQExam\\LinQExam.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\linqexam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B1DA8A-8B7F-43AD-9E9F-9B31A8CFAF7E}|LinQExam\\LinQExam.csproj|solutionrelative:linqexam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DBCon.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\EFCoreDal\\Dal\\DBCon.cs",
+              "RelativeDocumentMoniker": "EFCoreDal\\Dal\\DBCon.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\EFCoreDal\\Dal\\DBCon.cs",
+              "RelativeToolTip": "EFCoreDal\\Dal\\DBCon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T20:00:17.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\LinQExam\\Program.cs",
+              "RelativeDocumentMoniker": "LinQExam\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\LinQExam\\Program.cs",
+              "RelativeToolTip": "LinQExam\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T19:54:29.378Z",
+              "EditorCaption": ""
             }
           ]
         }

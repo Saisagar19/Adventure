@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET_ASP\\LINQPracticleConsole\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA3592B4-8230-3290-22B3-22B168567C0E}|LINQJoin\\LINQJoin.csproj|d:\\cdac\\adventure\\.net_asp\\linqpracticleconsole\\linqjoin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3592B4-8230-3290-22B3-22B168567C0E}|LINQJoin\\LINQJoin.csproj|solutionrelative:linqjoin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\LINQPracticleConsole\\LINQJoin\\Program.cs",
+              "RelativeDocumentMoniker": "LINQJoin\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\LINQPracticleConsole\\LINQJoin\\Program.cs",
+              "RelativeToolTip": "LINQJoin\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T19:55:39.531Z",
+              "EditorCaption": ""
             }
           ]
         }

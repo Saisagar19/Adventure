@@ -1,0 +1,15 @@
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\bin\Debug\net10.0\LinQExam.exe
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\bin\Debug\net10.0\LinQExam.deps.json
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\bin\Debug\net10.0\LinQExam.runtimeconfig.json
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\bin\Debug\net10.0\LinQExam.dll
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\bin\Debug\net10.0\LinQExam.pdb
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\LinQExam.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\LinQExam.AssemblyInfoInputs.cache
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\LinQExam.AssemblyInfo.cs
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\LinQExam.csproj.CoreCompileInputs.cache
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\LinQExam.sourcelink.json
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\LinQExam.dll
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\refint\LinQExam.dll
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\LinQExam.pdb
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\LinQExam.genruntimeconfig.cache
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\LinQExam\obj\Debug\net10.0\ref\LinQExam.dll

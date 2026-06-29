@@ -1,0 +1,86 @@
+Project: LinQExam
+
+Topic:
+LINQ in C# using query syntax, join operations, anonymous types, and calculated output from related collections.
+
+Project Question:
+Create a console application that stores customer, product, and order data, joins these collections using LINQ, and displays customer order details with the total amount.
+
+How to Implement:
+1. Create a Console App project named LinQExam.
+2. Create a Customer class with customerID, CustomerName, and City properties.
+3. Create a Product class with productID, productName, UnitPrive, and Stock properties.
+4. Create an Order class with orderId, quantity, orderDate, customerId, and productId properties.
+5. In Program.cs, create getAllCustomers method:
+   - Return a List<Customer> with sample customer records.
+6. Create getAllProducts method:
+   - Return a List<Product> with sample product records.
+7. Create getAllOrders method:
+   - Return a List<Order> with sample order records.
+8. In Main, write a LINQ query using query syntax.
+9. Join customers with orders using:
+   - Customer.customerID equals Order.customerId
+10. Join orders with products using:
+   - Order.productId equals product.productID
+11. Select required data into an anonymous type:
+   - Customer name
+   - Customer city
+   - Quantity
+   - Order date
+   - Product name
+   - Total amount
+12. Calculate total amount using:
+   - Order.quantity * product.UnitPrive
+13. Use foreach to print each joined record on the console.
+14. Run the project and verify that customer, order, product, and total amount details are displayed.
+
+Key Points:
+- LINQ stands for Language Integrated Query.
+- LINQ can query in-memory collections such as List<T>.
+- Query syntax uses keywords such as from, join, on, equals, and select.
+- join is used to combine related data from two collections.
+- Multiple joins can be used to combine more than two collections.
+- The customerID and customerId fields connect customers with orders.
+- The productID and productId fields connect products with orders.
+- Anonymous types are useful when selecting temporary result shapes.
+- foreach is used to iterate over the LINQ query result.
+- Total amount is calculated by multiplying quantity by product unit price.
+- DateTime.Now stores the current date and time for each sample order.
+
+Basic and Viva Questions with Answers:
+
+Q1. What is LINQ?
+A. LINQ stands for Language Integrated Query. It allows querying collections and other data sources directly in C#.
+
+Q2. Which namespace is commonly used for LINQ?
+A. System.Linq. In modern console projects, it is usually available through implicit usings.
+
+Q3. Which LINQ syntax is used in this project?
+A. Query syntax is used.
+
+Q4. What is the purpose of join in LINQ?
+A. join combines records from two collections based on matching key values.
+
+Q5. How are customers joined with orders?
+A. Customers are joined with orders using Customer.customerID equals Order.customerId.
+
+Q6. How are orders joined with products?
+A. Orders are joined with products using Order.productId equals product.productID.
+
+Q7. What is an anonymous type?
+A. An anonymous type is a temporary object type created without declaring a separate class.
+
+Q8. Why is an anonymous type used in the select clause?
+A. It allows the query to return only the required fields from customer, order, and product data.
+
+Q9. How is TotalAmount calculated?
+A. TotalAmount is calculated as Order.quantity * product.UnitPrive.
+
+Q10. What type of collection is used to store customers, products, and orders?
+A. List<T> is used.
+
+Q11. What does foreach do in this project?
+A. foreach iterates through each joined result and prints the details on the console.
+
+Q12. What is the difference between query syntax and method syntax?
+A. Query syntax looks similar to SQL, while method syntax uses extension methods such as Join, Where, Select, and ToList.

@@ -1,9 +1,8 @@
 <Solution>
-  <Project Path="../EFCoreExamDemo/EFCoreCodeFirstModuleWay/EFCoreCodeFirstModuleWay.csproj" />
-  <Project Path="../LINQPracticleConsole/LINQJoin/LINQJoin.csproj" />
   <Project Path="AsyncAwaitExam/AsyncAwaitExam.csproj" Id="7f282270-4152-46ee-a8a5-04ef8b202a94" />
   <Project Path="ConsoleDirectory/ConsoleDirectory.csproj" Id="df38e78e-37a0-4a43-ac6d-1b3924ebbc5d" />
   <Project Path="ControllerToView/ControllerToView.csproj" Id="41c36139-ad5a-4363-8861-41aa1593cbd5" />
   <Project Path="FileIOOperation/FileIOOperation.csproj" />
+  <Project Path="LinQExam/LinQExam.csproj" Id="77b1da8a-8b7f-43ad-9e9f-9b31a8cfaf7e" />
   <Project Path="WebApiExam/HospitalWebApiExam.csproj" Id="9f5a8fc5-51f1-4d81-bdee-f21310db8a9b" />
 </Solution>
