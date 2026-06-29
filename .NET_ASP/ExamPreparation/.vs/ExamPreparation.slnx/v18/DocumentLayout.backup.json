@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5A8FC5-51F1-4D81-BDEE-F21310DB8A9B}|WebApiExam\\HospitalWebApiExam.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\webapiexam\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5A8FC5-51F1-4D81-BDEE-F21310DB8A9B}|WebApiExam\\HospitalWebApiExam.csproj|solutionrelative:webapiexam\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -19,25 +14,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PatientController.cs",
-              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\WebApiExam\\Controllers\\PatientController.cs",
-              "RelativeDocumentMoniker": "WebApiExam\\Controllers\\PatientController.cs",
-              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\WebApiExam\\Controllers\\PatientController.cs",
-              "RelativeToolTip": "WebApiExam\\Controllers\\PatientController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAIwFMAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T18:57:55.073Z",
-              "EditorCaption": ""
             }
           ]
         }

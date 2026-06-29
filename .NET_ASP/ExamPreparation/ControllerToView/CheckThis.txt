@@ -1,0 +1,92 @@
+Project: ControllerToView
+
+Topic:
+ASP.NET Core MVC controller-to-view communication using strongly typed models, ViewBag, ViewData, TempData, Razor views, and routing.
+
+Project Question:
+Create an ASP.NET Core MVC application that demonstrates how data is passed from a controller to a view using a model, ViewBag, ViewData, and TempData.
+
+How to Implement:
+1. Create an ASP.NET Core MVC project named ControllerToView.
+2. In Program.cs, register MVC services:
+   builder.Services.AddControllersWithViews();
+3. Configure routing using MapControllerRoute with the default pattern:
+   {controller=Home}/{action=Index}/{id?}
+4. Create a Product model in Models folder with:
+   - ProductId
+   - ProductName
+   - Price
+   - StockQuantity
+5. Create ProductController inside Controllers folder.
+6. Add Index action method.
+7. Inside Index action, create a Product object and assign sample values.
+8. Pass the Product object to the view using:
+   return View(product);
+9. Set ViewBag.Message for dynamic data.
+10. Set ViewData["Company"] for dictionary-based data.
+11. Set TempData["Success"] for data that survives one redirect/request.
+12. Create Views/Product/Index.cshtml.
+13. Add @model Product at the top of the view.
+14. Display model properties using @Model.PropertyName.
+15. Display ViewBag, ViewData, and TempData values.
+16. Create Save action in ProductController.
+17. In Save action, set TempData and redirect to Success action.
+18. Create Success action and Views/Product/Success.cshtml.
+19. Display TempData success message in the Success view.
+20. Run the project and browse to /Product/Index.
+
+Key Points:
+- MVC stands for Model View Controller.
+- Model contains data and business properties.
+- View displays UI using Razor syntax.
+- Controller handles request and returns response.
+- Strongly typed view uses @model and gets compile-time support.
+- ViewBag is dynamic and is useful for small amounts of temporary data.
+- ViewData is dictionary-based and uses string keys.
+- TempData stores data for the next request, commonly after RedirectToAction.
+- Razor syntax uses @ to switch from HTML to C#.
+- Attribute-less conventional routing is configured in Program.cs.
+
+Basic and Viva Questions with Answers:
+
+Q1. What is MVC?
+A. MVC is a design pattern with three parts: Model for data, View for UI, and Controller for request handling.
+
+Q2. What is a strongly typed view?
+A. A view that declares a model type using @model and accesses data using @Model.
+
+Q3. What is ViewBag?
+A. ViewBag is a dynamic object used to pass data from controller to view.
+
+Q4. What is ViewData?
+A. ViewData is a dictionary used to pass data from controller to view using key-value pairs.
+
+Q5. What is TempData?
+A. TempData stores data temporarily and can pass data from one action to another, especially after a redirect.
+
+Q6. Difference between ViewBag and ViewData?
+A. ViewBag is dynamic property-based syntax, while ViewData is dictionary-based syntax.
+
+Q7. Difference between ViewData and TempData?
+A. ViewData is available only for the current request. TempData can survive one redirect or next request.
+
+Q8. What does return View(product) do?
+A. It returns the Index view and passes the product model object to that view.
+
+Q9. What is Razor?
+A. Razor is the view engine used in ASP.NET Core MVC to write C# code inside HTML.
+
+Q10. What is RedirectToAction?
+A. It redirects the request to another action method.
+
+Q11. Why is TempData used in the Save action?
+A. Because Save redirects to Success, and TempData can carry the success message across that redirect.
+
+Q12. What is the route for Product Index?
+A. With default routing, the URL is /Product/Index.
+
+Q13. What service is needed for MVC views?
+A. AddControllersWithViews() is registered in Program.cs.
+
+Q14. What is model binding?
+A. Model binding maps HTTP request data to action method parameters or model objects.

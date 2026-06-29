@@ -1,0 +1,129 @@
+Project: HospitalWebApiExam
+
+Topic:
+ASP.NET Core Web API using controllers, models, attribute routing, static data, HTTP GET endpoints, ActionResult, status codes, Swagger, and LINQ filtering.
+
+Project Question:
+Create a Hospital Patient Management Web API. Store patient records and implement GET APIs to fetch all patients, fetch patient by id, fetch patients by disease, and fetch patients by doctor.
+
+Expected Question Data:
+PatientId, Name, Disease, Age, Doctor
+101, Rahul, Fever, 25, Dr. Mehta
+102, Priya, Diabetes, 40, Dr. Shah
+103, Amit, Fever, 32, Dr. Mehta
+104, Neha, Asthma, 28, Dr. Joshi
+105, Karan, Diabetes, 45, Dr. Shah
+
+Current Project Note:
+The implemented code uses similar static patient data but with PatientId 1 to 5 and property names PatientName and DoctorName. For exact exam question matching, update the static list to the expected data above.
+
+How to Implement:
+1. Create an ASP.NET Core Web API project named HospitalWebApiExam.
+2. In Program.cs, register controllers:
+   builder.Services.AddControllers();
+3. Register Swagger/OpenAPI services:
+   builder.Services.AddOpenApi();
+   builder.Services.AddSwaggerGen();
+   builder.Services.AddEndpointsApiExplorer();
+4. In development environment, enable Swagger:
+   app.UseSwagger();
+   app.UseSwaggerUI();
+5. Map controller endpoints:
+   app.MapControllers();
+6. Create a Patient model in Models folder.
+7. Add properties:
+   - PatientId
+   - PatientName or Name
+   - Disease
+   - Age
+   - DoctorName or Doctor
+8. Create PatientController in Controllers folder.
+9. Add [ApiController] attribute.
+10. Add route:
+    [Route("api/[controller]")]
+11. Create a static or readonly List<Patient> with sample patient data.
+12. Add GET all patients endpoint:
+    [HttpGet]
+    URL: GET /api/Patient
+13. Add GET by id endpoint:
+    [HttpGet("{id:int}")]
+    URL: GET /api/Patient/1
+14. Add GET by disease endpoint:
+    [HttpGet("disease/{disease:alpha}")]
+    URL: GET /api/Patient/disease/Fever
+15. Add GET by doctor endpoint:
+    [HttpGet("doctor/{doc}")]
+    URL: GET /api/Patient/doctor/Dr.%20Santosh
+16. Use LINQ Where for disease and doctor filtering.
+17. Return Ok(data) when data is found.
+18. Return NoContent() when no records are available.
+19. Run the project and test APIs using Swagger, browser, Postman, or .http file.
+
+Key Points:
+- Web API returns data, usually JSON, instead of HTML views.
+- ControllerBase is used for API controllers.
+- [ApiController] enables API-specific behavior such as automatic model validation.
+- [Route("api/[controller]")] creates route based on controller name.
+- [HttpGet] maps an action to HTTP GET.
+- Route constraints like {id:int} restrict parameter type.
+- ActionResult<T> allows returning both data and HTTP status responses.
+- Ok() returns HTTP 200.
+- NoContent() returns HTTP 204.
+- LINQ Where filters patient data by disease or doctor.
+- Swagger UI helps test API endpoints in the browser.
+
+Basic and Viva Questions with Answers:
+
+Q1. What is Web API?
+A. Web API is a service that exposes data and operations over HTTP, commonly returning JSON.
+
+Q2. What is REST API?
+A. REST API is an API style that uses HTTP methods like GET, POST, PUT, and DELETE to work with resources.
+
+Q3. What is [ApiController]?
+A. It marks a controller as a Web API controller and enables API-specific features.
+
+Q4. What is ControllerBase?
+A. ControllerBase is the base class for Web API controllers that do not return views.
+
+Q5. Why is ControllerBase used instead of Controller?
+A. Controller includes MVC view support. ControllerBase is lighter and suitable for APIs.
+
+Q6. What is attribute routing?
+A. Attribute routing defines routes directly on controllers and action methods using attributes.
+
+Q7. What is the route for all patients?
+A. GET /api/Patient.
+
+Q8. What is the route for patient by id?
+A. GET /api/Patient/{id}, for example GET /api/Patient/1.
+
+Q9. What is the route for patients by disease?
+A. GET /api/Patient/disease/{disease}, for example GET /api/Patient/disease/Fever.
+
+Q10. What is the route for patients by doctor?
+A. GET /api/Patient/doctor/{doc}, for example GET /api/Patient/doctor/Dr.%20Santosh.
+
+Q11. Why is %20 used in URL?
+A. %20 represents a space in URL encoding.
+
+Q12. What does Ok() return?
+A. It returns HTTP 200 with response data.
+
+Q13. What does NoContent() return?
+A. It returns HTTP 204 with no response body.
+
+Q14. What is ActionResult<T>?
+A. It allows an API action to return either typed data or an HTTP response result.
+
+Q15. What is Swagger?
+A. Swagger provides API documentation and a browser UI for testing endpoints.
+
+Q16. What is LINQ used for in this project?
+A. LINQ is used to filter patients by disease and doctor.
+
+Q17. What should be returned if patient id is not found?
+A. A better response is NotFound(), because the requested patient does not exist.
+
+Q18. What improvement can be made in this project?
+A. Use the exact question data, return NotFound for missing records, and make patient list static or use a service/repository.

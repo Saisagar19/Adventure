@@ -20,4 +20,9 @@ public class DBCon : DbContext
     {
         optionsBuilder.UseMySQL("Server = 127.0.0.1; Port = 1919; Database = EmpDB; User Id = root; Password = root;");
     }
+
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //    optionsBuilder.UseMySQL("Server = 127.0.0.1; Port = 1919; Database = EmpDB; User Id = root; Password = root;");
+    //}
 }

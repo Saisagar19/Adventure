@@ -1,0 +1,74 @@
+Project: ConsoleDirectory
+
+Topic:
+Directory handling in C# using System.IO classes such as DriveInfo, DirectoryInfo, FileInfo, and exception handling.
+
+Project Question:
+Create a console application that displays available system drives, then reads a specific directory and lists its folders and files.
+
+How to Implement:
+1. Create a Console App project named ConsoleDirectory.
+2. Use System.IO classes through implicit usings or add using System.IO if needed.
+3. In Main, print a heading such as "Directory Data".
+4. Use DriveInfo.GetDrives() to get all drives.
+5. Loop through each drive.
+6. Skip network drives using:
+   drive.DriveType != DriveType.Network
+7. Print each drive name.
+8. Handle UnauthorizedAccessException and general Exception.
+9. Select a directory path such as C:\.
+10. Create a DirectoryInfo object:
+    DirectoryInfo directoryInfo = new DirectoryInfo(dirName);
+11. Print root drive information using directoryInfo.Root.
+12. Use directoryInfo.GetDirectories() to get folders.
+13. For each folder, print the folder name.
+14. Use directory.GetFiles() to list files inside that folder.
+15. Handle UnauthorizedAccessException while accessing protected folders.
+16. Run the project and verify that drives, folders, and files are printed.
+
+Key Points:
+- DriveInfo is used to get information about system drives.
+- DirectoryInfo is used to work with directory details.
+- FileInfo represents file information.
+- GetDirectories() returns subdirectories.
+- GetFiles() returns files inside a directory.
+- UnauthorizedAccessException can occur when accessing protected system folders.
+- try-catch is important for file system programs because access permissions can vary.
+
+Basic and Viva Questions with Answers:
+
+Q1. Which namespace contains DriveInfo and DirectoryInfo?
+A. System.IO.
+
+Q2. What is DriveInfo.GetDrives() used for?
+A. It returns all logical drives available on the computer.
+
+Q3. What is DirectoryInfo?
+A. DirectoryInfo is a class used to get information about directories and perform directory operations.
+
+Q4. What is FileInfo?
+A. FileInfo is a class used to get file details such as name, size, extension, and path.
+
+Q5. Why does the project skip network drives?
+A. Network drives may be slow, unavailable, or restricted, so the code focuses on local drives.
+
+Q6. What does GetDirectories() return?
+A. It returns an array of DirectoryInfo objects representing subdirectories.
+
+Q7. What does GetFiles() return?
+A. It returns an array of FileInfo objects representing files in a directory.
+
+Q8. Why is UnauthorizedAccessException handled?
+A. Some folders require administrator permission or are protected by the operating system.
+
+Q9. What is the purpose of try-catch?
+A. It prevents the program from crashing when an exception occurs and allows error messages to be handled.
+
+Q10. What is directoryInfo.Root?
+A. It returns the root directory of the current DirectoryInfo path, such as C:\.
+
+Q11. Can this program list files recursively?
+A. The current code lists files one level inside each folder. For recursive listing, we can call the same logic for subfolders.
+
+Q12. What is a path?
+A. A path is the location of a file or directory in the file system.

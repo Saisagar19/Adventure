@@ -1,0 +1,81 @@
+Project: AsyncAwaitExam
+
+Topic:
+Asynchronous programming in C# using async, await, Task<T>, LINQ filtering, and a simple conference booking workflow.
+
+Project Question:
+Create a console application that stores customer data, filters customers who are not from Pune, and performs conference-related flight and hotel booking operations asynchronously.
+
+How to Implement:
+1. Create a Console App project named AsyncAwaitExam.
+2. Create a Customer class with CustomerId, CustomerName, and City properties.
+3. In Program.cs, make Main method asynchronous:
+   static async Task Main(string[] args)
+4. Create GetAllCustomersAsync method:
+   - Prepare a List<Customer>.
+   - Print all customers.
+   - Return Task<List<Customer>>.
+5. Create FilterCustomerAsync method:
+   - Accept city and customer list.
+   - Use LINQ Where condition to select customers whose City is not Pune.
+   - Return the filtered customer list.
+6. Create FlightBookingAsync method:
+   - Accept filtered customers.
+   - Print flight booking messages.
+   - Return the same list.
+7. Create HotelBookingAsync method:
+   - Accept filtered customers.
+   - Print hotel booking messages.
+   - Return the same list.
+8. In Main, call all methods with await in workflow order:
+   - Get all customers
+   - Filter customers
+   - Book flights
+   - Book hotels
+9. Run the project and check console output.
+
+Key Points:
+- async and await are used to write asynchronous code in a readable way.
+- Task<T> represents an operation that will return a value in the future.
+- LINQ Where filters data based on a condition.
+- await pauses the current async method until the task completes.
+- The workflow filters non-Pune customers because they need travel and hotel booking for the Pune conference.
+- Current project uses Task.Run to simulate asynchronous operations.
+
+Basic and Viva Questions with Answers:
+
+Q1. What is async in C#?
+A. async is a keyword used to mark a method as asynchronous. It allows the method to use await inside it.
+
+Q2. What is await?
+A. await waits for an asynchronous Task to complete without blocking the main thread.
+
+Q3. What is Task<T>?
+A. Task<T> represents an asynchronous operation that returns a value of type T.
+
+Q4. Why is Main declared as async Task Main?
+A. It allows asynchronous methods to be awaited directly inside the application's entry point.
+
+Q5. Which collection is used to store customers?
+A. List<Customer> is used to store customer records.
+
+Q6. How are non-Pune customers filtered?
+A. Using LINQ: customers.Where(c => c.City != city).ToList().
+
+Q7. What is LINQ?
+A. LINQ stands for Language Integrated Query. It is used to query collections and other data sources in C#.
+
+Q8. Why do we filter customers before booking?
+A. Only customers coming from outside Pune need flight and hotel booking.
+
+Q9. What is the difference between synchronous and asynchronous programming?
+A. Synchronous code executes step by step and waits for each operation. Asynchronous code can wait for long operations without blocking execution.
+
+Q10. What is Task.Run?
+A. Task.Run queues work to run on a thread pool thread. In this project it is used to simulate asynchronous execution.
+
+Q11. What does HotelBookingAsync return?
+A. It returns Task<List<Customer>> containing the customers for whom hotel booking messages were printed.
+
+Q12. What improvement can be made in FilterCustomerAsync?
+A. Avoid using .Result inside async code and await the task directly to prevent possible blocking.
