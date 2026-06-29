@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{7F282270-4152-46EE-A8A5-04EF8B202A94}|AsyncAwaitExam\\AsyncAwaitExam.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\asyncawaitexam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F282270-4152-46EE-A8A5-04EF8B202A94}|AsyncAwaitExam\\AsyncAwaitExam.csproj|solutionrelative:asyncawaitexam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F282270-4152-46EE-A8A5-04EF8B202A94}|AsyncAwaitExam\\AsyncAwaitExam.csproj|d:\\cdac\\adventure\\.net_asp\\exampreparation\\asyncawaitexam\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F282270-4152-46EE-A8A5-04EF8B202A94}|AsyncAwaitExam\\AsyncAwaitExam.csproj|solutionrelative:asyncawaitexam\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,37 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\AsyncAwaitExam\\Customer.cs",
-              "RelativeDocumentMoniker": "AsyncAwaitExam\\Customer.cs",
-              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\AsyncAwaitExam\\Customer.cs",
-              "RelativeToolTip": "AsyncAwaitExam\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T15:03:32.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\AsyncAwaitExam\\Program.cs",
-              "RelativeDocumentMoniker": "AsyncAwaitExam\\Program.cs",
-              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\ExamPreparation\\AsyncAwaitExam\\Program.cs",
-              "RelativeToolTip": "AsyncAwaitExam\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T15:02:32.732Z",
-              "EditorCaption": ""
             }
           ]
         }

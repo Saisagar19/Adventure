@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="AsyncAwaitExam/AsyncAwaitExam.csproj" Id="7f282270-4152-46ee-a8a5-04ef8b202a94" />
   <Project Path="ConsoleDirectory/ConsoleDirectory.csproj" Id="df38e78e-37a0-4a43-ac6d-1b3924ebbc5d" />
+  <Project Path="ControllerToView/ControllerToView.csproj" Id="41c36139-ad5a-4363-8861-41aa1593cbd5" />
   <Project Path="FileIOOperation/FileIOOperation.csproj" />
 </Solution>

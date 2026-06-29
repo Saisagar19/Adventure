@@ -1,0 +1,28 @@
+﻿@model Product
+
+<h1>Controller To View Communication</h1>
+
+<hr />
+
+<h2>1.Strongly Type Model</h2>
+<p>ProductId: @Model.ProductId</p>
+<p>ProductName: @Model.ProductName</p>
+<p>StockQuantity: @Model.StockQuantity</p>
+<p>Price: @Model.Price</p>
+
+<hr />
+
+<h2>2.ViewBag</h2>
+<p>@ViewBag.Message</p>
+
+<hr />
+
+<h2>3.ViewData</h2>
+<p>Company: @ViewData["Company"]</p>
+
+<hr />
+
+<h2>4.TempData</h2>
+<p>@TempData["Success"]</p>
+
+<a asp-action="Save" class="btn btn-success">Test Temp DataRedirect</a>

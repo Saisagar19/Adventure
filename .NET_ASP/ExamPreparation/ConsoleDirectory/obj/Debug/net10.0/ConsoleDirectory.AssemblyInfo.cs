@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleDirectory")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f66e4ffedb8c99e06cb07584a22816b1f8204b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83e868e4307cef37421cd66d7daa928d6622bf42")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleDirectory")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleDirectory")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
