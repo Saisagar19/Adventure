@@ -1,0 +1,15 @@
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\bin\Debug\net10.0\AsyncAwaitExam.exe
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\bin\Debug\net10.0\AsyncAwaitExam.deps.json
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\bin\Debug\net10.0\AsyncAwaitExam.runtimeconfig.json
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\bin\Debug\net10.0\AsyncAwaitExam.dll
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\bin\Debug\net10.0\AsyncAwaitExam.pdb
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\AsyncAwaitExam.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\AsyncAwaitExam.AssemblyInfoInputs.cache
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\AsyncAwaitExam.AssemblyInfo.cs
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\AsyncAwaitExam.csproj.CoreCompileInputs.cache
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\AsyncAwaitExam.sourcelink.json
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\AsyncAwaitExam.dll
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\refint\AsyncAwaitExam.dll
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\AsyncAwaitExam.pdb
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\AsyncAwaitExam.genruntimeconfig.cache
+D:\CDAC\Adventure\.NET_ASP\ExamPreparation\AsyncAwaitExam\obj\Debug\net10.0\ref\AsyncAwaitExam.dll
