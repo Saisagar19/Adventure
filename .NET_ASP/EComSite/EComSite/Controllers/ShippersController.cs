@@ -1,12 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EComSite.Dal;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EComSite.Controllers
 {
     public class ShippersController : Controller
     {
-        public IActionResult Index()
+        private readonly eCommerceDbContext _context;
+
+        public ShippersController(eCommerceDbContext con)
         {
-            return View();
+            _context = con;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var shippersList = await _context.Shippers.ToListAsync();
+            return View(shippersList);
         }
     }
 }

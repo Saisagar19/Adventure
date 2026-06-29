@@ -1,0 +1,6 @@
+﻿<Products>
+	<Product ProductId="1223" ProductName="Laptop" UnitPrice="120000" Stock="78"/>
+	<Product ProductId="1224" ProductName="Nokia 7" UnitPrice="20000" Stock="178"/>
+	<Product ProductId="1225" ProductName="Samsung Galaxy" UnitPrice="320000" Stock="88"/>
+	<Product ProductId="1226" ProductName="MotoG" UnitPrice="420000" Stock="178"/>
+</Products>

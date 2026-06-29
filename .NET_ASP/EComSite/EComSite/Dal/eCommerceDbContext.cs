@@ -7,11 +7,11 @@ public class eCommerceDbContext : DbContext
 {
     public eCommerceDbContext()
     {
-        
+
     }
     public eCommerceDbContext(DbContextOptions<eCommerceDbContext> options) : base(options)
     {
-        
+
     }
     public DbSet<Product> Products { get; set; }
     public DbSet<Cart> Carts { get; set; }
@@ -24,9 +24,9 @@ public class eCommerceDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        if(!optionsBuilder.IsConfigured)
+        if (!optionsBuilder.IsConfigured)
         {
             optionsBuilder.UseMySQL("Server=127.0.0.1;Port=1919;Database=eComDBDemo;User Id=root;Password=root;");
         }
-    }
+    } 
 }

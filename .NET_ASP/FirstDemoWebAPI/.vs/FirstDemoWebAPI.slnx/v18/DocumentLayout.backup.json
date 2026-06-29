@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstDemoWebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4CE7B3F-626C-4555-BC41-7B29C0BC25D6}|FirstDemoWebAPI\\FirstDemoWebAPI.csproj|d:\\cdac\\adventure\\.net_asp\\firstdemowebapi\\firstdemowebapi\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4CE7B3F-626C-4555-BC41-7B29C0BC25D6}|FirstDemoWebAPI\\FirstDemoWebAPI.csproj|solutionrelative:firstdemowebapi\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4CE7B3F-626C-4555-BC41-7B29C0BC25D6}|FirstDemoWebAPI\\FirstDemoWebAPI.csproj|d:\\cdac\\adventure\\.net_asp\\firstdemowebapi\\firstdemowebapi\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4CE7B3F-626C-4555-BC41-7B29C0BC25D6}|FirstDemoWebAPI\\FirstDemoWebAPI.csproj|solutionrelative:firstdemowebapi\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4CE7B3F-626C-4555-BC41-7B29C0BC25D6}|FirstDemoWebAPI\\FirstDemoWebAPI.csproj|d:\\cdac\\adventure\\.net_asp\\firstdemowebapi\\firstdemowebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4CE7B3F-626C-4555-BC41-7B29C0BC25D6}|FirstDemoWebAPI\\FirstDemoWebAPI.csproj|solutionrelative:firstdemowebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstDemoWebAPI\\FirstDemoWebAPI\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "FirstDemoWebAPI\\Controllers\\CustomersController.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstDemoWebAPI\\FirstDemoWebAPI\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "FirstDemoWebAPI\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T17:42:26.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstDemoWebAPI\\FirstDemoWebAPI\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "FirstDemoWebAPI\\Models\\Customer.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstDemoWebAPI\\FirstDemoWebAPI\\Models\\Customer.cs",
+              "RelativeToolTip": "FirstDemoWebAPI\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T17:38:51.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstDemoWebAPI\\FirstDemoWebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "FirstDemoWebAPI\\Program.cs",
+              "ToolTip": "D:\\CDAC\\Adventure\\.NET_ASP\\FirstDemoWebAPI\\FirstDemoWebAPI\\Program.cs",
+              "RelativeToolTip": "FirstDemoWebAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T17:24:08.817Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

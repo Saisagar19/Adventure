@@ -1,0 +1,87 @@
+﻿@* @model Product
+
+@{
+    ViewData["Title"] = "Details Of - " + Model.ProductName;
+}
+<h1>@Model.ProductName</h1>
+<h3>@Model.Description</h3>
+<h3>@Convert.ToDecimal(@Model.UnitPrice - @Convert.ToDecimal(((@Model.UnitPrice * @Model.Discount) / 100)))</h3>
+ *@
+
+@model Product
+
+@{
+    ViewData["Title"] = "Details Of - " + Model.ProductName;
+
+    decimal discountedPrice = Model.UnitPrice -
+                              ((Model.UnitPrice * Model.Discount) / 100);
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg border-0">
+        <div class="row g-0">
+            <div class="col-md-5">
+                <img src="@Url.Content(Model.Picture)"
+                     class="img-fluid rounded-start h-100 w-100"
+                     style="object-fit:cover;"
+                     alt="@Model.ProductName">
+            </div>
+
+            <div class="col-md-7">
+                <div class="card-body">
+
+                    <h2 class="card-title">@Model.ProductName</h2>
+
+                    <p class="card-text text-muted">
+                        @Model.Description
+                    </p>
+
+                    <hr />
+
+                    <h3 class="text-danger">
+                        ₹@discountedPrice
+                    </h3>
+
+                    <h5 class="text-muted">
+                        <del>₹@Model.UnitPrice</del>
+                        <span class="badge bg-danger ms-2">
+                            @Model.Discount% OFF
+                        </span>
+                    </h5>
+
+                    <p class="mt-3">
+                        <strong>Availability :</strong>
+
+                        @if (Model.ProductQuantity > 0)
+                        {
+                            <span class="text-success">In Stock</span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">Out of Stock</span>
+                        }
+                    </p>
+
+                    <p>
+                        <strong>Quantity Available :</strong>
+                        @Model.ProductQuantity
+                    </p>
+
+                    <div class="mt-4">
+
+                        <a class="btn btn-warning btn-lg" asp-controller="Carts" asp-action="AddToCart" asp-route-productId="@Model.ProductId">Add To Cart</a>
+
+                        <button class="btn btn-success btn-lg ms-2">
+                            Buy Now
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary btn-lg ms-2">Back</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

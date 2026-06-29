@@ -1,0 +1,14 @@
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\bin\Debug\net8.0\LinqExamples.exe
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\bin\Debug\net8.0\LinqExamples.deps.json
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\bin\Debug\net8.0\LinqExamples.runtimeconfig.json
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\bin\Debug\net8.0\LinqExamples.dll
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\bin\Debug\net8.0\LinqExamples.pdb
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\obj\Debug\net8.0\LinqExamples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\obj\Debug\net8.0\LinqExamples.AssemblyInfoInputs.cache
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\obj\Debug\net8.0\LinqExamples.AssemblyInfo.cs
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\obj\Debug\net8.0\LinqExamples.csproj.CoreCompileInputs.cache
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\obj\Debug\net8.0\LinqExamples.dll
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\obj\Debug\net8.0\refint\LinqExamples.dll
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\obj\Debug\net8.0\LinqExamples.pdb
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\obj\Debug\net8.0\LinqExamples.genruntimeconfig.cache
+C:\Dotnet-June-2026\C#\CollectionsExamples\LinqExamples\obj\Debug\net8.0\ref\LinqExamples.dll

@@ -26,8 +26,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -38,8 +42,7 @@
               "RelativeToolTip": "eCommerceEFCoreExample\\Dal\\eCommerceDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T11:41:17.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T11:41:17.506Z"
             },
             {
               "$type": "Document",
@@ -51,8 +54,7 @@
               "RelativeToolTip": "eCommerceEFCoreExample\\Models\\Product.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T11:34:27.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T11:34:27.173Z"
             },
             {
               "$type": "Document",
@@ -64,8 +66,7 @@
               "RelativeToolTip": "eCommerceEFCoreExample\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T11:27:48.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T11:27:48.491Z"
             },
             {
               "$type": "Document",

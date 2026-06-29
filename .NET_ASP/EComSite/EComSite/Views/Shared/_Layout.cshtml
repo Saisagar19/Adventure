@@ -11,9 +11,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EComSite</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">amazon<sub>.in</sub></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,9 +27,26 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2"
+                               type="search"
+                               placeholder="Search products..."
+                               aria-label="Search">
+
+                        <button class="btn btn-warning" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="16"
+                                 height="16"
+                                 fill="currentColor"
+                                 class="bi bi-search"
+                                 viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </button>
+                    </form>
                 </div>
             </div>
-        </nav>
+        </nav> 
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -37,9 +54,128 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @* <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2026 - EComSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> *@
+    <footer>
+        <div class="bg-secondary text-center py-3">
+            <a href="#" class="text-white text-decoration-none"> Back to Top </a>
+        </div>
+
+        <div class="bg-dark text-white py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <h5>Get to Know Us</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">About Amazon</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Careers</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Press Releases</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Amazon Science</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <h5>Connect with Us</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <h5>Make Money with Us</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Sell on Amazon</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Amazon Global Selling</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Advertise Products</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Fulfilment by Amazon</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <h5>Let Us Help You</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Your Account</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Returns Centre</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white text-decoration-none">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark border-top border-secondary py-4">
+            <div class="container text-center">
+                <h3 class="text-white">amazon</h3>
+
+                <button class="btn btn-outline-light btn-sm me-2">English</button>
+
+                <button class="btn btn-outline-light btn-sm">India</button>
+            </div>
+        </div>
+        <div class="bg-black text-white py-4">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-3">
+                        <strong>AbeBooks</strong><br />
+                        Books, Art & Collectibles
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <strong>AWS</strong><br />
+                        Cloud Computing Services
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <strong>Audible</strong><br />
+                        Audio Books
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <strong>IMDb</strong><br />
+                        Movies, TV & Celebrities
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <small>
+                        Conditions of Use & Sale | Privacy Notice | Interest-Based Ads
+                    </small>
+                    <br />
+                    <small> © 1996-2026, Amazon.com, Inc. or its affiliates </small>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
