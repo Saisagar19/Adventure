@@ -14,11 +14,11 @@ account so you can push and pull images.
 ## Step 2: Build the Docker Image
 
 ``` bash
-docker build -t saisagar19/javaapp:0.0.1.RELEASE .
+docker build -t dockerUser/javaapp:0.0.1.RELEASE .
 ```
 
 **Explanation** - `docker build` -- Builds a Docker image. - `-t` --
-Assigns a name (tag) to the image. - `saisagar19/javaapp` -- Docker Hub
+Assigns a name (tag) to the image. - `dockerUser/javaapp` -- Docker Hub
 username and repository name. - `0.0.1.RELEASE` -- Image version
 (tag). - `.` -- Uses the current directory as the build context.
 
@@ -39,12 +39,12 @@ docker image ls
 ### Detached Mode
 
 ``` bash
-docker container run -d saisagar19/javaapp:0.0.1.RELEASE
+docker container run -d dockerUser/javaapp:0.0.1.RELEASE
 ```
 
 **Explanation** - `docker container run` -- Creates and starts a
 container. - `-d` -- Runs the container in the background. -
-`saisagar19/javaapp:0.0.1.RELEASE` -- Image to execute.
+`dockerUser/javaapp:0.0.1.RELEASE` -- Image to execute.
 
 For a simple Java program, the container exits automatically after the
 program finishes.
@@ -108,11 +108,11 @@ Hello World
 ``` bash
 docker login
 
-docker build -t saisagar19/javaapp:0.0.1.RELEASE .
+docker build -t dockerUser/javaapp:0.0.1.RELEASE .
 
 docker image ls
 
-docker container run -d saisagar19/javaapp:0.0.1.RELEASE
+docker container run -d dockerUser/javaapp:0.0.1.RELEASE
 
 docker container ls
 
